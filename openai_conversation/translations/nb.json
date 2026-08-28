@@ -1,0 +1,176 @@
+{
+    "config": {
+        "error": {
+            "cannot_connect": "Tilkobling mislyktes",
+            "invalid_auth": "Ugyldig godkjenning",
+            "unknown": "Uventet feil"
+        },
+        "step": {
+            "reauth_confirm": {
+                "data_description": {
+                    "api_key": "Din OpenAI API-n\u00f8kkel."
+                }
+            },
+            "user": {
+                "data": {
+                    "api_key": "API-n\u00f8kkel"
+                },
+                "data_description": {
+                    "api_key": "Din OpenAI API-n\u00f8kkel."
+                },
+                "description": "Konfigurer OpenAI Conversation-integrasjon ved \u00e5 oppgi OpenAI API-n\u00f8kkelen din. Instruksjoner for \u00e5 f\u00e5 tak i en API-n\u00f8kkel finner du [her]({instructions_url})."
+            }
+        }
+    },
+    "config_subentries": {
+        "ai_task_data": {
+            "entry_type": "AI-oppgave",
+            "initiate_flow": {
+                "reconfigure": "Konfigurer AI-oppgaven p\u00e5 nytt",
+                "user": "Legg til AI-oppgave"
+            },
+            "step": {
+                "advanced": {
+                    "data": {
+                        "chat_model": "Modell",
+                        "max_tokens": "Maksimalt antall tokens som skal returneres som svar",
+                        "temperature": "Temperatur"
+                    },
+                    "data_description": {
+                        "store_responses": "Hvis aktivert, lagres foresp\u00f8rsler og svar av OpenAI og er synlige i OpenAI-dashbordloggene dine"
+                    },
+                    "title": "Avanserte innstillinger"
+                },
+                "init": {
+                    "data": {
+                        "name": "Navn",
+                        "recommended": "Anbefalte modellinnstillinger"
+                    }
+                },
+                "model": {
+                    "data": {
+                        "reasoning_effort": "Resonnementsinnsats",
+                        "search_context_size": "St\u00f8rrelse p\u00e5 s\u00f8kekontekst",
+                        "user_location": "Inkluder hjemmeadresse",
+                        "web_search": "Aktiver netts\u00f8k"
+                    },
+                    "data_description": {
+                        "service_tier": "Kontrollerer kostnader og responstid"
+                    }
+                }
+            }
+        },
+        "conversation": {
+            "entry_type": "Samtaleagent",
+            "initiate_flow": {
+                "reconfigure": "Konfigurer samtaleagenten p\u00e5 nytt",
+                "user": "Legg til samtaleagent"
+            },
+            "step": {
+                "advanced": {
+                    "data": {
+                        "store_responses": "Lagre foresp\u00f8rsler og svar i OpenAI"
+                    },
+                    "data_description": {
+                        "store_responses": "Hvis aktivert, lagres foresp\u00f8rsler og svar av OpenAI og er synlige i OpenAI-dashbordloggene dine"
+                    }
+                },
+                "model": {
+                    "data": {
+                        "inline_citations": "Inkluder lenker i netts\u00f8kresultater",
+                        "reasoning_summary": "Sammendrag av resonnement"
+                    },
+                    "data_description": {
+                        "service_tier": "Kontrollerer kostnader og responstid"
+                    }
+                }
+            }
+        },
+        "stt": {
+            "abort": {
+                "entry_not_loaded": "Kan ikke legge til ting mens konfigurasjonen er deaktivert.",
+                "reconfigure_successful": "Rekonfigurasjonen var vellykket"
+            },
+            "entry_type": "Tale-til-tekst",
+            "initiate_flow": {
+                "reconfigure": "Konfigurer tale-til-tekst-tjenesten p\u00e5 nytt",
+                "user": "Legg til tale-til-tekst-tjeneste"
+            },
+            "step": {
+                "init": {
+                    "data": {
+                        "chat_model": "Modell",
+                        "name": "Navn"
+                    }
+                }
+            }
+        },
+        "tts": {
+            "initiate_flow": {
+                "user": "Legg til tekst-til-tale-tjeneste"
+            },
+            "step": {
+                "init": {
+                    "data": {
+                        "name": "Navn",
+                        "prompt": "Instruksjoner",
+                        "tts_speed": "Fart"
+                    },
+                    "data_description": {
+                        "tts_speed": "Hastigheten p\u00e5 den genererte talen"
+                    }
+                }
+            }
+        }
+    },
+    "issues": {
+        "deprecated_generate_content": {
+            "description": "Handlingen \u00abopenai_conversation.generate_content\u00bb er utdatert og vil bli fjernet i 2026.9.0-utgivelsen. Bruk handlingen \u00abai_task.generate_data\u00bb i stedet.",
+            "title": "Utdatert \u00abgenerer_content\u00bb-handling"
+        },
+        "deprecated_generate_image": {
+            "description": "Handlingen \u00abopenai_conversation.generate_image\u00bb er utdatert og vil bli fjernet i 2026.9.0-utgivelsen. Bruk handlingen \u00abai_task.generate_image\u00bb i stedet.",
+            "title": "Utdatert \u00abgenerer_image\u00bb-handling"
+        }
+    },
+    "selector": {
+        "reasoning_effort": {
+            "options": {
+                "minimal": "Minimal"
+            }
+        },
+        "reasoning_summary": {
+            "options": {
+                "concise": "Konsis",
+                "detailed": "Detaljert",
+                "off": "Av"
+            }
+        },
+        "service_tier": {
+            "options": {
+                "priority": "Prioritet"
+            }
+        },
+        "verbosity": {
+            "options": {
+                "high": "H\u00f8y",
+                "low": "Lav"
+            }
+        }
+    },
+    "services": {
+        "generate_image": {
+            "fields": {
+                "prompt": {
+                    "description": "Teksten som gj\u00f8r om til et bilde",
+                    "example": "Et bilde av en hund",
+                    "name": "Ledetekst"
+                },
+                "size": {
+                    "description": "St\u00f8rrelsen p\u00e5 bildet som genereres.",
+                    "name": "St\u00f8rrelse"
+                }
+            }
+        }
+    }
+}

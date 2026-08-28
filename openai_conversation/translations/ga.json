@@ -1,0 +1,307 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "T\u00e1 an tseirbh\u00eds cumraithe cheana f\u00e9in",
+            "reauth_successful": "D'\u00e9irigh leis an athfh\u00edordheimhni\u00fa"
+        },
+        "error": {
+            "cannot_connect": "Theip ar an nascadh",
+            "invalid_auth": "F\u00edordheimhni\u00fa neamhbhail\u00ed",
+            "unknown": "Earr\u00e1id gan choinne"
+        },
+        "step": {
+            "reauth_confirm": {
+                "data": {
+                    "api_key": "Eochair API"
+                },
+                "data_description": {
+                    "api_key": "D\u2019eochair API OpenAI."
+                },
+                "description": "Ath-fh\u00edordheimhni\u00fa ag teast\u00e1il. Cuir isteach d'eochair API nuashonraithe le do thoil."
+            },
+            "user": {
+                "data": {
+                    "api_key": "Eochair API"
+                },
+                "data_description": {
+                    "api_key": "D\u2019eochair API OpenAI."
+                },
+                "description": "Socraigh comhth\u00e1th\u00fa Comhr\u00e1 OpenAI tr\u00ed d\u2019eochair API OpenAI a shol\u00e1thar. Is f\u00e9idir treoracha chun eochair API a fh\u00e1il a fh\u00e1il [anseo]({instructions_url})."
+            }
+        }
+    },
+    "config_subentries": {
+        "ai_task_data": {
+            "abort": {
+                "entry_not_loaded": "N\u00ed f\u00e9idir ruda\u00ed a chur leis agus an chumra\u00edocht d\u00edchumasaithe."
+            },
+            "error": {
+                "code_interpreter_minimal_reasoning": "N\u00ed thaca\u00edtear le l\u00e9irmh\u00ednitheoir c\u00f3id le hiarracht r\u00e9as\u00fana\u00edochta \u00edosta",
+                "model_not_supported": "N\u00ed thaca\u00edtear leis an tsamhail seo, roghnaigh samhail eile le do thoil.",
+                "web_search_minimal_reasoning": "N\u00ed thaca\u00edtear le cuardach gr\u00e9as\u00e1in faoi l\u00e1thair le hiarracht \u00edosta r\u00e9as\u00fana\u00edochta"
+            },
+            "step": {
+                "advanced": {
+                    "data": {
+                        "chat_model": "Samhail",
+                        "max_tokens": "Uasmh\u00e9id comhartha\u00ed le tabhairt ar ais mar fhreagra",
+                        "store_responses": "St\u00f3r\u00e1il iarratais agus freagra\u00ed in OpenAI",
+                        "temperature": "Teocht",
+                        "top_p": "Barr P"
+                    },
+                    "data_description": {
+                        "store_responses": "M\u00e1 t\u00e1 s\u00e9 cumasaithe, st\u00f3r\u00e1lann OpenAI iarratais agus freagra\u00ed agus beidh siad le feice\u00e1il i loga\u00ed do phain\u00e9il OpenAI."
+                    },
+                    "title": "Socruithe casta"
+                },
+                "init": {
+                    "data": {
+                        "name": "Ainm",
+                        "recommended": "Socruithe samhail molta"
+                    }
+                },
+                "model": {
+                    "data": {
+                        "code_interpreter": "Cumasaigh uirlis l\u00e9irmh\u00ednithe c\u00f3id",
+                        "image_model": "Samhail gini\u00fana \u00edomh\u00e1",
+                        "inline_citations": "Cuir naisc san \u00e1ireamh i dtortha\u00ed cuardaigh gr\u00e9as\u00e1in",
+                        "reasoning_effort": "Iarracht r\u00e9as\u00fana\u00edochta",
+                        "reasoning_summary": "Achoimre r\u00e9as\u00fana\u00edochta",
+                        "search_context_size": "M\u00e9id chomhth\u00e9acs cuardaigh",
+                        "service_tier": "Leibh\u00e9al seirbh\u00edse",
+                        "user_location": "Cuir su\u00edomh baile san \u00e1ireamh",
+                        "web_search": "Cumasaigh cuardach gr\u00e9as\u00e1in"
+                    },
+                    "data_description": {
+                        "code_interpreter": "Ligeann an uirlis seo, ar a dtugtar uirlis python don mh\u00fanla freisin, d\u00f3 c\u00f3d a rith chun ceisteanna a fhreagairt.",
+                        "image_model": "An tsamhail le h\u00fas\u00e1id agus \u00edomh\u00e1nna \u00e1 ngini\u00faint",
+                        "inline_citations": "M\u00e1 t\u00e1 s\u00e9 d\u00edchumasaithe, cuirtear leid bhreise leis chun iarraidh ar an tsamhail gan luanna foinse a \u00e1ireamh",
+                        "reasoning_effort": "C\u00e9 mh\u00e9ad comhartha\u00ed r\u00e9as\u00fana\u00edochta ba ch\u00f3ir don mh\u00fanla a ghini\u00faint sula gcrutha\u00edtear freagra ar an leid",
+                        "reasoning_summary": "Controls the length and detail of reasoning summaries provided by the model",
+                        "search_context_size": "Treoir ardleibh\u00e9il maidir le m\u00e9id sp\u00e1is fuinneoige comhth\u00e9acs le h\u00fas\u00e1id don chuardach",
+                        "service_tier": "Riala\u00edonn s\u00e9 an costas agus an t-am freagartha",
+                        "user_location": "Scag tortha\u00ed cuardaigh bunaithe ar gheografa\u00edocht",
+                        "web_search": "Lig don mh\u00fanla cuardach a dh\u00e9anamh ar an ngr\u00e9as\u00e1n don fhaisn\u00e9is is d\u00e9ana\u00ed sula ngintear freagra"
+                    },
+                    "title": "Roghanna samhail-shonracha"
+                }
+            }
+        },
+        "conversation": {
+            "abort": {
+                "entry_not_loaded": "N\u00ed f\u00e9idir ruda\u00ed a chur leis agus an chumra\u00edocht d\u00edchumasaithe."
+            },
+            "entry_type": "Gn\u00edomhaire comhr\u00e1",
+            "error": {
+                "code_interpreter_minimal_reasoning": "N\u00ed thaca\u00edtear le l\u00e9irmh\u00ednitheoir c\u00f3id le hiarracht r\u00e9as\u00fana\u00edochta \u00edosta",
+                "model_not_supported": "N\u00ed thaca\u00edtear leis an tsamhail seo, roghnaigh samhail eile le do thoil.",
+                "web_search_minimal_reasoning": "N\u00ed thaca\u00edtear le cuardach gr\u00e9as\u00e1in faoi l\u00e1thair le hiarracht \u00edosta r\u00e9as\u00fana\u00edochta"
+            },
+            "initiate_flow": {
+                "reconfigure": "Athchumraigh gn\u00edomhaire comhr\u00e1",
+                "user": "Cuir gn\u00edomhaire comhr\u00e1 leis"
+            },
+            "step": {
+                "advanced": {
+                    "data": {
+                        "chat_model": "Samhail",
+                        "max_tokens": "Uasmh\u00e9id comhartha\u00ed le tabhairt ar ais mar fhreagra",
+                        "store_responses": "St\u00f3r\u00e1il iarratais agus freagra\u00ed in OpenAI",
+                        "temperature": "Teocht",
+                        "top_p": "Barr P"
+                    },
+                    "data_description": {
+                        "store_responses": "M\u00e1 t\u00e1 s\u00e9 cumasaithe, st\u00f3r\u00e1lann OpenAI iarratais agus freagra\u00ed agus beidh siad le feice\u00e1il i loga\u00ed do phain\u00e9il OpenAI."
+                    },
+                    "title": "Socruithe casta"
+                },
+                "init": {
+                    "data": {
+                        "llm_hass_api": "C\u00fant\u00f3ir Rialaithe Baile",
+                        "name": "Ainm",
+                        "prompt": "Treoracha",
+                        "recommended": "Socruithe samhail molta"
+                    },
+                    "data_description": {
+                        "prompt": "Treoraigh conas ba ch\u00f3ir don LLM freagairt. Is f\u00e9idir \u00e9 seo a bheith ina theimpl\u00e9ad."
+                    }
+                },
+                "model": {
+                    "data": {
+                        "code_interpreter": "Cumasaigh uirlis l\u00e9irmh\u00ednithe c\u00f3id",
+                        "image_model": "Samhail gini\u00fana \u00edomh\u00e1",
+                        "inline_citations": "Cuir naisc san \u00e1ireamh i dtortha\u00ed cuardaigh gr\u00e9as\u00e1in",
+                        "reasoning_effort": "Iarracht r\u00e9as\u00fana\u00edochta",
+                        "reasoning_summary": "Achoimre r\u00e9as\u00fana\u00edochta",
+                        "search_context_size": "M\u00e9id chomhth\u00e9acs cuardaigh",
+                        "service_tier": "Leibh\u00e9al seirbh\u00edse",
+                        "user_location": "Cuir su\u00edomh baile san \u00e1ireamh",
+                        "web_search": "Cumasaigh cuardach gr\u00e9as\u00e1in"
+                    },
+                    "data_description": {
+                        "code_interpreter": "Ligeann an uirlis seo, ar a dtugtar uirlis python don mh\u00fanla freisin, d\u00f3 c\u00f3d a rith chun ceisteanna a fhreagairt.",
+                        "image_model": "An tsamhail le h\u00fas\u00e1id agus \u00edomh\u00e1nna \u00e1 ngini\u00faint",
+                        "inline_citations": "M\u00e1 t\u00e1 s\u00e9 d\u00edchumasaithe, cuirtear leid bhreise leis chun iarraidh ar an tsamhail gan luanna foinse a \u00e1ireamh",
+                        "reasoning_effort": "C\u00e9 mh\u00e9ad comhartha\u00ed r\u00e9as\u00fana\u00edochta ba ch\u00f3ir don mh\u00fanla a ghini\u00faint sula gcrutha\u00edtear freagra ar an leid",
+                        "reasoning_summary": "Controls the length and detail of reasoning summaries provided by the model",
+                        "search_context_size": "Treoir ardleibh\u00e9il maidir le m\u00e9id sp\u00e1is fuinneoige comhth\u00e9acs le h\u00fas\u00e1id don chuardach",
+                        "service_tier": "Riala\u00edonn s\u00e9 an costas agus an t-am freagartha",
+                        "user_location": "Scag tortha\u00ed cuardaigh bunaithe ar gheografa\u00edocht",
+                        "web_search": "Lig don mh\u00fanla cuardach a dh\u00e9anamh ar an ngr\u00e9as\u00e1n don fhaisn\u00e9is is d\u00e9ana\u00ed sula ngintear freagra"
+                    },
+                    "title": "Roghanna samhail-shonracha"
+                }
+            }
+        },
+        "stt": {
+            "abort": {
+                "entry_not_loaded": "N\u00ed f\u00e9idir ruda\u00ed a chur leis agus an chumra\u00edocht d\u00edchumasaithe."
+            },
+            "entry_type": "Urlabhra-go-t\u00e9acs",
+            "initiate_flow": {
+                "reconfigure": "Athchumraigh an tseirbh\u00eds cainte-go-t\u00e9acs",
+                "user": "Cuir seirbh\u00eds cainte-go-t\u00e9acs leis"
+            },
+            "step": {
+                "init": {
+                    "data": {
+                        "chat_model": "Samhail",
+                        "name": "Ainm",
+                        "prompt": "Treoracha"
+                    },
+                    "data_description": {
+                        "chat_model": "An tsamhail le h\u00fas\u00e1id chun urlabhra a thras-scr\u00edobh.",
+                        "prompt": "Bain \u00fas\u00e1id as an leid seo chun feabhas a chur ar ch\u00e1il\u00edocht na dtras-scr\u00edbhinn\u00ed. Aistrigh go teanga an ph\u00edbl\u00edne le haghaidh na dtortha\u00ed is fearr. F\u00e9ach ar an doicim\u00e9ad\u00fa le haghaidh tuilleadh sonra\u00ed."
+                    }
+                }
+            }
+        },
+        "tts": {
+            "abort": {
+                "entry_not_loaded": "N\u00ed f\u00e9idir ruda\u00ed a chur leis agus an chumra\u00edocht d\u00edchumasaithe."
+            },
+            "entry_type": "Text-to-speech",
+            "initiate_flow": {
+                "reconfigure": "Reconfigure text-to-speech service",
+                "user": "Add text-to-speech service"
+            },
+            "step": {
+                "init": {
+                    "data": {
+                        "name": "Ainm",
+                        "prompt": "Treoracha",
+                        "tts_speed": "Luas"
+                    },
+                    "data_description": {
+                        "prompt": "Rial\u00fa gn\u00e9ithe den chaint, lena n-\u00e1ir\u00edtear blas, raon moth\u00fach\u00e1nach, intona\u00edocht, imprisean, luas cainte, ton, cogarna\u00edocht, agus tuilleadh",
+                        "tts_speed": "Luas na cainte ginte"
+                    }
+                }
+            }
+        }
+    },
+    "exceptions": {
+        "invalid_config_entry": {
+            "message": "Iontr\u00e1il chumra\u00edochta neamhbhail\u00ed curtha ar f\u00e1il. Fuarthas {config_entry}"
+        }
+    },
+    "issues": {
+        "deprecated_generate_content": {
+            "description": "T\u00e1 an gn\u00edomh 'openai_conversation.generate_content' imithe i l\u00e9ig agus bainfear \u00e9 i leagan 2026.9.0. Bain \u00fas\u00e1id as an ngn\u00edomh 'ai_task.generate_data' ina ionad.",
+            "title": "Gn\u00edomh 'generate_content' at\u00e1 imithe i l\u00e9ig"
+        },
+        "deprecated_generate_image": {
+            "description": "T\u00e1 an gn\u00edomh 'openai_conversation.generate_image' imithe i l\u00e9ig agus bainfear \u00e9 i leagan 2026.9.0. Bain \u00fas\u00e1id as an ngn\u00edomh 'ai_task.generate_image' ina ionad.",
+            "title": "Gn\u00edomh 'generate_image' at\u00e1 imithe i l\u00e9ig"
+        },
+        "organization_verification_required": {
+            "description": "N\u00ed m\u00f3r d\u2019eagra\u00edocht a fh\u00edor\u00fa chun an tsamhail seo a \u00fas\u00e1id. T\u00e9igh go {platform_settings} agus roghnaigh F\u00edoraigh Eagra\u00edocht. M\u00e1 rinne t\u00fa f\u00edor\u00fa d\u00edreach, f\u00e9adfaidh s\u00e9 suas le 15 n\u00f3im\u00e9ad a th\u00f3g\u00e1il chun rochtain a scaipeadh.",
+            "title": "F\u00edor\u00fa eagra\u00edochta ag teast\u00e1il"
+        }
+    },
+    "selector": {
+        "reasoning_effort": {
+            "options": {
+                "high": "Ard",
+                "low": "\u00cdseal",
+                "medium": "Me\u00e1nach",
+                "minimal": "\u00cdosmh\u00e9id",
+                "none": "Dada",
+                "xhigh": "An-Ard"
+            }
+        },
+        "reasoning_summary": {
+            "options": {
+                "auto": "Uath",
+                "concise": "Gonta",
+                "detailed": "Mionsonraithe",
+                "off": "As"
+            }
+        },
+        "search_context_size": {
+            "options": {
+                "high": "Ard",
+                "low": "\u00cdseal",
+                "medium": "Me\u00e1nach"
+            }
+        },
+        "service_tier": {
+            "options": {
+                "auto": "Uath",
+                "default": "Standard",
+                "flex": "Flex",
+                "priority": "Tosa\u00edocht"
+            }
+        },
+        "verbosity": {
+            "options": {
+                "high": "Ard",
+                "low": "\u00cdseal",
+                "medium": "Me\u00e1nach"
+            }
+        }
+    },
+    "services": {
+        "generate_content": {
+            "fields": {
+                "config_entry": {
+                    "description": "An iontr\u00e1il chumra\u00edochta le h\u00fas\u00e1id don ghn\u00edomh seo",
+                    "name": "Iontr\u00e1il chumra\u00edochta"
+                },
+                "filenames": {
+                    "description": "Liosta comhad le huasl\u00f3d\u00e1il",
+                    "name": "Comhaid"
+                },
+                "prompt": {
+                    "description": "An pras le seoladh",
+                    "name": "Pras"
+                }
+            }
+        },
+        "generate_image": {
+            "fields": {
+                "config_entry": {
+                    "description": "An iontr\u00e1il chumra\u00edochta le h\u00fas\u00e1id don ghn\u00edomh seo",
+                    "name": "Iontr\u00e1il chumra\u00edochta"
+                },
+                "prompt": {
+                    "description": "An t\u00e9acs le hiomp\u00fa ina \u00edomh\u00e1",
+                    "example": "Grianghraf de mhadra",
+                    "name": "Spreag"
+                },
+                "quality": {
+                    "description": "C\u00e1il\u00edocht na h\u00edomh\u00e1 a ghinfear",
+                    "name": "C\u00e1il\u00edocht"
+                },
+                "size": {
+                    "description": "M\u00e9id na h\u00edomh\u00e1 at\u00e1 le gini\u00faint",
+                    "name": "M\u00e9id"
+                },
+                "style": {
+                    "description": "St\u00edl na h\u00edomh\u00e1 a ghintear",
+                    "name": "St\u00edl"
+                }
+            }
+        }
+    }
+}

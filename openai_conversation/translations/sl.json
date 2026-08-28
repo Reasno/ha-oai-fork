@@ -1,0 +1,64 @@
+{
+    "config": {
+        "error": {
+            "cannot_connect": "Povezava ni uspela",
+            "invalid_auth": "Neveljavna avtentikacija",
+            "unknown": "Nepri\u010dakovana napaka"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "api_key": "API klju\u010d"
+                }
+            }
+        }
+    },
+    "exceptions": {
+        "invalid_config_entry": {
+            "message": "Podan neveljaven vnos konfiguracije. Dobil {config_entry}"
+        }
+    },
+    "services": {
+        "generate_content": {
+            "fields": {
+                "config_entry": {
+                    "description": "Konfiguracijski vnos, ki se bo uporabil za to akcijo",
+                    "name": "Konfiguracijski vnos"
+                },
+                "filenames": {
+                    "description": "Seznam datotek za nalaganje",
+                    "name": "Datoteke"
+                },
+                "prompt": {
+                    "description": "Poziv, ki se bo poslal",
+                    "name": "Poziv"
+                }
+            }
+        },
+        "generate_image": {
+            "fields": {
+                "config_entry": {
+                    "description": "Konfiguracijski vnos, ki se uporabi za to akcijo",
+                    "name": "Konfiguracijski vnos"
+                },
+                "prompt": {
+                    "description": "Besedilo, ki naj se spremeni v sliko",
+                    "example": "Fotografija psa",
+                    "name": "Poziv"
+                },
+                "quality": {
+                    "description": "Kakovost slike, ki bo ustvarjena",
+                    "name": "Kakovost"
+                },
+                "size": {
+                    "description": "Velikost slike, ki naj se ustvari",
+                    "name": "Velikost"
+                },
+                "style": {
+                    "description": "Slog ustvarjene slike",
+                    "name": "Stil"
+                }
+            }
+        }
+    }
+}

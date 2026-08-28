@@ -1,0 +1,105 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Layanan sudah dikonfigurasi"
+        },
+        "error": {
+            "cannot_connect": "Gagal terhubung",
+            "invalid_auth": "Autentikasi tidak valid",
+            "unknown": "Kesalahan tak terduga"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "api_key": "Kunci API"
+                }
+            }
+        }
+    },
+    "config_subentries": {
+        "ai_task_data": {
+            "step": {
+                "advanced": {
+                    "data": {
+                        "chat_model": "Model"
+                    }
+                },
+                "init": {
+                    "data": {
+                        "name": "Nama"
+                    }
+                }
+            }
+        },
+        "conversation": {
+            "step": {
+                "advanced": {
+                    "data": {
+                        "chat_model": "Model"
+                    }
+                },
+                "init": {
+                    "data": {
+                        "llm_hass_api": "Kendalikan Home Assistant",
+                        "name": "Nama",
+                        "prompt": "Instruksi"
+                    }
+                }
+            }
+        }
+    },
+    "exceptions": {
+        "invalid_config_entry": {
+            "message": "Entri konfigurasi yang diberikan tidak valid. {config_entry} didapatkan"
+        }
+    },
+    "selector": {
+        "reasoning_effort": {
+            "options": {
+                "high": "Tinggi",
+                "low": "Rendah",
+                "medium": "Sedang"
+            }
+        },
+        "search_context_size": {
+            "options": {
+                "high": "Tinggi",
+                "low": "Rendah",
+                "medium": "Sedang"
+            }
+        },
+        "verbosity": {
+            "options": {
+                "high": "Tinggi",
+                "low": "Rendah",
+                "medium": "Sedang"
+            }
+        }
+    },
+    "services": {
+        "generate_image": {
+            "fields": {
+                "config_entry": {
+                    "description": "Entri konfigurasi yang akan digunakan untuk aksi ini"
+                },
+                "prompt": {
+                    "description": "Teks untuk diubah ke gambar",
+                    "example": "Foto anjing",
+                    "name": "Perintah"
+                },
+                "quality": {
+                    "description": "Kualitas gambar yang akan dihasilkan",
+                    "name": "Kualitas"
+                },
+                "size": {
+                    "description": "Ukuran gambar yang akan dihasilkan",
+                    "name": "Ukuran"
+                },
+                "style": {
+                    "description": "Gaya gambar yang dihasilkan",
+                    "name": "Gaya"
+                }
+            }
+        }
+    }
+}

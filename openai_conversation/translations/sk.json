@@ -1,0 +1,320 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Slu\u017eba u\u017e je nakonfigurovan\u00e1",
+            "reauth_successful": "Op\u00e4tovn\u00e9 overenie bolo \u00faspe\u0161n\u00e9"
+        },
+        "error": {
+            "cannot_connect": "Nepodarilo sa pripoji\u0165",
+            "invalid_auth": "Neplatn\u00e9 overenie",
+            "unknown": "Neo\u010dak\u00e1van\u00e1 chyba"
+        },
+        "step": {
+            "reauth_confirm": {
+                "data": {
+                    "api_key": "API k\u013e\u00fa\u010d"
+                },
+                "data_description": {
+                    "api_key": "V\u00e1\u0161 k\u013e\u00fa\u010d API OpenAI."
+                },
+                "description": "Vy\u017eaduje sa op\u00e4tovn\u00e9 overenie. Zadajte svoj aktualizovan\u00fd k\u013e\u00fa\u010d API."
+            },
+            "user": {
+                "data": {
+                    "api_key": "API k\u013e\u00fa\u010d"
+                },
+                "data_description": {
+                    "api_key": "V\u00e1\u0161 k\u013e\u00fa\u010d API OpenAI."
+                },
+                "description": "Nastavte integr\u00e1ciu OpenAI Conversation poskytnut\u00edm k\u013e\u00fa\u010da OpenAI API. Pokyny na z\u00edskanie k\u013e\u00fa\u010da API n\u00e1jdete [tu]({instructions_url})."
+            }
+        }
+    },
+    "config_subentries": {
+        "ai_task_data": {
+            "abort": {
+                "entry_not_loaded": "Nie je mo\u017en\u00e9 prid\u00e1va\u0165 veci, ke\u010f je konfigur\u00e1cia vypnut\u00e1.",
+                "reconfigure_successful": "Rekonfigur\u00e1cia bola \u00faspe\u0161n\u00e1"
+            },
+            "entry_type": "\u00daloha AI",
+            "error": {
+                "code_interpreter_minimal_reasoning": "Interpret k\u00f3du nie je podporovan\u00fd s minim\u00e1lnym \u00fasil\u00edm o uva\u017eovanie",
+                "model_not_supported": "Tento model nie je podporovan\u00fd, vyberte in\u00fd model",
+                "web_search_minimal_reasoning": "Vyh\u013ead\u00e1vanie na webe v s\u00fa\u010dasnosti nie je podporovan\u00e9 s minim\u00e1lnym \u00fasil\u00edm o zd\u00f4vodnenie"
+            },
+            "initiate_flow": {
+                "reconfigure": "Rekonfigur\u00e1cia \u00falohy AI",
+                "user": "Prida\u0165 AI \u00falohu"
+            },
+            "step": {
+                "advanced": {
+                    "data": {
+                        "chat_model": "Model",
+                        "max_tokens": "Maxim\u00e1lny po\u010det tokenov, ktor\u00e9 sa maj\u00fa vr\u00e1ti\u0165 v odpovedi",
+                        "store_responses": "Ukladanie po\u017eiadaviek a odpoved\u00ed v OpenAI",
+                        "temperature": "Teplota",
+                        "top_p": "Top P"
+                    },
+                    "data_description": {
+                        "store_responses": "Ak je povolen\u00e9, po\u017eiadavky a odpovede s\u00fa ukladan\u00e9 syst\u00e9mom OpenAI a vidite\u013en\u00e9 v protokoloch v\u00e1\u0161ho ovl\u00e1dacieho panela OpenAI."
+                    },
+                    "title": "Roz\u0161\u00edren\u00e9 nastavenia"
+                },
+                "init": {
+                    "data": {
+                        "name": "N\u00e1zov",
+                        "recommended": "Odpor\u00fa\u010dan\u00e9 nastavenia modelu"
+                    }
+                },
+                "model": {
+                    "data": {
+                        "code_interpreter": "Povolenie n\u00e1stroja na interpret\u00e1ciu k\u00f3du",
+                        "image_model": "Model generovania obr\u00e1zkov",
+                        "inline_citations": "Zahrn\u00fa\u0165 odkazy do v\u00fdsledkov webov\u00e9ho vyh\u013ead\u00e1vania",
+                        "reasoning_effort": "Rozumn\u00e9 \u00fasilie",
+                        "reasoning_summary": "Zhrnutie zd\u00f4vodnenia",
+                        "search_context_size": "Ve\u013ekos\u0165 kontextu vyh\u013ead\u00e1vania",
+                        "service_tier": "\u00darove\u0148 slu\u017eieb",
+                        "user_location": "Zahrn\u00fa\u0165 domovsk\u00fa polohu",
+                        "web_search": "Povoli\u0165 vyh\u013ead\u00e1vanie na webe"
+                    },
+                    "data_description": {
+                        "code_interpreter": "Tento n\u00e1stroj, zn\u00e1my aj ako n\u00e1stroj python pre model, umo\u017e\u0148uje spusti\u0165 k\u00f3d na zodpovedanie ot\u00e1zok",
+                        "image_model": "Model, ktor\u00fd sa m\u00e1 pou\u017ei\u0165 pri generovan\u00ed obr\u00e1zkov",
+                        "inline_citations": "Ak je vypnut\u00e9, prid\u00e1 sa \u010fal\u0161ia v\u00fdzva, aby model neobsahoval cit\u00e1cie zdrojov",
+                        "reasoning_effort": "Ko\u013eko \u017eet\u00f3nov zd\u00f4vodnenia by mal model vygenerova\u0165 pred vytvoren\u00edm odpovede na v\u00fdzvu",
+                        "reasoning_summary": "Kontroluje d\u013a\u017eku a podrobnos\u0165 s\u00fahrnov od\u00f4vodnen\u00ed poskytovan\u00fdch modelom",
+                        "search_context_size": "Vysoko\u00farov\u0148ov\u00e9 pokyny pre ve\u013ekos\u0165 priestoru kontextov\u00e9ho okna, ktor\u00fd sa m\u00e1 pou\u017ei\u0165 na vyh\u013ead\u00e1vanie",
+                        "service_tier": "Kontroluje n\u00e1klady a \u010das odozvy",
+                        "user_location": "Spresnenie v\u00fdsledkov vyh\u013ead\u00e1vania na z\u00e1klade geografick\u00e9ho h\u013eadiska",
+                        "web_search": "Umo\u017eni\u0165 modelu vyh\u013eada\u0165 na webe najnov\u0161ie inform\u00e1cie pred generovan\u00edm odpovede"
+                    },
+                    "title": "Mo\u017enosti \u0161pecifick\u00e9 pre model"
+                }
+            }
+        },
+        "conversation": {
+            "abort": {
+                "entry_not_loaded": "Nie je mo\u017en\u00e9 prid\u00e1va\u0165 veci, ke\u010f je konfigur\u00e1cia vypnut\u00e1.",
+                "reconfigure_successful": "Rekonfigur\u00e1cia bola \u00faspe\u0161n\u00e1"
+            },
+            "entry_type": "Agent pre konverz\u00e1ciu",
+            "error": {
+                "code_interpreter_minimal_reasoning": "Interpret k\u00f3du nie je podporovan\u00fd s minim\u00e1lnym \u00fasil\u00edm o uva\u017eovanie",
+                "model_not_supported": "Tento model nie je podporovan\u00fd, vyberte in\u00fd model",
+                "web_search_minimal_reasoning": "Vyh\u013ead\u00e1vanie na webe v s\u00fa\u010dasnosti nie je podporovan\u00e9 s minim\u00e1lnym \u00fasil\u00edm o zd\u00f4vodnenie"
+            },
+            "initiate_flow": {
+                "reconfigure": "Zmena konfigur\u00e1cie agenta konverz\u00e1cie",
+                "user": "Prida\u0165 agenta na konverz\u00e1ciu"
+            },
+            "step": {
+                "advanced": {
+                    "data": {
+                        "chat_model": "Model",
+                        "max_tokens": "Maxim\u00e1lny po\u010det tokenov, ktor\u00e9 sa maj\u00fa vr\u00e1ti\u0165 v odpovedi",
+                        "store_responses": "Ukladanie po\u017eiadaviek a odpoved\u00ed v OpenAI",
+                        "temperature": "Teplota",
+                        "top_p": "Top P"
+                    },
+                    "data_description": {
+                        "store_responses": "Ak je povolen\u00e9, po\u017eiadavky a odpovede s\u00fa ukladan\u00e9 syst\u00e9mom OpenAI a vidite\u013en\u00e9 v protokoloch v\u00e1\u0161ho ovl\u00e1dacieho panela OpenAI."
+                    },
+                    "title": "Roz\u0161\u00edren\u00e9 nastavenia"
+                },
+                "init": {
+                    "data": {
+                        "llm_hass_api": "Ovl\u00e1danie Home Assistant",
+                        "name": "N\u00e1zov",
+                        "prompt": "In\u0161trukcie",
+                        "recommended": "Odpor\u00fa\u010dan\u00e9 nastavenia modelu"
+                    },
+                    "data_description": {
+                        "prompt": "Pokyn, ako by mal LLM reagova\u0165. M\u00f4\u017ee \u00eds\u0165 o \u0161abl\u00f3nu."
+                    }
+                },
+                "model": {
+                    "data": {
+                        "code_interpreter": "Povolenie n\u00e1stroja na interpret\u00e1ciu k\u00f3du",
+                        "image_model": "Model generovania obr\u00e1zkov",
+                        "inline_citations": "Zahrn\u00fa\u0165 odkazy do v\u00fdsledkov webov\u00e9ho vyh\u013ead\u00e1vania",
+                        "reasoning_effort": "Rozumn\u00e9 \u00fasilie",
+                        "reasoning_summary": "Zhrnutie zd\u00f4vodnenia",
+                        "search_context_size": "Ve\u013ekos\u0165 kontextu vyh\u013ead\u00e1vania",
+                        "service_tier": "\u00darove\u0148 slu\u017eieb",
+                        "user_location": "Zahrn\u00fa\u0165 domovsk\u00fa polohu",
+                        "web_search": "Povoli\u0165 vyh\u013ead\u00e1vanie na webe"
+                    },
+                    "data_description": {
+                        "code_interpreter": "Tento n\u00e1stroj, zn\u00e1my aj ako n\u00e1stroj python pre model, umo\u017e\u0148uje spusti\u0165 k\u00f3d na zodpovedanie ot\u00e1zok",
+                        "image_model": "Model, ktor\u00fd sa m\u00e1 pou\u017ei\u0165 pri generovan\u00ed obr\u00e1zkov",
+                        "inline_citations": "Ak je vypnut\u00e9, prid\u00e1 sa \u010fal\u0161ia v\u00fdzva, aby model neobsahoval cit\u00e1cie zdrojov",
+                        "reasoning_effort": "Ko\u013eko \u017eet\u00f3nov zd\u00f4vodnenia by mal model vygenerova\u0165 pred vytvoren\u00edm odpovede na v\u00fdzvu",
+                        "reasoning_summary": "Kontroluje d\u013a\u017eku a podrobnos\u0165 s\u00fahrnov od\u00f4vodnen\u00ed poskytovan\u00fdch modelom",
+                        "search_context_size": "Vysoko\u00farov\u0148ov\u00e9 pokyny pre ve\u013ekos\u0165 priestoru kontextov\u00e9ho okna, ktor\u00fd sa m\u00e1 pou\u017ei\u0165 na vyh\u013ead\u00e1vanie",
+                        "service_tier": "Kontroluje n\u00e1klady a \u010das odozvy",
+                        "user_location": "Spresnenie v\u00fdsledkov vyh\u013ead\u00e1vania na z\u00e1klade geografick\u00e9ho h\u013eadiska",
+                        "web_search": "Umo\u017eni\u0165 modelu vyh\u013eada\u0165 na webe najnov\u0161ie inform\u00e1cie pred generovan\u00edm odpovede"
+                    },
+                    "title": "Mo\u017enosti \u0161pecifick\u00e9 pre model"
+                }
+            }
+        },
+        "stt": {
+            "abort": {
+                "entry_not_loaded": "Nie je mo\u017en\u00e9 prid\u00e1va\u0165 veci, ke\u010f je konfigur\u00e1cia vypnut\u00e1.",
+                "reconfigure_successful": "Rekonfigur\u00e1cia bola \u00faspe\u0161n\u00e1"
+            },
+            "entry_type": "Prevod re\u010di na text",
+            "initiate_flow": {
+                "reconfigure": "Prekonfigurujte slu\u017ebu prevodu re\u010di na text",
+                "user": "Pridajte slu\u017ebu prevodu re\u010di na text"
+            },
+            "step": {
+                "init": {
+                    "data": {
+                        "chat_model": "Model",
+                        "name": "N\u00e1zov",
+                        "prompt": "In\u0161trukcie"
+                    },
+                    "data_description": {
+                        "chat_model": "Model, ktor\u00fd sa m\u00e1 pou\u017ei\u0165 na prepis re\u010di.",
+                        "prompt": "T\u00fato v\u00fdzvu pou\u017eite na zlep\u0161enie kvality prepisov. Pre dosiahnutie najlep\u0161\u00edch v\u00fdsledkov ich prelo\u017ete do jazyka kan\u00e1la. \u010eal\u0161ie podrobnosti n\u00e1jdete v dokument\u00e1cii."
+                    }
+                }
+            }
+        },
+        "tts": {
+            "abort": {
+                "entry_not_loaded": "Nie je mo\u017en\u00e9 prid\u00e1va\u0165 veci, ke\u010f je konfigur\u00e1cia vypnut\u00e1.",
+                "reconfigure_successful": "Rekonfigur\u00e1cia bola \u00faspe\u0161n\u00e1"
+            },
+            "entry_type": "Prevod textu na re\u010d",
+            "initiate_flow": {
+                "reconfigure": "Prekonfigurujte slu\u017ebu prevodu textu na re\u010d",
+                "user": "Prida\u0165 slu\u017ebu prevodu textu na re\u010d"
+            },
+            "step": {
+                "init": {
+                    "data": {
+                        "name": "N\u00e1zov",
+                        "prompt": "In\u0161trukcie",
+                        "tts_speed": "R\u00fdchlos\u0165"
+                    },
+                    "data_description": {
+                        "prompt": "Ovl\u00e1danie aspektov re\u010di vr\u00e1tane pr\u00edzvuku, emocion\u00e1lneho rozsahu, inton\u00e1cie, dojmov, r\u00fdchlosti re\u010di, t\u00f3nu, \u0161epotu a \u010fal\u0161\u00edch",
+                        "tts_speed": "R\u00fdchlos\u0165 generovanej re\u010di"
+                    }
+                }
+            }
+        }
+    },
+    "exceptions": {
+        "invalid_config_entry": {
+            "message": "Zadan\u00e1 neplatn\u00e1 konfigura\u010dn\u00e1 polo\u017eka. M\u00e1m {config_entry}"
+        }
+    },
+    "issues": {
+        "deprecated_generate_content": {
+            "description": "Akcia 'openai_conversation.generate_content' je zastaran\u00e1 a bude odstr\u00e1nen\u00e1 vo verzii 2026.9.0. Namiesto toho pou\u017eite akciu 'ai_task.generate_data'",
+            "title": "Zastaran\u00e1 akcia \u201egenerate_content\u201c"
+        },
+        "deprecated_generate_image": {
+            "description": "Akcia 'openai_conversation.generate_image' je zastaran\u00e1 a bude odstr\u00e1nen\u00e1 vo verzii 2026.9.0. Namiesto toho pou\u017eite akciu 'ai_task.generate_image'",
+            "title": "Zastaran\u00e1 akcia 'generate_image'"
+        },
+        "organization_verification_required": {
+            "description": "Va\u0161a organiz\u00e1cia mus\u00ed by\u0165 overen\u00e1, aby mohla pou\u017e\u00edva\u0165 tento model. Prejdite na str\u00e1nku {platform_settings} a vyberte polo\u017eku Overi\u0165 organiz\u00e1ciu. Ak ste pr\u00e1ve overili, propag\u00e1cia pr\u00edstupu m\u00f4\u017ee trva\u0165 a\u017e 15 min\u00fat.",
+            "title": "Po\u017eadovan\u00e9 overenie organiz\u00e1cie"
+        }
+    },
+    "selector": {
+        "reasoning_effort": {
+            "options": {
+                "high": "Vysok\u00e1",
+                "low": "N\u00edzka",
+                "medium": "Stredn\u00e1",
+                "minimal": "Minim\u00e1lne",
+                "none": "\u017diadne",
+                "xhigh": "X-High"
+            }
+        },
+        "reasoning_summary": {
+            "options": {
+                "auto": "Auto",
+                "concise": "Stru\u010dn\u00e9",
+                "detailed": "Podrobn\u00e9",
+                "off": "Neakt\u00edvny"
+            }
+        },
+        "search_context_size": {
+            "options": {
+                "high": "Vysok\u00e1",
+                "low": "N\u00edzka",
+                "medium": "Stredn\u00e1"
+            }
+        },
+        "service_tier": {
+            "options": {
+                "auto": "Auto",
+                "default": "\u0160tandard",
+                "flex": "Flex",
+                "priority": "Priorita"
+            }
+        },
+        "verbosity": {
+            "options": {
+                "high": "Vysok\u00e1",
+                "low": "N\u00edzka",
+                "medium": "Stredn\u00e1"
+            }
+        }
+    },
+    "services": {
+        "generate_content": {
+            "description": "Odo\u0161le konverza\u010dn\u00fd dopyt do ChatGPT vr\u00e1tane v\u0161etk\u00fdch prilo\u017een\u00fdch obr\u00e1zkov alebo s\u00faborov PDF (zastaran\u00e9)",
+            "fields": {
+                "config_entry": {
+                    "description": "Polo\u017eka konfigur\u00e1cie, ktor\u00e1 sa m\u00e1 pou\u017ei\u0165 pre t\u00fato akciu",
+                    "name": "Polo\u017eka konfigur\u00e1cie"
+                },
+                "filenames": {
+                    "description": "Zoznam s\u00faborov na nahranie",
+                    "name": "S\u00fabory"
+                },
+                "prompt": {
+                    "description": "V\u00fdzva na odoslanie",
+                    "name": "Prompt"
+                }
+            },
+            "name": "Generova\u0165 obsah (zastaran\u00e9)"
+        },
+        "generate_image": {
+            "description": "Premen\u00ed v\u00fdzvu na obr\u00e1zok (zastaran\u00e9)",
+            "fields": {
+                "config_entry": {
+                    "description": "Polo\u017eka konfigur\u00e1cie, ktor\u00e1 sa m\u00e1 pou\u017ei\u0165 pre t\u00fato akciu",
+                    "name": "Polo\u017eka nastavenie"
+                },
+                "prompt": {
+                    "description": "Text, ktor\u00fd sa m\u00e1 zmeni\u0165 na obr\u00e1zok",
+                    "example": "Fotografia psa",
+                    "name": "Prompt"
+                },
+                "quality": {
+                    "description": "Kvalita vygenerovan\u00e9ho obrazu",
+                    "name": "Kvalita"
+                },
+                "size": {
+                    "description": "Ve\u013ekos\u0165 obr\u00e1zka, ktor\u00fd sa m\u00e1 vygenerova\u0165",
+                    "name": "Ve\u013ekos\u0165"
+                },
+                "style": {
+                    "description": "\u0160t\u00fdl vygenerovan\u00e9ho obr\u00e1zka",
+                    "name": "\u0160t\u00fdl"
+                }
+            },
+            "name": "Generova\u0165 obr\u00e1zok (zastaran\u00e9)"
+        }
+    }
+}

@@ -1,0 +1,320 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "El servicio ya est\u00e1 configurado",
+            "reauth_successful": "La autenticaci\u00f3n se volvi\u00f3 a realizar correctamente"
+        },
+        "error": {
+            "cannot_connect": "No se pudo conectar",
+            "invalid_auth": "Autenticaci\u00f3n no v\u00e1lida",
+            "unknown": "Error inesperado"
+        },
+        "step": {
+            "reauth_confirm": {
+                "data": {
+                    "api_key": "Clave API"
+                },
+                "data_description": {
+                    "api_key": "Tu clave API de OpenAI."
+                },
+                "description": "Es necesaria una nueva autenticaci\u00f3n. Por favor, introduce tu clave API actualizada."
+            },
+            "user": {
+                "data": {
+                    "api_key": "Clave API"
+                },
+                "data_description": {
+                    "api_key": "Tu clave API de OpenAI."
+                },
+                "description": "Configura la integraci\u00f3n de OpenAI Conversation proporcionando tu clave de API de OpenAI. Las instrucciones para obtener una clave de API se encuentran [aqu\u00ed]({instructions_url})."
+            }
+        }
+    },
+    "config_subentries": {
+        "ai_task_data": {
+            "abort": {
+                "entry_not_loaded": "No se pueden a\u00f1adir cosas mientras la configuraci\u00f3n est\u00e1 desactivada.",
+                "reconfigure_successful": "Se volvi\u00f3 a configurar correctamente"
+            },
+            "entry_type": "Tarea de IA",
+            "error": {
+                "code_interpreter_minimal_reasoning": "El int\u00e9rprete de c\u00f3digo no es compatible con el m\u00ednimo esfuerzo de razonamiento",
+                "model_not_supported": "Este modelo no es compatible, por favor, selecciona un modelo diferente",
+                "web_search_minimal_reasoning": "Actualmente, la b\u00fasqueda web no es compatible con el m\u00ednimo esfuerzo de razonamiento."
+            },
+            "initiate_flow": {
+                "reconfigure": "Volver a configurar la tarea de IA",
+                "user": "A\u00f1adir tarea IA"
+            },
+            "step": {
+                "advanced": {
+                    "data": {
+                        "chat_model": "Modelo",
+                        "max_tokens": "M\u00e1ximo de tokens para devolver en respuesta",
+                        "store_responses": "Almacenar solicitudes y respuestas en OpenAI",
+                        "temperature": "Temperatura",
+                        "top_p": "Top P"
+                    },
+                    "data_description": {
+                        "store_responses": "Si est\u00e1 habilitada, OpenAI almacena las solicitudes y respuestas, y estas se muestran en los registros de tu panel de control de OpenAI."
+                    },
+                    "title": "Configuraci\u00f3n avanzada"
+                },
+                "init": {
+                    "data": {
+                        "name": "Nombre",
+                        "recommended": "Ajustes recomendados del modelo"
+                    }
+                },
+                "model": {
+                    "data": {
+                        "code_interpreter": "Habilitar la herramienta de interpretaci\u00f3n de c\u00f3digo",
+                        "image_model": "Modelo de generaci\u00f3n de im\u00e1genes",
+                        "inline_citations": "Incluir enlaces en los resultados de las b\u00fasquedas web",
+                        "reasoning_effort": "Esfuerzo de razonamiento",
+                        "reasoning_summary": "Resumen del razonamiento",
+                        "search_context_size": "Tama\u00f1o del contexto de b\u00fasqueda",
+                        "service_tier": "Nivel de servicio",
+                        "user_location": "Incluir ubicaci\u00f3n de la casa",
+                        "web_search": "Habilitar la b\u00fasqueda web"
+                    },
+                    "data_description": {
+                        "code_interpreter": "Esta herramienta, tambi\u00e9n conocida como la herramienta Python para el modelo, le permite ejecutar c\u00f3digo para responder preguntas.",
+                        "image_model": "El modelo que se utilizar\u00e1 para generar im\u00e1genes",
+                        "inline_citations": "Si est\u00e1 deshabilitado, se a\u00f1ade un aviso adicional para pedirle al modelo que no incluya citas de fuentes.",
+                        "reasoning_effort": "Cu\u00e1ntos tokens de razonamiento debe generar el modelo antes de crear una respuesta a la solicitud",
+                        "reasoning_summary": "Controla la longitud y el detalle de los res\u00famenes de razonamiento proporcionados por el modelo",
+                        "search_context_size": "Orientaci\u00f3n de alto nivel sobre la cantidad de espacio de la ventana de contexto que se debe utilizar para la b\u00fasqueda",
+                        "service_tier": "Controla el coste y el tiempo de respuesta",
+                        "user_location": "Refinar los resultados de b\u00fasqueda seg\u00fan la geograf\u00eda",
+                        "web_search": "Permitir que el modelo busque en la web la informaci\u00f3n m\u00e1s reciente antes de generar una respuesta"
+                    },
+                    "title": "Opciones espec\u00edficas del modelo"
+                }
+            }
+        },
+        "conversation": {
+            "abort": {
+                "entry_not_loaded": "No se pueden a\u00f1adir cosas mientras la configuraci\u00f3n est\u00e1 desactivada.",
+                "reconfigure_successful": "Se volvi\u00f3 a configurar correctamente"
+            },
+            "entry_type": "Agente de conversaci\u00f3n",
+            "error": {
+                "code_interpreter_minimal_reasoning": "El int\u00e9rprete de c\u00f3digo no es compatible con el m\u00ednimo esfuerzo de razonamiento",
+                "model_not_supported": "Este modelo no es compatible, por favor, selecciona un modelo diferente",
+                "web_search_minimal_reasoning": "Actualmente, la b\u00fasqueda web no es compatible con el m\u00ednimo esfuerzo de razonamiento."
+            },
+            "initiate_flow": {
+                "reconfigure": "Volver a configurar el agente de conversaci\u00f3n",
+                "user": "A\u00f1adir agente de conversaci\u00f3n"
+            },
+            "step": {
+                "advanced": {
+                    "data": {
+                        "chat_model": "Modelo",
+                        "max_tokens": "M\u00e1ximo de tokens para devolver en respuesta",
+                        "store_responses": "Almacenar solicitudes y respuestas en OpenAI",
+                        "temperature": "Temperatura",
+                        "top_p": "Top P"
+                    },
+                    "data_description": {
+                        "store_responses": "Si est\u00e1 habilitada, OpenAI almacena las solicitudes y respuestas, y estas se muestran en los registros de tu panel de control de OpenAI."
+                    },
+                    "title": "Configuraci\u00f3n avanzada"
+                },
+                "init": {
+                    "data": {
+                        "llm_hass_api": "Controla Home Assistant",
+                        "name": "Nombre",
+                        "prompt": "Instrucciones",
+                        "recommended": "Ajustes recomendados del modelo"
+                    },
+                    "data_description": {
+                        "prompt": "Indica c\u00f3mo debe responder el LLM. Puede ser una plantilla."
+                    }
+                },
+                "model": {
+                    "data": {
+                        "code_interpreter": "Habilitar la herramienta de interpretaci\u00f3n de c\u00f3digo",
+                        "image_model": "Modelo de generaci\u00f3n de im\u00e1genes",
+                        "inline_citations": "Incluir enlaces en los resultados de las b\u00fasquedas web",
+                        "reasoning_effort": "Esfuerzo de razonamiento",
+                        "reasoning_summary": "Resumen del razonamiento",
+                        "search_context_size": "Tama\u00f1o del contexto de b\u00fasqueda",
+                        "service_tier": "Nivel de servicio",
+                        "user_location": "Incluir ubicaci\u00f3n de la casa",
+                        "web_search": "Habilitar la b\u00fasqueda web"
+                    },
+                    "data_description": {
+                        "code_interpreter": "Esta herramienta, tambi\u00e9n conocida como la herramienta Python para el modelo, le permite ejecutar c\u00f3digo para responder preguntas.",
+                        "image_model": "El modelo que se utilizar\u00e1 para generar im\u00e1genes",
+                        "inline_citations": "Si est\u00e1 deshabilitado, se a\u00f1ade un aviso adicional para pedirle al modelo que no incluya citas de fuentes.",
+                        "reasoning_effort": "Cu\u00e1ntos tokens de razonamiento debe generar el modelo antes de crear una respuesta a la solicitud",
+                        "reasoning_summary": "Controla la longitud y el detalle de los res\u00famenes de razonamiento proporcionados por el modelo",
+                        "search_context_size": "Orientaci\u00f3n de alto nivel sobre la cantidad de espacio de la ventana de contexto que se debe utilizar para la b\u00fasqueda",
+                        "service_tier": "Controla el coste y el tiempo de respuesta",
+                        "user_location": "Refinar los resultados de b\u00fasqueda seg\u00fan la geograf\u00eda",
+                        "web_search": "Permitir que el modelo busque en la web la informaci\u00f3n m\u00e1s reciente antes de generar una respuesta"
+                    },
+                    "title": "Opciones espec\u00edficas del modelo"
+                }
+            }
+        },
+        "stt": {
+            "abort": {
+                "entry_not_loaded": "No se pueden a\u00f1adir cosas mientras la configuraci\u00f3n est\u00e1 desactivada.",
+                "reconfigure_successful": "Se volvi\u00f3 a configurar correctamente"
+            },
+            "entry_type": "Voz a texto",
+            "initiate_flow": {
+                "reconfigure": "Volver a configurar el servicio de voz a texto",
+                "user": "A\u00f1adir servicio de voz a texto"
+            },
+            "step": {
+                "init": {
+                    "data": {
+                        "chat_model": "Modelo",
+                        "name": "Nombre",
+                        "prompt": "Instrucciones"
+                    },
+                    "data_description": {
+                        "chat_model": "El modelo a utilizar para transcribir el habla.",
+                        "prompt": "Utilizar este prompt para mejorar la calidad de las transcripciones. Traducir al idioma del pipeline para obtener mejores resultados. Consulta la documentaci\u00f3n para obtener m\u00e1s detalles."
+                    }
+                }
+            }
+        },
+        "tts": {
+            "abort": {
+                "entry_not_loaded": "No se pueden a\u00f1adir cosas mientras la configuraci\u00f3n est\u00e1 desactivada.",
+                "reconfigure_successful": "Se volvi\u00f3 a configurar correctamente"
+            },
+            "entry_type": "Texto a voz",
+            "initiate_flow": {
+                "reconfigure": "Volver a configurar el servicio de texto a voz",
+                "user": "A\u00f1adir servicio de texto a voz"
+            },
+            "step": {
+                "init": {
+                    "data": {
+                        "name": "Nombre",
+                        "prompt": "Instrucciones",
+                        "tts_speed": "Velocidad"
+                    },
+                    "data_description": {
+                        "prompt": "Controla aspectos del habla, como el acento, el rango emocional, la entonaci\u00f3n, las impresiones, la velocidad del habla, el tono, los susurros, etc",
+                        "tts_speed": "Velocidad del discurso generado"
+                    }
+                }
+            }
+        }
+    },
+    "exceptions": {
+        "invalid_config_entry": {
+            "message": "Se proporcion\u00f3 una entrada de configuraci\u00f3n no v\u00e1lida. Se obtuvo {config_entry}"
+        }
+    },
+    "issues": {
+        "deprecated_generate_content": {
+            "description": "La acci\u00f3n \u00abopenai_conversation.generate_content\u00bb est\u00e1 obsoleta y se eliminar\u00e1 en la versi\u00f3n 2026.9.0. Por favor, utiliza la acci\u00f3n \u00abai_task.generate_data\u00bb en su lugar.",
+            "title": "Acci\u00f3n 'generate_content' obsoleta"
+        },
+        "deprecated_generate_image": {
+            "description": "La acci\u00f3n \u00abopenai_conversation.generate_image\u00bb est\u00e1 obsoleta y se eliminar\u00e1 en la versi\u00f3n 2026.9.0. Por favor, utiliza la acci\u00f3n \u00abai_task.generate_image\u00bb en su lugar.",
+            "title": "Acci\u00f3n 'generate_image' obsoleta"
+        },
+        "organization_verification_required": {
+            "description": "Tu organizaci\u00f3n debe estar verificada para usar este modelo. Ve a {platform_settings} y selecciona Verificar organizaci\u00f3n. Si acabas de verificar, el acceso puede tardar hasta 15 minutos en propagarse.",
+            "title": "Se requiere verificaci\u00f3n de la organizaci\u00f3n"
+        }
+    },
+    "selector": {
+        "reasoning_effort": {
+            "options": {
+                "high": "Alto",
+                "low": "Bajo",
+                "medium": "Medio",
+                "minimal": "M\u00ednimo",
+                "none": "Ninguno",
+                "xhigh": "X-High"
+            }
+        },
+        "reasoning_summary": {
+            "options": {
+                "auto": "Auto",
+                "concise": "Conciso",
+                "detailed": "Detallado",
+                "off": "Apagado"
+            }
+        },
+        "search_context_size": {
+            "options": {
+                "high": "Alto",
+                "low": "Bajo",
+                "medium": "Medio"
+            }
+        },
+        "service_tier": {
+            "options": {
+                "auto": "Auto",
+                "default": "Est\u00e1ndar",
+                "flex": "Flex",
+                "priority": "Prioridad"
+            }
+        },
+        "verbosity": {
+            "options": {
+                "high": "Alto",
+                "low": "Bajo",
+                "medium": "Medio"
+            }
+        }
+    },
+    "services": {
+        "generate_content": {
+            "description": "Env\u00eda una consulta conversacional a ChatGPT, incluyendo cualquier imagen o archivo PDF adjunto (obsoleto)",
+            "fields": {
+                "config_entry": {
+                    "description": "La entrada de configuraci\u00f3n que se utilizar\u00e1 para esta acci\u00f3n.",
+                    "name": "Entrada de configuraci\u00f3n"
+                },
+                "filenames": {
+                    "description": "Lista de archivos para subir",
+                    "name": "Archivos"
+                },
+                "prompt": {
+                    "description": "El mensaje para enviar",
+                    "name": "Entrada"
+                }
+            },
+            "name": "Generar contenido (obsoleto)"
+        },
+        "generate_image": {
+            "description": "Convierte un prompt en una imagen (obsoleto)",
+            "fields": {
+                "config_entry": {
+                    "description": "La entrada de configuraci\u00f3n que se utilizar\u00e1 para esta acci\u00f3n.",
+                    "name": "Entrada de configuraci\u00f3n"
+                },
+                "prompt": {
+                    "description": "El texto a convertir en imagen",
+                    "example": "Una foto de un perro",
+                    "name": "Entrada"
+                },
+                "quality": {
+                    "description": "La calidad de la imagen que se generar\u00e1.",
+                    "name": "Calidad"
+                },
+                "size": {
+                    "description": "El tama\u00f1o de la imagen a generar.",
+                    "name": "Tama\u00f1o"
+                },
+                "style": {
+                    "description": "El estilo de la imagen generada.",
+                    "name": "Estilo"
+                }
+            },
+            "name": "Generar imagen (obsoleto)"
+        }
+    }
+}

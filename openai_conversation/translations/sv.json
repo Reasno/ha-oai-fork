@@ -1,0 +1,209 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Tj\u00e4nsten \u00e4r redan konfigurerad"
+        },
+        "error": {
+            "cannot_connect": "Det gick inte att ansluta",
+            "invalid_auth": "Ogiltig autentisering",
+            "unknown": "Ov\u00e4ntat fel"
+        },
+        "step": {
+            "reauth_confirm": {
+                "data": {
+                    "api_key": "API-nyckel"
+                },
+                "data_description": {
+                    "api_key": "Din OpenAI API-nyckel."
+                }
+            },
+            "user": {
+                "data": {
+                    "api_key": "API-nyckel"
+                },
+                "data_description": {
+                    "api_key": "Din OpenAI API-nyckel."
+                },
+                "description": "St\u00e4ll in OpenAI Conversation-integration genom att ange din OpenAI API-nyckel. Instruktioner f\u00f6r att f\u00e5 en API-nyckel finns [h\u00e4r]({instructions_url})."
+            }
+        }
+    },
+    "config_subentries": {
+        "ai_task_data": {
+            "abort": {
+                "entry_not_loaded": "Det g\u00e5r inte att l\u00e4gga till saker n\u00e4r konfigurationen \u00e4r inaktiverad."
+            },
+            "error": {
+                "model_not_supported": "Denna modell st\u00f6ds inte, v\u00e4lj en annan modell",
+                "web_search_minimal_reasoning": "Webbs\u00f6kning st\u00f6ds f\u00f6r n\u00e4rvarande inte med minimal resonemangsanstr\u00e4ngning"
+            },
+            "step": {
+                "advanced": {
+                    "data": {
+                        "chat_model": "Modell",
+                        "store_responses": "Lagra f\u00f6rfr\u00e5gningar och svar i OpenAI",
+                        "temperature": "Temperatur"
+                    },
+                    "data_description": {
+                        "store_responses": "Om aktiverat lagras f\u00f6rfr\u00e5gningar och svar av OpenAI och syns i dina OpenAI-kontrollpanelloggar"
+                    },
+                    "title": "Avancerade inst\u00e4llningar"
+                },
+                "init": {
+                    "data": {
+                        "name": "Namn",
+                        "recommended": "Rekommenderade modellinst\u00e4llningar"
+                    }
+                },
+                "model": {
+                    "data": {
+                        "code_interpreter": "Aktivera verktyget f\u00f6r kodtolkning",
+                        "image_model": "Modell f\u00f6r bildgenerering",
+                        "inline_citations": "Inkludera l\u00e4nkar i webbs\u00f6kresultat",
+                        "user_location": "Inkludera hemplats",
+                        "web_search": "Aktivera webbs\u00f6kning"
+                    },
+                    "data_description": {
+                        "code_interpreter": "Det h\u00e4r verktyget, \u00e4ven k\u00e4nt som modellens pythonverktyg, l\u00e5ter den k\u00f6ra kod f\u00f6r att besvara fr\u00e5gor.",
+                        "image_model": "Den modell som ska anv\u00e4ndas f\u00f6r att generera bilder",
+                        "inline_citations": "Om inaktiverat l\u00e4ggs ytterligare en uppmaning till f\u00f6r att be modellen att inte inkludera k\u00e4llh\u00e4nvisningar",
+                        "user_location": "F\u00f6rfina s\u00f6kresultaten baserat p\u00e5 geografi",
+                        "web_search": "Till\u00e5t modellen att s\u00f6ka p\u00e5 webben efter den senaste informationen innan ett svar genereras"
+                    },
+                    "title": "Modellspecifika alternativ"
+                }
+            }
+        },
+        "conversation": {
+            "abort": {
+                "entry_not_loaded": "Det g\u00e5r inte att l\u00e4gga till saker n\u00e4r konfigurationen \u00e4r inaktiverad."
+            },
+            "error": {
+                "model_not_supported": "Denna modell st\u00f6ds inte, v\u00e4lj en annan modell",
+                "web_search_minimal_reasoning": "Webbs\u00f6kning st\u00f6ds f\u00f6r n\u00e4rvarande inte med minimal resonemangsanstr\u00e4ngning"
+            },
+            "step": {
+                "advanced": {
+                    "data": {
+                        "chat_model": "Modell",
+                        "store_responses": "Lagra f\u00f6rfr\u00e5gningar och svar i OpenAI",
+                        "temperature": "Temperatur"
+                    },
+                    "data_description": {
+                        "store_responses": "Om aktiverat lagras f\u00f6rfr\u00e5gningar och svar av OpenAI och syns i dina OpenAI-kontrollpanelloggar"
+                    },
+                    "title": "Avancerade inst\u00e4llningar"
+                },
+                "init": {
+                    "data": {
+                        "llm_hass_api": "Styr Home Assistant",
+                        "name": "Namn",
+                        "prompt": "Instruktioner",
+                        "recommended": "Rekommenderade modellinst\u00e4llningar"
+                    },
+                    "data_description": {
+                        "prompt": "Instruera hur LLM:en ska svara. Detta kan vara en mall."
+                    }
+                },
+                "model": {
+                    "data": {
+                        "image_model": "Modell f\u00f6r bildgenerering",
+                        "user_location": "Inkludera hemplats",
+                        "web_search": "Aktivera webbs\u00f6kning"
+                    },
+                    "data_description": {
+                        "code_interpreter": "Detta verktyg, \u00e4ven k\u00e4nt som modellens pythonverktyg, g\u00f6r det m\u00f6jligt att k\u00f6ra kod f\u00f6r att svara p\u00e5 fr\u00e5gor",
+                        "image_model": "Den modell som ska anv\u00e4ndas f\u00f6r att generera bilder",
+                        "user_location": "F\u00f6rfina s\u00f6kresultaten baserat p\u00e5 geografi",
+                        "web_search": "Till\u00e5t modellen att s\u00f6ka p\u00e5 webben efter den senaste informationen innan ett svar genereras"
+                    },
+                    "title": "Modellspecifika alternativ"
+                }
+            }
+        }
+    },
+    "exceptions": {
+        "invalid_config_entry": {
+            "message": "Ogiltig konfigurationspost har angetts. Fick {config_entry}"
+        }
+    },
+    "issues": {
+        "organization_verification_required": {
+            "description": "Din organisation m\u00e5ste verifieras f\u00f6r att kunna anv\u00e4nda den h\u00e4r modellen. G\u00e5 till {platform_settings} och v\u00e4lj Verifiera organisation. Om du just har verifierat kan det ta upp till 15 minuter innan \u00e5tkomsten sprids.",
+            "title": "Organisationsverifiering kr\u00e4vs"
+        }
+    },
+    "selector": {
+        "reasoning_effort": {
+            "options": {
+                "high": "H\u00f6g",
+                "low": "L\u00e5g",
+                "medium": "Medel",
+                "minimal": "Minimal",
+                "none": "Ingen"
+            }
+        },
+        "reasoning_summary": {
+            "options": {
+                "off": "Av"
+            }
+        },
+        "search_context_size": {
+            "options": {
+                "high": "H\u00f6g",
+                "low": "L\u00e5g",
+                "medium": "Medel"
+            }
+        },
+        "verbosity": {
+            "options": {
+                "high": "H\u00f6g",
+                "low": "L\u00e5g",
+                "medium": "Medel"
+            }
+        }
+    },
+    "services": {
+        "generate_content": {
+            "fields": {
+                "config_entry": {
+                    "description": "Den konfigurationspost som ska anv\u00e4ndas f\u00f6r den h\u00e4r \u00e5tg\u00e4rden",
+                    "name": "Konfigurationspost"
+                },
+                "filenames": {
+                    "description": "Lista \u00f6ver filer att ladda upp",
+                    "name": "Filer"
+                },
+                "prompt": {
+                    "description": "Prompten som ska skickas",
+                    "name": "Prompt"
+                }
+            }
+        },
+        "generate_image": {
+            "fields": {
+                "config_entry": {
+                    "description": "Den konfigurationspost som ska anv\u00e4ndas f\u00f6r den h\u00e4r \u00e5tg\u00e4rden",
+                    "name": "Konfigurationspost"
+                },
+                "prompt": {
+                    "description": "Texten som ska omvandlas till bild",
+                    "example": "Ett foto p\u00e5 en hund",
+                    "name": "Prompt"
+                },
+                "quality": {
+                    "description": "Kvaliteten p\u00e5 den bild som kommer att genereras",
+                    "name": "Kvalitet"
+                },
+                "size": {
+                    "description": "Storleken p\u00e5 bilden som ska genereras",
+                    "name": "Storlek"
+                },
+                "style": {
+                    "description": "Stilen f\u00f6r den genererade bilden",
+                    "name": "Stil"
+                }
+            }
+        }
+    }
+}

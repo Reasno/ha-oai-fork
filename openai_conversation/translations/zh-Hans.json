@@ -1,0 +1,305 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "\u670d\u52a1\u5df2\u914d\u7f6e",
+            "reauth_successful": "\u91cd\u65b0\u8ba4\u8bc1\u6210\u529f"
+        },
+        "error": {
+            "cannot_connect": "\u8fde\u63a5\u5931\u8d25",
+            "invalid_auth": "\u8eab\u4efd\u9a8c\u8bc1\u65e0\u6548",
+            "unknown": "\u610f\u5916\u9519\u8bef"
+        },
+        "step": {
+            "reauth_confirm": {
+                "data": {
+                    "api_key": "API \u5bc6\u94a5"
+                },
+                "data_description": {
+                    "api_key": "\u60a8\u7684 OpenAI API \u5bc6\u94a5\u3002"
+                },
+                "description": "\u9700\u8981\u91cd\u65b0\u9a8c\u8bc1\u8eab\u4efd\u3002\u8bf7\u8f93\u5165\u60a8\u66f4\u65b0\u540e\u7684 API \u5bc6\u94a5\u3002"
+            },
+            "user": {
+                "data": {
+                    "api_key": "API \u5bc6\u94a5"
+                },
+                "data_description": {
+                    "api_key": "\u60a8\u7684 OpenAI API \u5bc6\u94a5\u3002"
+                },
+                "description": "\u8bf7\u63d0\u4f9b\u60a8\u7684 OpenAI API \u5bc6\u94a5\u4ee5\u8bbe\u7f6e OpenAI Conversation \u96c6\u6210\u3002\u3010\u6b64\u5904\u3011({instructions_url}\uff09\u6709\u83b7\u53d6 API \u5bc6\u94a5\u7684\u8bf4\u660e\u3002"
+            }
+        }
+    },
+    "config_subentries": {
+        "ai_task_data": {
+            "abort": {
+                "entry_not_loaded": "\u7981\u7528\u914d\u7f6e\u65f6\u65e0\u6cd5\u6dfb\u52a0\u5185\u5bb9\u3002",
+                "reconfigure_successful": "\u91cd\u65b0\u914d\u7f6e\u6210\u529f"
+            },
+            "entry_type": "\u4eba\u5de5\u667a\u80fd\u4efb\u52a1",
+            "error": {
+                "model_not_supported": "\u4e0d\u652f\u6301\u6b64\u6a21\u578b\uff0c\u8bf7\u9009\u62e9\u5176\u5b83\u6a21\u578b",
+                "web_search_minimal_reasoning": "\u76ee\u524d\u4e0d\u652f\u6301\u4ee5\u6700\u5c11\u7684\u63a8\u7406\u52aa\u529b\u8fdb\u884c\u7f51\u7edc\u641c\u7d22"
+            },
+            "initiate_flow": {
+                "reconfigure": "\u91cd\u65b0\u914d\u7f6e\u4eba\u5de5\u667a\u80fd\u4efb\u52a1",
+                "user": "\u6dfb\u52a0\u4eba\u5de5\u667a\u80fd\u4efb\u52a1"
+            },
+            "step": {
+                "advanced": {
+                    "data": {
+                        "chat_model": "\u6a21\u578b",
+                        "max_tokens": "\u56de\u5e94\u4e2d\u8fd4\u56de\u7684\u6700\u5927\u4ee4\u724c\u6570",
+                        "temperature": "\u6e29\u5ea6",
+                        "top_p": "Top P"
+                    },
+                    "title": "\u9ad8\u7ea7\u8bbe\u7f6e"
+                },
+                "init": {
+                    "data": {
+                        "name": "\u540d\u79f0",
+                        "recommended": "\u63a8\u8350\u7684\u6a21\u578b\u8bbe\u7f6e"
+                    }
+                },
+                "model": {
+                    "data": {
+                        "code_interpreter": "\u542f\u7528\u4ee3\u7801\u89e3\u91ca\u5de5\u5177",
+                        "image_model": "\u56fe\u50cf\u751f\u6210\u6a21\u578b",
+                        "inline_citations": "\u5728\u7f51\u9875\u641c\u7d22\u7ed3\u679c\u4e2d\u5305\u542b\u94fe\u63a5",
+                        "reasoning_effort": "\u63a8\u7406\u52aa\u529b",
+                        "reasoning_summary": "\u63a8\u7406\u6982\u8981",
+                        "search_context_size": "\u641c\u7d22\u4e0a\u4e0b\u6587\u5927\u5c0f",
+                        "service_tier": "\u670d\u52a1\u5c42\u7ea7",
+                        "user_location": "\u5305\u62ec\u5bb6\u5ead\u4f4d\u7f6e",
+                        "web_search": "\u542f\u7528\u7f51\u9875\u641c\u7d22"
+                    },
+                    "data_description": {
+                        "code_interpreter": "\u8fd9\u4e2a\u5de5\u5177\uff0c\u4e5f\u79f0\u4e3a\u6a21\u578b\u7684 Python \u5de5\u5177\uff0c\u53ef\u8ba9\u5b83\u8fd0\u884c\u4ee3\u7801\u6765\u56de\u7b54\u95ee\u9898",
+                        "image_model": "\u751f\u6210\u56fe\u50cf\u65f6\u4f7f\u7528\u7684\u6a21\u578b",
+                        "inline_citations": "\u5982\u679c\u7981\u7528\u6b64\u529f\u80fd\uff0c\u5219\u4f1a\u6dfb\u52a0\u989d\u5916\u63d0\u793a\uff0c\u8be2\u95ee\u6a21\u578b\u662f\u5426\u5305\u542b\u6765\u6e90\u5f15\u7528",
+                        "reasoning_effort": "\u5728\u5bf9\u63d0\u793a\u505a\u51fa\u56de\u5e94\u4e4b\u524d\uff0c\u6a21\u578b\u5e94\u8be5\u751f\u6210\u591a\u5c11\u4e2a\u63a8\u7406\u6807\u8bb0",
+                        "reasoning_summary": "\u63a7\u5236\u6a21\u578b\u6240\u63d0\u4f9b\u63a8\u7406\u6982\u8981\u7684\u957f\u5ea6\u548c\u7ec6\u8282",
+                        "search_context_size": "\u7528\u4e8e\u641c\u7d22\u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u7a7a\u95f4\u91cf\u7684\u9ad8\u7ea7\u6307\u5bfc",
+                        "service_tier": "\u63a7\u5236\u6210\u672c\u548c\u54cd\u5e94\u65f6\u95f4",
+                        "user_location": "\u6839\u636e\u5730\u7406\u4f4d\u7f6e\u4f18\u5316\u641c\u7d22\u7ed3\u679c",
+                        "web_search": "\u5141\u8bb8\u6a21\u578b\u5728\u751f\u6210\u56de\u5e94\u4e4b\u524d\u5728\u7f51\u4e0a\u641c\u7d22\u6700\u65b0\u4fe1\u606f"
+                    },
+                    "title": "\u7279\u5b9a\u4e8e\u6a21\u578b\u7684\u9009\u9879"
+                }
+            }
+        },
+        "conversation": {
+            "abort": {
+                "entry_not_loaded": "\u7981\u7528\u914d\u7f6e\u65f6\u65e0\u6cd5\u6dfb\u52a0\u5185\u5bb9\u3002",
+                "reconfigure_successful": "\u91cd\u65b0\u914d\u7f6e\u6210\u529f"
+            },
+            "entry_type": "\u5bf9\u8bdd\u4ee3\u7406",
+            "error": {
+                "model_not_supported": "\u4e0d\u652f\u6301\u6b64\u6a21\u578b\uff0c\u8bf7\u9009\u62e9\u5176\u5b83\u6a21\u578b",
+                "web_search_minimal_reasoning": "\u76ee\u524d\u4e0d\u652f\u6301\u4ee5\u6700\u5c11\u7684\u63a8\u7406\u52aa\u529b\u8fdb\u884c\u7f51\u7edc\u641c\u7d22"
+            },
+            "initiate_flow": {
+                "reconfigure": "\u91cd\u65b0\u914d\u7f6e\u5bf9\u8bdd\u4ee3\u7406",
+                "user": "\u6dfb\u52a0\u5bf9\u8bdd\u4ee3\u7406"
+            },
+            "step": {
+                "advanced": {
+                    "data": {
+                        "chat_model": "\u6a21\u578b",
+                        "max_tokens": "\u56de\u5e94\u4e2d\u8fd4\u56de\u7684\u6700\u5927\u4ee4\u724c\u6570",
+                        "temperature": "\u6e29\u5ea6",
+                        "top_p": "Top P"
+                    },
+                    "title": "\u9ad8\u7ea7\u8bbe\u7f6e"
+                },
+                "init": {
+                    "data": {
+                        "llm_hass_api": "\u63a7\u5236 Home Assistant",
+                        "name": "\u540d\u79f0",
+                        "prompt": "\u6307\u5bfc",
+                        "recommended": "\u63a8\u8350\u7684\u6a21\u578b\u8bbe\u7f6e"
+                    },
+                    "data_description": {
+                        "prompt": "\u6307\u5bfc LLM \u5e94\u8be5\u5982\u4f55\u56de\u5e94\u3002\u8fd9\u53ef\u4ee5\u662f\u4e00\u4e2a\u6a21\u677f\u3002"
+                    }
+                },
+                "model": {
+                    "data": {
+                        "code_interpreter": "\u542f\u7528\u4ee3\u7801\u89e3\u91ca\u5de5\u5177",
+                        "image_model": "\u56fe\u50cf\u751f\u6210\u6a21\u578b",
+                        "inline_citations": "\u5728\u7f51\u9875\u641c\u7d22\u7ed3\u679c\u4e2d\u5305\u542b\u94fe\u63a5",
+                        "reasoning_effort": "\u63a8\u7406\u52aa\u529b",
+                        "reasoning_summary": "\u63a8\u7406\u6982\u8981",
+                        "search_context_size": "\u641c\u7d22\u4e0a\u4e0b\u6587\u5927\u5c0f",
+                        "service_tier": "\u670d\u52a1\u5c42\u7ea7",
+                        "user_location": "\u5305\u62ec\u5bb6\u5ead\u4f4d\u7f6e",
+                        "web_search": "\u542f\u7528\u7f51\u9875\u641c\u7d22"
+                    },
+                    "data_description": {
+                        "code_interpreter": "\u8fd9\u4e2a\u5de5\u5177\uff0c\u4e5f\u79f0\u4e3a\u6a21\u578b\u7684 Python \u5de5\u5177\uff0c\u53ef\u8ba9\u5b83\u8fd0\u884c\u4ee3\u7801\u6765\u56de\u7b54\u95ee\u9898",
+                        "image_model": "\u751f\u6210\u56fe\u50cf\u65f6\u4f7f\u7528\u7684\u6a21\u578b",
+                        "inline_citations": "\u5982\u679c\u7981\u7528\u6b64\u529f\u80fd\uff0c\u5219\u4f1a\u6dfb\u52a0\u989d\u5916\u63d0\u793a\uff0c\u8be2\u95ee\u6a21\u578b\u662f\u5426\u5305\u542b\u6765\u6e90\u5f15\u7528",
+                        "reasoning_effort": "\u5728\u5bf9\u63d0\u793a\u505a\u51fa\u56de\u5e94\u4e4b\u524d\uff0c\u6a21\u578b\u5e94\u8be5\u751f\u6210\u591a\u5c11\u4e2a\u63a8\u7406\u6807\u8bb0",
+                        "reasoning_summary": "\u63a7\u5236\u6a21\u578b\u6240\u63d0\u4f9b\u63a8\u7406\u6982\u8981\u7684\u957f\u5ea6\u548c\u7ec6\u8282",
+                        "search_context_size": "\u7528\u4e8e\u641c\u7d22\u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u7a7a\u95f4\u91cf\u7684\u9ad8\u7ea7\u6307\u5bfc",
+                        "service_tier": "\u63a7\u5236\u6210\u672c\u548c\u54cd\u5e94\u65f6\u95f4",
+                        "user_location": "\u6839\u636e\u5730\u7406\u4f4d\u7f6e\u4f18\u5316\u641c\u7d22\u7ed3\u679c",
+                        "web_search": "\u5141\u8bb8\u6a21\u578b\u5728\u751f\u6210\u56de\u5e94\u4e4b\u524d\u5728\u7f51\u4e0a\u641c\u7d22\u6700\u65b0\u4fe1\u606f"
+                    },
+                    "title": "\u7279\u5b9a\u4e8e\u6a21\u578b\u7684\u9009\u9879"
+                }
+            }
+        },
+        "stt": {
+            "abort": {
+                "entry_not_loaded": "\u7981\u7528\u914d\u7f6e\u65f6\u65e0\u6cd5\u6dfb\u52a0\u5185\u5bb9\u3002",
+                "reconfigure_successful": "\u91cd\u65b0\u914d\u7f6e\u6210\u529f"
+            },
+            "entry_type": "\u8bed\u97f3\u8f6c\u6587\u672c",
+            "initiate_flow": {
+                "reconfigure": "\u91cd\u65b0\u914d\u7f6e\u8bed\u97f3\u8f6c\u6587\u672c\u670d\u52a1",
+                "user": "\u6dfb\u52a0\u8bed\u97f3\u8f6c\u6587\u672c\u670d\u52a1"
+            },
+            "step": {
+                "init": {
+                    "data": {
+                        "chat_model": "\u6a21\u578b",
+                        "name": "\u540d\u79f0",
+                        "prompt": "\u6307\u5bfc"
+                    }
+                }
+            }
+        },
+        "tts": {
+            "abort": {
+                "entry_not_loaded": "\u7981\u7528\u914d\u7f6e\u65f6\u65e0\u6cd5\u6dfb\u52a0\u5185\u5bb9\u3002",
+                "reconfigure_successful": "\u91cd\u65b0\u914d\u7f6e\u6210\u529f"
+            },
+            "entry_type": "\u6587\u672c\u8f6c\u8bed\u97f3",
+            "initiate_flow": {
+                "reconfigure": "\u91cd\u65b0\u914d\u7f6e\u6587\u672c\u8f6c\u8bed\u97f3\u670d\u52a1",
+                "user": "\u6dfb\u52a0\u6587\u672c\u8f6c\u8bed\u97f3\u670d\u52a1"
+            },
+            "step": {
+                "init": {
+                    "data": {
+                        "name": "\u540d\u79f0",
+                        "prompt": "\u6307\u5bfc",
+                        "tts_speed": "\u901f\u5ea6"
+                    },
+                    "data_description": {
+                        "prompt": "\u63a7\u5236\u8bed\u97f3\u7684\u5404\u4e2a\u65b9\u9762\uff0c\u5305\u62ec\u53e3\u97f3\u3001\u60c5\u611f\u8303\u56f4\u3001\u8bed\u8c03\u3001\u5370\u8c61\u3001\u8bed\u901f\u3001\u8bed\u6c14\u3001\u8033\u8bed\u7b49",
+                        "tts_speed": "\u751f\u6210\u8bed\u97f3\u7684\u901f\u5ea6"
+                    }
+                }
+            }
+        }
+    },
+    "exceptions": {
+        "invalid_config_entry": {
+            "message": "\u63d0\u4f9b\u7684\u914d\u7f6e\u6761\u76ee\u65e0\u6548\u3002\u73b0\u5728\u7684\u662f {config_entry}"
+        }
+    },
+    "issues": {
+        "deprecated_generate_content": {
+            "description": "\u52a8\u4f5c \"openai_conversation.generate_content\" \u5df2\u88ab\u5f03\u7528\uff0c\u5e76\u5c06\u5728 2026.9.0 \u7248\u672c\u4e2d\u79fb\u9664\u3002\u8bf7\u4f7f\u7528 \"ai_task.generate_data\" \u52a8\u4f5c\u66ff\u4ee3",
+            "title": "\u5df2\u5f03\u7528 \u201cgenerate_content\u201d \u52a8\u4f5c"
+        },
+        "deprecated_generate_image": {
+            "description": "\u52a8\u4f5c \"openai_conversation.generate_image\" \u5df2\u88ab\u5f03\u7528\uff0c\u5e76\u5c06\u5728 2026.9.0 \u7248\u672c\u4e2d\u79fb\u9664\u3002\u8bf7\u4f7f\u7528 \"ai_task.generate_image\" \u52a8\u4f5c\u66ff\u4ee3",
+            "title": "\u5df2\u5f03\u7528 \u201cgenerate_image\u201d \u52a8\u4f5c"
+        },
+        "organization_verification_required": {
+            "description": "\u60a8\u7684\u7ec4\u7ec7\u5fc5\u987b\u7ecf\u8fc7\u9a8c\u8bc1\u624d\u80fd\u4f7f\u7528\u6b64\u6a21\u578b\u3002\u8bf7\u524d\u5f80{platform_settings}\u5e76\u9009\u62e9\u201c\u9a8c\u8bc1\u7ec4\u7ec7\u201d\u3002\u5982\u679c\u60a8\u521a\u521a\u9a8c\u8bc1\uff0c\u8bbf\u95ee\u6743\u9650\u6700\u591a\u53ef\u80fd\u9700\u8981 15 \u5206\u949f\u624d\u80fd\u751f\u6548\u3002",
+            "title": "\u9700\u8981\u7ec4\u7ec7\u9a8c\u8bc1"
+        }
+    },
+    "selector": {
+        "reasoning_effort": {
+            "options": {
+                "high": "\u9ad8",
+                "low": "\u4f4e",
+                "medium": "\u4e2d",
+                "minimal": "\u6700\u5c0f",
+                "none": "\u65e0",
+                "xhigh": "\u8d85\u9ad8"
+            }
+        },
+        "reasoning_summary": {
+            "options": {
+                "auto": "\u81ea\u52a8",
+                "detailed": "\u8be6\u7ec6",
+                "off": "\u5173\u95ed"
+            }
+        },
+        "search_context_size": {
+            "options": {
+                "high": "\u9ad8",
+                "low": "\u4f4e",
+                "medium": "\u4e2d"
+            }
+        },
+        "service_tier": {
+            "options": {
+                "auto": "\u81ea\u52a8",
+                "default": "\u6807\u51c6",
+                "flex": "\u5f39\u6027",
+                "priority": "\u4f18\u5148\u7ea7"
+            }
+        },
+        "verbosity": {
+            "options": {
+                "high": "\u9ad8",
+                "low": "\u4f4e",
+                "medium": "\u4e2d"
+            }
+        }
+    },
+    "services": {
+        "generate_content": {
+            "description": "\u5411 ChatGPT \u53d1\u9001\u5bf9\u8bdd\u5f0f\u67e5\u8be2\uff0c\u5305\u62ec\u4efb\u4f55\u9644\u52a0\u7684\u56fe\u50cf\u6216 PDF \u6587\u4ef6\uff08\u5df2\u5f03\u7528\uff09",
+            "fields": {
+                "config_entry": {
+                    "description": "\u7528\u4e8e\u6b64\u64cd\u4f5c\u7684\u914d\u7f6e\u6761\u76ee",
+                    "name": "\u914d\u7f6e\u6761\u76ee"
+                },
+                "filenames": {
+                    "description": "\u8981\u4e0a\u4f20\u7684\u6587\u4ef6\u5217\u8868",
+                    "name": "\u6587\u4ef6"
+                },
+                "prompt": {
+                    "description": "\u8981\u53d1\u9001\u7684\u63d0\u793a\u8bcd",
+                    "name": "\u63d0\u793a\u8bcd"
+                }
+            },
+            "name": "\u751f\u6210\u5185\u5bb9\uff08\u5df2\u5f03\u7528\uff09"
+        },
+        "generate_image": {
+            "description": "\u5c06\u63d0\u793a\u4fe1\u606f\u8f6c\u6362\u4e3a\u56fe\u50cf\uff08\u5df2\u5f03\u7528\uff09",
+            "fields": {
+                "config_entry": {
+                    "description": "\u6b64\u52a8\u4f5c\u4f7f\u7528\u7684\u914d\u7f6e\u6761\u76ee\u3002",
+                    "name": "\u914d\u7f6e\u6761\u76ee"
+                },
+                "prompt": {
+                    "description": "\u8981\u8f6c\u6362\u4e3a\u56fe\u50cf\u7684\u6587\u672c",
+                    "example": "\u4e00\u5f20\u72d7\u7684\u7167\u7247",
+                    "name": "\u63d0\u793a\u8bed"
+                },
+                "quality": {
+                    "description": "\u5c06\u751f\u6210\u7684\u56fe\u50cf\u7684\u8d28\u91cf",
+                    "name": "\u8d28\u91cf"
+                },
+                "size": {
+                    "description": "\u8981\u751f\u6210\u7684\u56fe\u50cf\u7684\u5c3a\u5bf8",
+                    "name": "\u5c3a\u5bf8"
+                },
+                "style": {
+                    "description": "\u751f\u6210\u56fe\u50cf\u7684\u98ce\u683c",
+                    "name": "\u98ce\u683c"
+                }
+            },
+            "name": "\u751f\u6210\u56fe\u50cf\uff08\u5df2\u5f03\u7528\uff09"
+        }
+    }
+}

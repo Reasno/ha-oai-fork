@@ -1,0 +1,121 @@
+{
+    "config": {
+        "error": {
+            "cannot_connect": "Nie mo\u017cna nawi\u0105za\u0107 po\u0142\u0105czenia",
+            "invalid_auth": "Niepoprawne uwierzytelnienie",
+            "unknown": "Nieoczekiwany b\u0142\u0105d"
+        }
+    },
+    "config_subentries": {
+        "ai_task_data": {
+            "entry_type": "Zadanie AI",
+            "initiate_flow": {
+                "reconfigure": "Ponownie konfiguruj zadanie AI",
+                "user": "Dodaj zadanie AI"
+            },
+            "step": {
+                "model": {
+                    "data": {
+                        "image_model": "Model generowania obraz\u00f3w"
+                    }
+                }
+            }
+        },
+        "conversation": {
+            "entry_type": "Agent konwersacji",
+            "initiate_flow": {
+                "reconfigure": "Ponownie konfiguruj agenta konwersacji",
+                "user": "Dodaj agenta konwersacji"
+            },
+            "step": {
+                "init": {
+                    "data": {
+                        "recommended": "Zalecane ustawienia modelu"
+                    },
+                    "data_description": {
+                        "prompt": "Poinstruuj, jak model LLM powinien odpowiada\u0107. Mo\u017ce to by\u0107 szablon."
+                    }
+                },
+                "model": {
+                    "data": {
+                        "code_interpreter": "W\u0142\u0105cz narz\u0119dzie interpretuj\u0105ce kod",
+                        "image_model": "Model generowania obraz\u00f3w",
+                        "inline_citations": "Uwzgl\u0119dnij linki w wynikach wyszukiwania w sieci",
+                        "user_location": "Uwzgl\u0119dnij lokalizacj\u0119 domu",
+                        "web_search": "W\u0142\u0105cz wyszukiwanie w internecie"
+                    },
+                    "data_description": {
+                        "code_interpreter": "To narz\u0119dzie, znane r\u00f3wnie\u017c jako narz\u0119dzie Python dla modelu, umo\u017cliwia uruchamianie kodu w celu uzyskania odpowiedzi na pytania",
+                        "inline_citations": "Je\u015bli opcja ta jest wy\u0142\u0105czona, dodawany jest dodatkowy monit, aby model nie zawiera\u0142 cytat\u00f3w \u017ar\u00f3d\u0142owych",
+                        "search_context_size": "Og\u00f3lne wskaz\u00f3wki dotycz\u0105ce ilo\u015bci miejsca w oknie kontekstowym do wykorzystania podczas wyszukiwania",
+                        "user_location": "Doprecyzuj wyniki wyszukiwania na podstawie lokalizacji geograficznej"
+                    }
+                }
+            }
+        }
+    },
+    "exceptions": {
+        "invalid_config_entry": {
+            "message": "Podano nieprawid\u0142owy wpis konfiguracyjny. Otrzymano {config_entry}"
+        }
+    },
+    "selector": {
+        "reasoning_effort": {
+            "options": {
+                "high": "wysoki",
+                "low": "niski",
+                "medium": "\u015bredni"
+            }
+        },
+        "search_context_size": {
+            "options": {
+                "high": "wysoki",
+                "low": "niski",
+                "medium": "\u015bredni"
+            }
+        }
+    },
+    "services": {
+        "generate_content": {
+            "fields": {
+                "config_entry": {
+                    "description": "Wpis konfiguracyjny u\u017cywany dla tej akcji",
+                    "name": "Wpis konfiguracji"
+                },
+                "filenames": {
+                    "description": "Lista plik\u00f3w do przes\u0142ania",
+                    "name": "Pliki"
+                },
+                "prompt": {
+                    "description": "Zapytanie do wys\u0142ania",
+                    "name": "Zapytanie"
+                }
+            }
+        },
+        "generate_image": {
+            "fields": {
+                "config_entry": {
+                    "description": "Wpis konfiguracyjny u\u017cywany dla tej akcji",
+                    "name": "Wpis konfiguracji"
+                },
+                "prompt": {
+                    "description": "Tekst do przekszta\u0142cenia w obraz",
+                    "example": "Zdj\u0119cie psa",
+                    "name": "Zapytanie"
+                },
+                "quality": {
+                    "description": "Jako\u015b\u0107 obrazu, kt\u00f3ry zostanie wygenerowany",
+                    "name": "Jako\u015b\u0107"
+                },
+                "size": {
+                    "description": "Rozmiar obrazu do wygenerowania",
+                    "name": "Rozmiar"
+                },
+                "style": {
+                    "description": "Styl wygenerowanego obrazu",
+                    "name": "Styl"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,131 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "El servei ja est\u00e0 configurat",
+            "reauth_successful": "Re-autenticaci\u00f3 realitzada correctament"
+        },
+        "error": {
+            "cannot_connect": "Ha fallat la connexi\u00f3",
+            "invalid_auth": "Autenticaci\u00f3 inv\u00e0lida",
+            "unknown": "Error inesperat"
+        },
+        "step": {
+            "reauth_confirm": {
+                "data": {
+                    "api_key": "Clau API"
+                }
+            },
+            "user": {
+                "data": {
+                    "api_key": "Clau API"
+                }
+            }
+        }
+    },
+    "config_subentries": {
+        "ai_task_data": {
+            "step": {
+                "advanced": {
+                    "data": {
+                        "chat_model": "Model"
+                    }
+                },
+                "init": {
+                    "data": {
+                        "name": "Nom"
+                    }
+                }
+            }
+        },
+        "conversation": {
+            "step": {
+                "advanced": {
+                    "data": {
+                        "chat_model": "Model"
+                    }
+                },
+                "init": {
+                    "data": {
+                        "llm_hass_api": "Controla Home Assistant",
+                        "name": "Nom",
+                        "prompt": "Instruccions"
+                    }
+                }
+            }
+        },
+        "stt": {
+            "step": {
+                "init": {
+                    "data": {
+                        "name": "Nom",
+                        "prompt": "Instruccions"
+                    }
+                }
+            }
+        },
+        "tts": {
+            "step": {
+                "init": {
+                    "data": {
+                        "name": "Nom",
+                        "prompt": "Instruccions"
+                    }
+                }
+            }
+        }
+    },
+    "selector": {
+        "reasoning_effort": {
+            "options": {
+                "high": "Alt/a",
+                "low": "Baix/a",
+                "medium": "Mitj\u00e0/na"
+            }
+        },
+        "reasoning_summary": {
+            "options": {
+                "auto": "Auto",
+                "off": "OFF"
+            }
+        },
+        "search_context_size": {
+            "options": {
+                "high": "Alt/a",
+                "low": "Baix/a",
+                "medium": "Mitj\u00e0/na"
+            }
+        },
+        "service_tier": {
+            "options": {
+                "auto": "Auto"
+            }
+        },
+        "verbosity": {
+            "options": {
+                "high": "Alt/a",
+                "low": "Baix/a",
+                "medium": "Mitj\u00e0/na"
+            }
+        }
+    },
+    "services": {
+        "generate_image": {
+            "fields": {
+                "prompt": {
+                    "description": "Text a convertir en imatge",
+                    "example": "Foto d'un gos"
+                },
+                "quality": {
+                    "name": "Qualitat"
+                },
+                "size": {
+                    "description": "Mida de la imatge a generar",
+                    "name": "Mida"
+                },
+                "style": {
+                    "name": "Estil"
+                }
+            }
+        }
+    }
+}

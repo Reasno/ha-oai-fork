@@ -1,0 +1,39 @@
+{
+    "config": {
+        "error": {
+            "cannot_connect": "Yhteyden muodostaminen ep\u00e4onnistui",
+            "invalid_auth": "Virheellinen todennus",
+            "unknown": "Odottamaton virhe"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "api_key": "API-avain"
+                }
+            }
+        }
+    },
+    "services": {
+        "generate_image": {
+            "fields": {
+                "prompt": {
+                    "description": "Teksti, joka muutetaan kuvaksi",
+                    "example": "Kuva koirasta",
+                    "name": "Kehote"
+                },
+                "quality": {
+                    "description": "Luotavan kuvan laatu",
+                    "name": "Laatu"
+                },
+                "size": {
+                    "description": "Luotavan kuvan koko",
+                    "name": "Koko"
+                },
+                "style": {
+                    "description": "Luodun kuvan tyyli",
+                    "name": "Tyyli"
+                }
+            }
+        }
+    }
+}

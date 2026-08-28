@@ -1,0 +1,53 @@
+{
+    "config_subentries": {
+        "ai_task_data": {
+            "step": {
+                "model": {
+                    "data": {
+                        "image_model": "Model foar \u00f4fbyldingsgeneraasje"
+                    },
+                    "data_description": {
+                        "image_model": "It model om te br\u00fbken by it generearjen fan \u00f4fbyldings"
+                    }
+                }
+            }
+        },
+        "conversation": {
+            "step": {
+                "model": {
+                    "data": {
+                        "image_model": "Model foar \u00f4fbyldingsgeneraasje"
+                    },
+                    "data_description": {
+                        "image_model": "It model om te br\u00fbken by it generearjen fan \u00f4fbyldings"
+                    }
+                }
+            }
+        }
+    },
+    "selector": {
+        "reasoning_effort": {
+            "options": {
+                "high": "Heech",
+                "low": "Leech",
+                "medium": "Gemiddeld"
+            }
+        },
+        "search_context_size": {
+            "options": {
+                "high": "Heech",
+                "low": "Leech",
+                "medium": "Gemiddeld"
+            }
+        }
+    },
+    "services": {
+        "generate_image": {
+            "fields": {
+                "prompt": {
+                    "name": "Prompt"
+                }
+            }
+        }
+    }
+}

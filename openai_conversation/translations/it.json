@@ -1,0 +1,174 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Il servizio \u00e8 gi\u00e0 configurato"
+        },
+        "error": {
+            "cannot_connect": "Impossibile connettersi",
+            "invalid_auth": "Autenticazione non valida",
+            "unknown": "Errore imprevisto"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "api_key": "Chiave API"
+                }
+            }
+        }
+    },
+    "config_subentries": {
+        "ai_task_data": {
+            "abort": {
+                "entry_not_loaded": "Impossibile aggiungere elementi mentre la configurazione \u00e8 disattivata."
+            },
+            "error": {
+                "model_not_supported": "Questo modello non \u00e8 supportato, seleziona un modello diverso"
+            },
+            "step": {
+                "advanced": {
+                    "data": {
+                        "chat_model": "Modello",
+                        "max_tokens": "Numero massimo di token da restituire nella risposta",
+                        "temperature": "Temperatura",
+                        "top_p": "Top P"
+                    },
+                    "title": "Impostazioni avanzate"
+                },
+                "init": {
+                    "data": {
+                        "name": "Nome",
+                        "recommended": "Impostazioni modello consigliate"
+                    }
+                },
+                "model": {
+                    "data": {
+                        "reasoning_effort": "Impegno nel ragionamento",
+                        "reasoning_summary": "Riepilogo del ragionamento",
+                        "search_context_size": "Dimensione del contesto di ricerca",
+                        "user_location": "Includi la posizione di casa",
+                        "web_search": "Abilita la ricerca web"
+                    },
+                    "data_description": {
+                        "reasoning_effort": "Quanti token di ragionamento il modello dovrebbe generare prima di creare una risposta al prompt",
+                        "reasoning_summary": "Controlla la lunghezza e il dettaglio dei riepiloghi di ragionamento forniti dal modello",
+                        "search_context_size": "Linee guida generali sulla quantit\u00e0 di spazio della finestra di contesto da utilizzare per la ricerca",
+                        "user_location": "Affina i risultati di ricerca in base alla geografia",
+                        "web_search": "Consenti al modello di cercare sul web le informazioni pi\u00f9 recenti prima di generare una risposta"
+                    },
+                    "title": "Opzioni specifiche del modello"
+                }
+            }
+        },
+        "conversation": {
+            "abort": {
+                "entry_not_loaded": "Impossibile aggiungere elementi mentre la configurazione \u00e8 disattivata."
+            },
+            "entry_type": "Agente di conversazione",
+            "error": {
+                "model_not_supported": "Questo modello non \u00e8 supportato, seleziona un modello diverso"
+            },
+            "initiate_flow": {
+                "reconfigure": "Riconfigura l'agente di conversazione",
+                "user": "Aggiungi agente di conversazione"
+            },
+            "step": {
+                "advanced": {
+                    "data": {
+                        "chat_model": "Modello",
+                        "max_tokens": "Numero massimo di token da restituire nella risposta",
+                        "temperature": "Temperatura",
+                        "top_p": "Top P"
+                    },
+                    "title": "Impostazioni avanzate"
+                },
+                "init": {
+                    "data": {
+                        "llm_hass_api": "Controlla Home Assistant",
+                        "name": "Nome",
+                        "recommended": "Impostazioni modello consigliate"
+                    },
+                    "data_description": {
+                        "prompt": "Indica come dovrebbe rispondere il LLM. Questo pu\u00f2 essere un modello."
+                    }
+                },
+                "model": {
+                    "data": {
+                        "reasoning_effort": "Impegno nel ragionamento",
+                        "reasoning_summary": "Riepilogo del ragionamento",
+                        "search_context_size": "Dimensione del contesto di ricerca",
+                        "user_location": "Includi la posizione di casa",
+                        "web_search": "Abilita la ricerca web"
+                    },
+                    "data_description": {
+                        "reasoning_effort": "Quanti token di ragionamento il modello dovrebbe generare prima di creare una risposta al prompt",
+                        "reasoning_summary": "Controlla la lunghezza e il dettaglio dei riepiloghi di ragionamento forniti dal modello",
+                        "search_context_size": "Linee guida generali sulla quantit\u00e0 di spazio della finestra di contesto da utilizzare per la ricerca",
+                        "user_location": "Affina i risultati di ricerca in base alla geografia",
+                        "web_search": "Consenti al modello di cercare sul web le informazioni pi\u00f9 recenti prima di generare una risposta"
+                    },
+                    "title": "Opzioni specifiche del modello"
+                }
+            }
+        }
+    },
+    "exceptions": {
+        "invalid_config_entry": {
+            "message": "Configurazione fornita non valida. Ricevuta {config_entry}"
+        }
+    },
+    "selector": {
+        "reasoning_effort": {
+            "options": {
+                "high": "Alto/a",
+                "low": "Basso/a",
+                "medium": "Medio/a",
+                "minimal": "Minimale",
+                "none": "Nessuno"
+            }
+        },
+        "reasoning_summary": {
+            "options": {
+                "auto": "Automatico",
+                "detailed": "Dettagliato",
+                "off": "Spento"
+            }
+        },
+        "search_context_size": {
+            "options": {
+                "high": "Alto/a",
+                "low": "Basso/a",
+                "medium": "Medio/a"
+            }
+        },
+        "verbosity": {
+            "options": {
+                "high": "Alto/a",
+                "low": "Basso/a",
+                "medium": "Medio/a"
+            }
+        }
+    },
+    "services": {
+        "generate_image": {
+            "fields": {
+                "prompt": {
+                    "description": "Il testo da trasformare in un'immagine",
+                    "example": "Una foto di un cane",
+                    "name": "Prompt"
+                },
+                "quality": {
+                    "description": "La qualit\u00e0 dell'immagine che verr\u00e0 generata",
+                    "name": "Qualit\u00e0"
+                },
+                "size": {
+                    "description": "La dimensione dell'immagine da generare",
+                    "name": "Dimensione"
+                },
+                "style": {
+                    "description": "Lo stile dell'immagine generata",
+                    "name": "Stile"
+                }
+            }
+        }
+    }
+}

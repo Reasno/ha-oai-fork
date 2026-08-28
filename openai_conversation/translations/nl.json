@@ -1,0 +1,148 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Dienst is al geconfigureerd",
+            "reauth_successful": "Herauthenticatie geslaagd"
+        },
+        "error": {
+            "cannot_connect": "Kan geen verbinding maken",
+            "invalid_auth": "Ongeldige authenticatie",
+            "unknown": "Onverwachte fout"
+        },
+        "step": {
+            "reauth_confirm": {
+                "data": {
+                    "api_key": "API-sleutel"
+                }
+            },
+            "user": {
+                "data": {
+                    "api_key": "API-sleutel"
+                }
+            }
+        }
+    },
+    "config_subentries": {
+        "ai_task_data": {
+            "entry_type": "AI taak",
+            "step": {
+                "advanced": {
+                    "data": {
+                        "chat_model": "Model",
+                        "temperature": "Temperatuur"
+                    }
+                },
+                "init": {
+                    "data": {
+                        "name": "Naam"
+                    }
+                }
+            }
+        },
+        "conversation": {
+            "step": {
+                "advanced": {
+                    "data": {
+                        "chat_model": "Model",
+                        "temperature": "Temperatuur"
+                    }
+                },
+                "init": {
+                    "data": {
+                        "llm_hass_api": "Beheer Home Assistant",
+                        "name": "Naam",
+                        "prompt": "Instructies"
+                    }
+                }
+            }
+        },
+        "stt": {
+            "step": {
+                "init": {
+                    "data": {
+                        "name": "Naam",
+                        "prompt": "Instructies"
+                    }
+                }
+            }
+        },
+        "tts": {
+            "step": {
+                "init": {
+                    "data": {
+                        "name": "Naam",
+                        "prompt": "Instructies"
+                    }
+                }
+            }
+        }
+    },
+    "selector": {
+        "reasoning_effort": {
+            "options": {
+                "high": "Hoog",
+                "low": "Laag",
+                "medium": "Gemiddeld",
+                "minimal": "Minimaal",
+                "none": "Geen"
+            }
+        },
+        "reasoning_summary": {
+            "options": {
+                "auto": "Automatisch",
+                "off": "Uit"
+            }
+        },
+        "search_context_size": {
+            "options": {
+                "high": "Hoog",
+                "low": "Laag",
+                "medium": "Gemiddeld"
+            }
+        },
+        "service_tier": {
+            "options": {
+                "auto": "Automatisch",
+                "priority": "Prioriteit"
+            }
+        },
+        "verbosity": {
+            "options": {
+                "high": "Hoog",
+                "low": "Laag",
+                "medium": "Gemiddeld"
+            }
+        }
+    },
+    "services": {
+        "generate_content": {
+            "fields": {
+                "filenames": {
+                    "description": "Lijst met te uploaden bestanden",
+                    "name": "Bestanden"
+                }
+            }
+        },
+        "generate_image": {
+            "fields": {
+                "prompt": {
+                    "description": "De tekst die in een afbeelding moet worden omgezet",
+                    "example": "Een foto van een hond",
+                    "name": "Opdracht"
+                },
+                "quality": {
+                    "description": "De kwaliteit van de afbeelding die wordt gegenereerd",
+                    "name": "Kwaliteit"
+                },
+                "size": {
+                    "description": "De grootte van de te genereren afbeelding",
+                    "name": "grootte"
+                },
+                "style": {
+                    "description": "De stijl van de gegenereerde afbeelding",
+                    "name": "Stijl"
+                }
+            }
+        }
+    }
+}

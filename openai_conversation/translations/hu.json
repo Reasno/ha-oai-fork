@@ -1,0 +1,311 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "A szolg\u00e1ltat\u00e1s m\u00e1r konfigur\u00e1lva van",
+            "reauth_successful": "Az \u00fajrahiteles\u00edt\u00e9s sikeres volt"
+        },
+        "error": {
+            "cannot_connect": "Sikertelen csatlakoz\u00e1s",
+            "invalid_auth": "\u00c9rv\u00e9nytelen hiteles\u00edt\u00e9s",
+            "unknown": "V\u00e1ratlan hiba"
+        },
+        "step": {
+            "reauth_confirm": {
+                "data": {
+                    "api_key": "API kulcs"
+                },
+                "data_description": {
+                    "api_key": "Az OpenAI API kulcs."
+                },
+                "description": "\u00dajrahiteles\u00edt\u00e9s sz\u00fcks\u00e9ges. K\u00e9rj\u00fck, adja meg a friss\u00edtett API kulcsot."
+            },
+            "user": {
+                "data": {
+                    "api_key": "API kulcs"
+                },
+                "data_description": {
+                    "api_key": "Az OpenAI API kulcs."
+                },
+                "description": "Az OpenAI Conversation integr\u00e1ci\u00f3 be\u00e1ll\u00edt\u00e1s\u00e1hoz adja meg az OpenAI API kulcs\u00e1t. Az API kulcs beszerz\u00e9s\u00e9re vonatkoz\u00f3 utas\u00edt\u00e1sokat [itt]({instructions_url}) tal\u00e1lja."
+            }
+        }
+    },
+    "config_subentries": {
+        "ai_task_data": {
+            "abort": {
+                "entry_not_loaded": "Nem lehet \u00faj elemeket hozz\u00e1adni, am\u00edg a konfigur\u00e1ci\u00f3 le van tiltva.",
+                "reconfigure_successful": "Az \u00fajrakonfigur\u00e1l\u00e1s sikeres volt"
+            },
+            "entry_type": "AI feladat",
+            "error": {
+                "code_interpreter_minimal_reasoning": "A k\u00f3d\u00e9rtelmez\u0151 nem t\u00e1mogatott minim\u00e1lis \u00e9rvel\u00e9si er\u0151fesz\u00edt\u00e9s mellett",
+                "model_not_supported": "Ez a modell nem t\u00e1mogatott, v\u00e1lasszon egy m\u00e1sik modellt",
+                "web_search_minimal_reasoning": "A webes keres\u00e9s jelenleg nem t\u00e1mogatott minim\u00e1lis \u00e9rvel\u00e9si szinten"
+            },
+            "initiate_flow": {
+                "reconfigure": "AI-feladat \u00fajrakonfigur\u00e1l\u00e1sa",
+                "user": "AI feladat hozz\u00e1ad\u00e1sa"
+            },
+            "step": {
+                "advanced": {
+                    "data": {
+                        "chat_model": "Modell",
+                        "max_tokens": "V\u00e1laszk\u00e9nt visszaadand\u00f3 maxim\u00e1lis tokenek sz\u00e1ma",
+                        "temperature": "H\u0151m\u00e9rs\u00e9klet",
+                        "top_p": "Top P"
+                    },
+                    "title": "Halad\u00f3 be\u00e1ll\u00edt\u00e1sok"
+                },
+                "init": {
+                    "data": {
+                        "name": "Elnevez\u00e9s",
+                        "recommended": "Aj\u00e1nlott modellbe\u00e1ll\u00edt\u00e1sok"
+                    }
+                },
+                "model": {
+                    "data": {
+                        "code_interpreter": "K\u00f3dfuttat\u00f3 eszk\u00f6z enged\u00e9lyez\u00e9se",
+                        "image_model": "K\u00e9pgener\u00e1l\u00e1si modell",
+                        "inline_citations": "Hivatkoz\u00e1sok hozz\u00e1ad\u00e1sa a webes keres\u00e9si eredm\u00e9nyekhez",
+                        "reasoning_effort": "\u00c9rvel\u00e9si r\u00e1ford\u00edt\u00e1s",
+                        "reasoning_summary": "\u00c9rvel\u00e9si \u00f6sszefoglal\u00f3",
+                        "search_context_size": "Keres\u00e9si kontextus m\u00e9rete",
+                        "service_tier": "Szolg\u00e1ltat\u00e1si szint",
+                        "user_location": "Otthoni helysz\u00edn figyelembev\u00e9tele",
+                        "web_search": "Webes keres\u00e9s enged\u00e9lyez\u00e9se"
+                    },
+                    "data_description": {
+                        "code_interpreter": "Ez az eszk\u00f6z \u2013 m\u00e1s n\u00e9ven a modell Python-eszk\u00f6ze \u2013 lehet\u0151v\u00e9 teszi k\u00f3d futtat\u00e1s\u00e1t a k\u00e9rd\u00e9sek megv\u00e1laszol\u00e1s\u00e1hoz",
+                        "image_model": "A k\u00e9pek gener\u00e1l\u00e1s\u00e1hoz haszn\u00e1land\u00f3 modell",
+                        "inline_citations": "Ha le van tiltva, tov\u00e1bbi utas\u00edt\u00e1s ker\u00fcl hozz\u00e1ad\u00e1sra, hogy a modell ne foglaljon bele forr\u00e1shivatkoz\u00e1sokat",
+                        "reasoning_effort": "A modell mennyi \u00e9rvel\u00e9si tokent gener\u00e1ljon, miel\u0151tt v\u00e1laszt ad az utas\u00edt\u00e1sra.",
+                        "reasoning_summary": "Vez\u00e9rli a modell \u00e1ltal ny\u00fajtott \u00e9rvel\u00e9si \u00f6sszefoglal\u00f3k hossz\u00e1t \u00e9s r\u00e9szletess\u00e9g\u00e9t",
+                        "search_context_size": "Ir\u00e1nyelv a keres\u00e9shez haszn\u00e1lt kontextusablak m\u00e9ret\u00e9re vonatkoz\u00f3an",
+                        "service_tier": "A k\u00f6lts\u00e9get \u00e9s a v\u00e1laszid\u0151t szab\u00e1lyozza",
+                        "user_location": "Keres\u00e9si eredm\u00e9nyek pontos\u00edt\u00e1sa f\u00f6ldrajzi adatok alapj\u00e1n",
+                        "web_search": "Enged\u00e9lyezi a modell sz\u00e1m\u00e1ra a legfrissebb inform\u00e1ci\u00f3k keres\u00e9s\u00e9t az interneten a v\u00e1lasz gener\u00e1l\u00e1sa el\u0151tt"
+                    },
+                    "title": "Modellspecifikus be\u00e1ll\u00edt\u00e1sok"
+                }
+            }
+        },
+        "conversation": {
+            "abort": {
+                "entry_not_loaded": "Nem lehet \u00faj elemeket hozz\u00e1adni, am\u00edg a konfigur\u00e1ci\u00f3 le van tiltva.",
+                "reconfigure_successful": "Az \u00fajrakonfigur\u00e1l\u00e1s sikeres volt"
+            },
+            "entry_type": "Besz\u00e9lget\u00e9si \u00fcgyn\u00f6k",
+            "error": {
+                "code_interpreter_minimal_reasoning": "A k\u00f3d\u00e9rtelmez\u0151 nem t\u00e1mogatott minim\u00e1lis \u00e9rvel\u00e9si er\u0151fesz\u00edt\u00e9s mellett",
+                "model_not_supported": "Ez a modell nem t\u00e1mogatott, v\u00e1lasszon egy m\u00e1sik modellt",
+                "web_search_minimal_reasoning": "A webes keres\u00e9s jelenleg nem t\u00e1mogatott minim\u00e1lis \u00e9rvel\u00e9si szinten"
+            },
+            "initiate_flow": {
+                "reconfigure": "Besz\u00e9lget\u00e9si \u00fcgyn\u00f6k \u00fajrakonfigur\u00e1l\u00e1sa",
+                "user": "Besz\u00e9lget\u00e9si \u00fcgyn\u00f6k hozz\u00e1ad\u00e1sa"
+            },
+            "step": {
+                "advanced": {
+                    "data": {
+                        "chat_model": "Modell",
+                        "max_tokens": "V\u00e1laszk\u00e9nt visszaadand\u00f3 maxim\u00e1lis tokenek sz\u00e1ma",
+                        "temperature": "H\u0151m\u00e9rs\u00e9klet",
+                        "top_p": "Top P"
+                    },
+                    "title": "Halad\u00f3 be\u00e1ll\u00edt\u00e1sok"
+                },
+                "init": {
+                    "data": {
+                        "llm_hass_api": "Home Assistant vez\u00e9rl\u00e9se",
+                        "name": "Elnevez\u00e9s",
+                        "prompt": "Utas\u00edt\u00e1sok",
+                        "recommended": "Aj\u00e1nlott modellbe\u00e1ll\u00edt\u00e1sok"
+                    },
+                    "data_description": {
+                        "prompt": "Adja meg, hogyan v\u00e1laszoljon a nagy nyelvi modell (LLM). Ez lehet sablon is."
+                    }
+                },
+                "model": {
+                    "data": {
+                        "code_interpreter": "K\u00f3dfuttat\u00f3 eszk\u00f6z enged\u00e9lyez\u00e9se",
+                        "image_model": "K\u00e9pgener\u00e1l\u00e1si modell",
+                        "inline_citations": "Hivatkoz\u00e1sok hozz\u00e1ad\u00e1sa a webes keres\u00e9si eredm\u00e9nyekhez",
+                        "reasoning_effort": "\u00c9rvel\u00e9si r\u00e1ford\u00edt\u00e1s",
+                        "reasoning_summary": "\u00c9rvel\u00e9si \u00f6sszefoglal\u00f3",
+                        "search_context_size": "Keres\u00e9si kontextus m\u00e9rete",
+                        "service_tier": "Szolg\u00e1ltat\u00e1si szint",
+                        "user_location": "Otthoni helysz\u00edn figyelembev\u00e9tele",
+                        "web_search": "Webes keres\u00e9s enged\u00e9lyez\u00e9se"
+                    },
+                    "data_description": {
+                        "code_interpreter": "Ez az eszk\u00f6z \u2013 m\u00e1s n\u00e9ven a modell Python-eszk\u00f6ze \u2013 lehet\u0151v\u00e9 teszi k\u00f3d futtat\u00e1s\u00e1t a k\u00e9rd\u00e9sek megv\u00e1laszol\u00e1s\u00e1hoz",
+                        "image_model": "A k\u00e9pek gener\u00e1l\u00e1s\u00e1hoz haszn\u00e1land\u00f3 modell",
+                        "inline_citations": "Ha le van tiltva, tov\u00e1bbi utas\u00edt\u00e1s ker\u00fcl hozz\u00e1ad\u00e1sra, hogy a modell ne foglaljon bele forr\u00e1shivatkoz\u00e1sokat",
+                        "reasoning_effort": "A modell mennyi \u00e9rvel\u00e9si tokent gener\u00e1ljon, miel\u0151tt v\u00e1laszt ad az utas\u00edt\u00e1sra.",
+                        "reasoning_summary": "Vez\u00e9rli a modell \u00e1ltal ny\u00fajtott \u00e9rvel\u00e9si \u00f6sszefoglal\u00f3k hossz\u00e1t \u00e9s r\u00e9szletess\u00e9g\u00e9t",
+                        "search_context_size": "Ir\u00e1nyelv a keres\u00e9shez haszn\u00e1lt kontextusablak m\u00e9ret\u00e9re vonatkoz\u00f3an",
+                        "service_tier": "A k\u00f6lts\u00e9get \u00e9s a v\u00e1laszid\u0151t szab\u00e1lyozza",
+                        "user_location": "Keres\u00e9si eredm\u00e9nyek pontos\u00edt\u00e1sa f\u00f6ldrajzi adatok alapj\u00e1n",
+                        "web_search": "Enged\u00e9lyezi a modell sz\u00e1m\u00e1ra a legfrissebb inform\u00e1ci\u00f3k keres\u00e9s\u00e9t az interneten a v\u00e1lasz gener\u00e1l\u00e1sa el\u0151tt"
+                    },
+                    "title": "Modellspecifikus be\u00e1ll\u00edt\u00e1sok"
+                }
+            }
+        },
+        "stt": {
+            "abort": {
+                "entry_not_loaded": "Nem lehet \u00faj elemeket hozz\u00e1adni, am\u00edg a konfigur\u00e1ci\u00f3 le van tiltva.",
+                "reconfigure_successful": "Az \u00fajrakonfigur\u00e1l\u00e1s sikeres volt"
+            },
+            "entry_type": "Besz\u00e9d sz\u00f6vegg\u00e9 alak\u00edt\u00e1sa",
+            "initiate_flow": {
+                "reconfigure": "Besz\u00e9d-sz\u00f6veg szolg\u00e1ltat\u00e1s \u00fajrakonfigur\u00e1l\u00e1sa",
+                "user": "Besz\u00e9d-sz\u00f6veg szolg\u00e1ltat\u00e1s hozz\u00e1ad\u00e1sa"
+            },
+            "step": {
+                "init": {
+                    "data": {
+                        "chat_model": "Modell",
+                        "name": "Elnevez\u00e9s",
+                        "prompt": "Utas\u00edt\u00e1sok"
+                    },
+                    "data_description": {
+                        "chat_model": "A besz\u00e9d \u00e1t\u00edr\u00e1s\u00e1hoz haszn\u00e1land\u00f3 modell.",
+                        "prompt": "Haszn\u00e1lja ezt az utas\u00edt\u00e1st az \u00e1tiratok min\u0151s\u00e9g\u00e9nek jav\u00edt\u00e1s\u00e1hoz. A legjobb eredm\u00e9nyek \u00e9rdek\u00e9ben ford\u00edtsa le a folyamat nyelv\u00e9re. Tov\u00e1bbi r\u00e9szletek\u00e9rt tekintse meg a dokument\u00e1ci\u00f3t."
+                    }
+                }
+            }
+        },
+        "tts": {
+            "abort": {
+                "entry_not_loaded": "Nem lehet \u00faj elemeket hozz\u00e1adni, am\u00edg a konfigur\u00e1ci\u00f3 le van tiltva.",
+                "reconfigure_successful": "Az \u00fajrakonfigur\u00e1l\u00e1s sikeres volt"
+            },
+            "entry_type": "Sz\u00f6vegfelolvas\u00e1s",
+            "initiate_flow": {
+                "reconfigure": "Sz\u00f6vegfelolvas\u00f3 szolg\u00e1ltat\u00e1s \u00fajrakonfigur\u00e1l\u00e1sa",
+                "user": "Sz\u00f6vegfelolvas\u00f3 szolg\u00e1ltat\u00e1s hozz\u00e1ad\u00e1sa"
+            },
+            "step": {
+                "init": {
+                    "data": {
+                        "name": "Elnevez\u00e9s",
+                        "prompt": "Utas\u00edt\u00e1sok",
+                        "tts_speed": "Sebess\u00e9g"
+                    },
+                    "data_description": {
+                        "prompt": "A besz\u00e9d k\u00fcl\u00f6nb\u00f6z\u0151 aspektusainak vez\u00e9rl\u00e9se, bele\u00e9rtve az akcentust, \u00e9rzelmi tartom\u00e1nyt, inton\u00e1ci\u00f3t, benyom\u00e1sokat, besz\u00e9d sebess\u00e9g\u00e9t, hangnemet, suttog\u00e1st \u00e9s egyebeket",
+                        "tts_speed": "A gener\u00e1lt besz\u00e9d sebess\u00e9ge"
+                    }
+                }
+            }
+        }
+    },
+    "exceptions": {
+        "invalid_config_entry": {
+            "message": "\u00c9rv\u00e9nytelen konfigur\u00e1ci\u00f3s bejegyz\u00e9st adott meg. Kapott bejegyz\u00e9s: {config_entry}"
+        }
+    },
+    "issues": {
+        "deprecated_generate_content": {
+            "description": "Az 'openai_conversation.generate_content' m\u0171velet elavult \u00e9s a 2026.9.0 verzi\u00f3ban elt\u00e1vol\u00edt\u00e1sra ker\u00fcl. K\u00e9rj\u00fck, haszn\u00e1lja helyette az 'ai_task.generate_data' m\u0171veletet",
+            "title": "Elavult 'generate_content' m\u0171velet"
+        },
+        "deprecated_generate_image": {
+            "description": "Az 'openai_conversation.generate_image' m\u0171velet elavult \u00e9s a 2026.9.0 verzi\u00f3ban elt\u00e1vol\u00edt\u00e1sra ker\u00fcl. K\u00e9rj\u00fck, haszn\u00e1lja helyette az 'ai_task.generate_image' m\u0171veletet",
+            "title": "Elavult 'generate_image' m\u0171velet"
+        },
+        "organization_verification_required": {
+            "description": "A modell haszn\u00e1lat\u00e1hoz az \u00d6n szervezet\u00e9nek hiteles\u00edtettnek kell lennie. K\u00e9rj\u00fck, l\u00e9pjen be a(z) {platform_settings} be\u00e1ll\u00edt\u00e1sokba, \u00e9s v\u00e1lassza a \u201eSzervezet hiteles\u00edt\u00e9se\u201d lehet\u0151s\u00e9get. A hiteles\u00edt\u00e9s ut\u00e1n ak\u00e1r 15 percbe is telhet, mire a hozz\u00e1f\u00e9r\u00e9s \u00e9letbe l\u00e9p.",
+            "title": "Szervezeti hiteles\u00edt\u00e9s sz\u00fcks\u00e9ges"
+        }
+    },
+    "selector": {
+        "reasoning_effort": {
+            "options": {
+                "high": "Magas",
+                "low": "Alacsony",
+                "medium": "K\u00f6zepes",
+                "minimal": "Minim\u00e1lis",
+                "none": "Nincs",
+                "xhigh": "Extra magas"
+            }
+        },
+        "reasoning_summary": {
+            "options": {
+                "auto": "Automatikus",
+                "detailed": "R\u00e9szletes",
+                "off": "Ki"
+            }
+        },
+        "search_context_size": {
+            "options": {
+                "high": "Magas",
+                "low": "Alacsony",
+                "medium": "K\u00f6zepes"
+            }
+        },
+        "service_tier": {
+            "options": {
+                "auto": "Automatikus",
+                "default": "Alap\u00e9rtelmezett",
+                "flex": "Rugalmas",
+                "priority": "Priorit\u00e1sos"
+            }
+        },
+        "verbosity": {
+            "options": {
+                "high": "Magas",
+                "low": "Alacsony",
+                "medium": "K\u00f6zepes"
+            }
+        }
+    },
+    "services": {
+        "generate_content": {
+            "description": "Besz\u00e9lget\u00e9si lek\u00e9rdez\u00e9st k\u00fcld a ChatGPT-nek, bele\u00e9rtve a csatolt k\u00e9p- vagy PDF f\u00e1jlokat is (elavult)",
+            "fields": {
+                "config_entry": {
+                    "description": "A m\u0171velethez haszn\u00e1land\u00f3 konfigur\u00e1ci\u00f3s bejegyz\u00e9s",
+                    "name": "Konfigur\u00e1ci\u00f3s bejegyz\u00e9s"
+                },
+                "filenames": {
+                    "description": "A felt\u00f6ltend\u0151 f\u00e1jlok list\u00e1ja",
+                    "name": "F\u00e1jlok"
+                },
+                "prompt": {
+                    "description": "Az elk\u00fcldend\u0151 feladat",
+                    "name": "Feladat"
+                }
+            },
+            "name": "Tartalom gener\u00e1l\u00e1sa (elavult)"
+        },
+        "generate_image": {
+            "description": "Egy megadott le\u00edr\u00e1s alapj\u00e1n k\u00e9pet hoz l\u00e9tre (elavult)",
+            "fields": {
+                "config_entry": {
+                    "description": "A konfigur\u00e1ci\u00f3s bejegyz\u00e9s, amelyet ehhez a m\u0171velethez haszn\u00e1lni kell",
+                    "name": "Konfigur\u00e1ci\u00f3s bejegyz\u00e9s"
+                },
+                "prompt": {
+                    "description": "A sz\u00f6veg, amit k\u00e9pp\u00e9 szeretne alak\u00edtani",
+                    "example": "Egy macska fot\u00f3ja",
+                    "name": "Kiindul\u00e1si sz\u00f6veg"
+                },
+                "quality": {
+                    "description": "A gener\u00e1lt k\u00e9p min\u0151s\u00e9ge",
+                    "name": "Min\u0151s\u00e9g"
+                },
+                "size": {
+                    "description": "A gener\u00e1lt k\u00e9p m\u00e9rete",
+                    "name": "M\u00e9ret"
+                },
+                "style": {
+                    "description": "A gener\u00e1lt k\u00e9p st\u00edlusa",
+                    "name": "St\u00edlus"
+                }
+            },
+            "name": "K\u00e9p gener\u00e1l\u00e1sa (elavult)"
+        }
+    }
+}

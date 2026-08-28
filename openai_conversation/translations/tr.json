@@ -1,0 +1,319 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Hizmet zaten yap\u0131land\u0131r\u0131lm\u0131\u015f",
+            "reauth_successful": "Yeniden kimlik do\u011frulama ba\u015far\u0131l\u0131 oldu"
+        },
+        "error": {
+            "cannot_connect": "Ba\u011flanma hatas\u0131",
+            "invalid_auth": "Ge\u00e7ersiz kimlik do\u011frulama",
+            "unknown": "Beklenmeyen hata"
+        },
+        "step": {
+            "reauth_confirm": {
+                "data": {
+                    "api_key": "API Anahtar\u0131"
+                },
+                "data_description": {
+                    "api_key": "OpenAI API anahtar\u0131n\u0131z."
+                },
+                "description": "Yeniden kimlik do\u011frulama gerekli. L\u00fctfen g\u00fcncellenmi\u015f API anahtar\u0131n\u0131z\u0131 girin."
+            },
+            "user": {
+                "data": {
+                    "api_key": "API Anahtar\u0131"
+                },
+                "data_description": {
+                    "api_key": "OpenAI API anahtar\u0131n\u0131z."
+                },
+                "description": "OpenAI API anahtar\u0131n\u0131z\u0131 sa\u011flayarak OpenAI Conversation entegrasyonunu kurun. Bir API anahtar\u0131 edinme talimatlar\u0131 [burada]({instructions_url}) bulunabilir."
+            }
+        }
+    },
+    "config_subentries": {
+        "ai_task_data": {
+            "abort": {
+                "entry_not_loaded": "Yap\u0131land\u0131rma devre d\u0131\u015f\u0131 b\u0131rak\u0131lm\u0131\u015fken hi\u00e7bir \u015fey eklenemez.",
+                "reconfigure_successful": "Yeniden yap\u0131land\u0131rma ba\u015far\u0131l\u0131 oldu"
+            },
+            "entry_type": "Yapay zeka g\u00f6revi",
+            "error": {
+                "code_interpreter_minimal_reasoning": "Kod yorumlay\u0131c\u0131s\u0131, minimum mant\u0131k y\u00fcr\u00fctme \u00e7abas\u0131yla desteklenmemektedir",
+                "model_not_supported": "Bu model desteklenmiyor, l\u00fctfen farkl\u0131 bir model se\u00e7in",
+                "web_search_minimal_reasoning": "Web aramas\u0131 \u015fu anda asgari d\u00fczeyde ak\u0131l y\u00fcr\u00fctme \u00e7abas\u0131yla desteklenmiyor"
+            },
+            "initiate_flow": {
+                "reconfigure": "Yapay zeka g\u00f6revini yeniden yap\u0131land\u0131r\u0131n",
+                "user": "Yapay zeka g\u00f6revi ekleyin"
+            },
+            "step": {
+                "advanced": {
+                    "data": {
+                        "chat_model": "Model",
+                        "max_tokens": "Yan\u0131t olarak d\u00f6nd\u00fcr\u00fclecek maksimum jeton say\u0131s\u0131",
+                        "store_responses": "\u0130stekleri ve yan\u0131tlar\u0131 OpenAI'de saklay\u0131n",
+                        "temperature": "S\u0131cakl\u0131k",
+                        "top_p": "Yukar\u0131 P"
+                    },
+                    "data_description": {
+                        "store_responses": "Etkinle\u015ftirilirse, istekler ve yan\u0131tlar OpenAI taraf\u0131ndan saklan\u0131r ve OpenAI g\u00f6sterge tablosu g\u00fcnl\u00fcklerinizde g\u00f6r\u00fcn\u00fcr"
+                    },
+                    "title": "Geli\u015fmi\u015f ayarlar"
+                },
+                "init": {
+                    "data": {
+                        "name": "Ad",
+                        "recommended": "\u00d6nerilen model ayarlar\u0131"
+                    }
+                },
+                "model": {
+                    "data": {
+                        "code_interpreter": "Kod yorumlay\u0131c\u0131 arac\u0131n\u0131 etkinle\u015ftir",
+                        "image_model": "G\u00f6r\u00fcnt\u00fc olu\u015fturma modeli",
+                        "inline_citations": "Web arama sonu\u00e7lar\u0131na ba\u011flant\u0131lar ekleyin",
+                        "reasoning_effort": "Ak\u0131l y\u00fcr\u00fctme \u00e7abas\u0131",
+                        "reasoning_summary": "Gerek\u00e7e \u00f6zeti",
+                        "search_context_size": "Arama ba\u011flam\u0131 boyutu",
+                        "service_tier": "Hizmet seviyesi",
+                        "user_location": "Ev konumunu ekle",
+                        "web_search": "Web aramas\u0131n\u0131 etkinle\u015ftir"
+                    },
+                    "data_description": {
+                        "code_interpreter": "Modelin Python arac\u0131 olarak da bilinen bu ara\u00e7, sorular\u0131 yan\u0131tlamak i\u00e7in kodun \u00e7al\u0131\u015ft\u0131r\u0131lmas\u0131na olanak tan\u0131r",
+                        "image_model": "G\u00f6r\u00fcnt\u00fc olu\u015ftururken kullan\u0131lacak model",
+                        "inline_citations": "Devre d\u0131\u015f\u0131 b\u0131rak\u0131l\u0131rsa, modelin kaynak al\u0131nt\u0131lar\u0131n\u0131 dahil etmemesini istemek i\u00e7in ek bir istem eklenir",
+                        "reasoning_effort": "Modelin, istemi yan\u0131tlamadan \u00f6nce ka\u00e7 tane ak\u0131l y\u00fcr\u00fctme belirteci \u00fcretmesi gerekir?",
+                        "reasoning_summary": "Model taraf\u0131ndan sa\u011flanan gerek\u00e7e \u00f6zetlerinin uzunlu\u011funu ve ayr\u0131nt\u0131 d\u00fczeyini kontrol eder",
+                        "search_context_size": "Arama i\u00e7in kullan\u0131lacak ba\u011flam penceresi alan\u0131 miktar\u0131na ili\u015fkin \u00fcst d\u00fczey k\u0131lavuz",
+                        "service_tier": "Maliyeti ve yan\u0131t s\u00fcresini kontrol eder",
+                        "user_location": "Co\u011frafyaya g\u00f6re arama sonu\u00e7lar\u0131n\u0131 daralt\u0131n",
+                        "web_search": "Bir yan\u0131t olu\u015fturmadan \u00f6nce modelin en son bilgileri web'de aramas\u0131na izin verin"
+                    },
+                    "title": "Modele \u00f6zg\u00fc se\u00e7enekler"
+                }
+            }
+        },
+        "conversation": {
+            "abort": {
+                "entry_not_loaded": "Yap\u0131land\u0131rma devre d\u0131\u015f\u0131 b\u0131rak\u0131lm\u0131\u015fken hi\u00e7bir \u015fey eklenemez.",
+                "reconfigure_successful": "Yeniden yap\u0131land\u0131rma ba\u015far\u0131l\u0131 oldu"
+            },
+            "entry_type": "Konu\u015fma arac\u0131s\u0131",
+            "error": {
+                "code_interpreter_minimal_reasoning": "Kod yorumlay\u0131c\u0131s\u0131, minimum mant\u0131k y\u00fcr\u00fctme \u00e7abas\u0131yla desteklenmemektedir",
+                "model_not_supported": "Bu model desteklenmiyor, l\u00fctfen farkl\u0131 bir model se\u00e7in",
+                "web_search_minimal_reasoning": "Web aramas\u0131 \u015fu anda asgari d\u00fczeyde ak\u0131l y\u00fcr\u00fctme \u00e7abas\u0131yla desteklenmiyor"
+            },
+            "initiate_flow": {
+                "reconfigure": "Konu\u015fma arac\u0131s\u0131n\u0131 yeniden yap\u0131land\u0131r\u0131n",
+                "user": "Konu\u015fma temsilcisi ekle"
+            },
+            "step": {
+                "advanced": {
+                    "data": {
+                        "chat_model": "Model",
+                        "max_tokens": "Yan\u0131t olarak d\u00f6nd\u00fcr\u00fclecek maksimum jeton say\u0131s\u0131",
+                        "store_responses": "\u0130stekleri ve yan\u0131tlar\u0131 OpenAI'de saklay\u0131n",
+                        "temperature": "S\u0131cakl\u0131k",
+                        "top_p": "Yukar\u0131 P"
+                    },
+                    "data_description": {
+                        "store_responses": "Etkinle\u015ftirilirse, istekler ve yan\u0131tlar OpenAI taraf\u0131ndan saklan\u0131r ve OpenAI g\u00f6sterge tablosu g\u00fcnl\u00fcklerinizde g\u00f6r\u00fcn\u00fcr"
+                    },
+                    "title": "Geli\u015fmi\u015f ayarlar"
+                },
+                "init": {
+                    "data": {
+                        "llm_hass_api": "Home Assistant'\u0131 kontrol et",
+                        "name": "Ad",
+                        "prompt": "Talimatlar",
+                        "recommended": "\u00d6nerilen model ayarlar\u0131"
+                    },
+                    "data_description": {
+                        "prompt": "LLM'nin nas\u0131l yan\u0131t vermesi gerekti\u011fini a\u00e7\u0131klay\u0131n. Bu bir \u015fablon olabilir."
+                    }
+                },
+                "model": {
+                    "data": {
+                        "code_interpreter": "Kod yorumlay\u0131c\u0131 arac\u0131n\u0131 etkinle\u015ftir",
+                        "image_model": "G\u00f6r\u00fcnt\u00fc olu\u015fturma modeli",
+                        "inline_citations": "Web arama sonu\u00e7lar\u0131na ba\u011flant\u0131lar ekleyin",
+                        "reasoning_effort": "Ak\u0131l y\u00fcr\u00fctme \u00e7abas\u0131",
+                        "reasoning_summary": "Gerek\u00e7e \u00f6zeti",
+                        "search_context_size": "Arama ba\u011flam\u0131 boyutu",
+                        "service_tier": "Hizmet seviyesi",
+                        "user_location": "Ev konumunu ekle",
+                        "web_search": "Web aramas\u0131n\u0131 etkinle\u015ftir"
+                    },
+                    "data_description": {
+                        "code_interpreter": "Modelin Python arac\u0131 olarak da bilinen bu ara\u00e7, sorular\u0131 yan\u0131tlamak i\u00e7in kodun \u00e7al\u0131\u015ft\u0131r\u0131lmas\u0131na olanak tan\u0131r",
+                        "image_model": "G\u00f6r\u00fcnt\u00fc olu\u015ftururken kullan\u0131lacak model",
+                        "inline_citations": "Devre d\u0131\u015f\u0131 b\u0131rak\u0131l\u0131rsa, modelin kaynak al\u0131nt\u0131lar\u0131n\u0131 dahil etmemesini istemek i\u00e7in ek bir istem eklenir",
+                        "reasoning_effort": "Modelin, istemi yan\u0131tlamadan \u00f6nce ka\u00e7 tane ak\u0131l y\u00fcr\u00fctme belirteci \u00fcretmesi gerekir?",
+                        "reasoning_summary": "Model taraf\u0131ndan sa\u011flanan gerek\u00e7e \u00f6zetlerinin uzunlu\u011funu ve ayr\u0131nt\u0131 d\u00fczeyini kontrol eder",
+                        "search_context_size": "Arama i\u00e7in kullan\u0131lacak ba\u011flam penceresi alan\u0131 miktar\u0131na ili\u015fkin \u00fcst d\u00fczey k\u0131lavuz",
+                        "service_tier": "Maliyeti ve yan\u0131t s\u00fcresini kontrol eder",
+                        "user_location": "Co\u011frafyaya g\u00f6re arama sonu\u00e7lar\u0131n\u0131 daralt\u0131n",
+                        "web_search": "Bir yan\u0131t olu\u015fturmadan \u00f6nce modelin en son bilgileri web'de aramas\u0131na izin verin"
+                    },
+                    "title": "Modele \u00f6zg\u00fc se\u00e7enekler"
+                }
+            }
+        },
+        "stt": {
+            "abort": {
+                "entry_not_loaded": "Yap\u0131land\u0131rma devre d\u0131\u015f\u0131 b\u0131rak\u0131lm\u0131\u015fken hi\u00e7bir \u015fey eklenemez.",
+                "reconfigure_successful": "Yeniden yap\u0131land\u0131rma ba\u015far\u0131l\u0131 oldu"
+            },
+            "entry_type": "Konu\u015fmadan metne",
+            "initiate_flow": {
+                "reconfigure": "Konu\u015fmadan metne d\u00f6n\u00fc\u015ft\u00fcrme hizmetini yeniden yap\u0131land\u0131r\u0131n",
+                "user": "Konu\u015fmadan metne d\u00f6n\u00fc\u015ft\u00fcrme hizmeti ekleyin"
+            },
+            "step": {
+                "init": {
+                    "data": {
+                        "chat_model": "Model",
+                        "name": "Ad",
+                        "prompt": "Talimatlar"
+                    },
+                    "data_description": {
+                        "chat_model": "Konu\u015fmay\u0131 yaz\u0131ya d\u00f6kmek i\u00e7in kullan\u0131lacak model.",
+                        "prompt": "Transkriptlerin kalitesini art\u0131rmak i\u00e7in bu komutu kullan\u0131n. En iyi sonu\u00e7lar i\u00e7in i\u015flem hatt\u0131 diline \u00e7evirin. Daha fazla ayr\u0131nt\u0131 i\u00e7in belgelere bak\u0131n."
+                    }
+                }
+            }
+        },
+        "tts": {
+            "abort": {
+                "entry_not_loaded": "Yap\u0131land\u0131rma devre d\u0131\u015f\u0131 b\u0131rak\u0131lm\u0131\u015fken hi\u00e7bir \u015fey eklenemez.",
+                "reconfigure_successful": "Yeniden yap\u0131land\u0131rma ba\u015far\u0131l\u0131 oldu"
+            },
+            "entry_type": "Metinden sese",
+            "initiate_flow": {
+                "reconfigure": "Metinden sese d\u00f6n\u00fc\u015ft\u00fcrme hizmetini yeniden yap\u0131land\u0131r\u0131n",
+                "user": "Metin okuma hizmeti ekleyin"
+            },
+            "step": {
+                "init": {
+                    "data": {
+                        "name": "Ad",
+                        "prompt": "Talimatlar",
+                        "tts_speed": "H\u0131z"
+                    },
+                    "data_description": {
+                        "prompt": "Konu\u015fman\u0131n aksan, duygu aral\u0131\u011f\u0131, tonlama, mimikler, konu\u015fma h\u0131z\u0131, ses tonu, f\u0131s\u0131ldama ve daha fazlas\u0131n\u0131 i\u00e7eren y\u00f6nlerini kontrol etmek",
+                        "tts_speed": "Olu\u015fturulan konu\u015fman\u0131n h\u0131z\u0131"
+                    }
+                }
+            }
+        }
+    },
+    "exceptions": {
+        "invalid_config_entry": {
+            "message": "Ge\u00e7ersiz yap\u0131land\u0131rma giri\u015fi sa\u011fland\u0131. {config_entry} ald\u0131m"
+        }
+    },
+    "issues": {
+        "deprecated_generate_content": {
+            "description": "'openai_conversation.generate_content' eylemi kullan\u0131mdan kald\u0131r\u0131lm\u0131\u015ft\u0131r ve 2026.9.0 s\u00fcr\u00fcm\u00fcnde kald\u0131r\u0131lacakt\u0131r. L\u00fctfen bunun yerine 'ai_task.generate_data' eylemini kullan\u0131n",
+            "title": "'generate_content' eylemi kullan\u0131mdan kald\u0131r\u0131ld\u0131"
+        },
+        "deprecated_generate_image": {
+            "description": "'openai_conversation.generate_image' eylemi kullan\u0131mdan kald\u0131r\u0131lm\u0131\u015ft\u0131r ve 2026.9.0 s\u00fcr\u00fcm\u00fcnde kald\u0131r\u0131lacakt\u0131r. L\u00fctfen bunun yerine 'ai_task.generate_image' eylemini kullan\u0131n",
+            "title": "'generate_image' eylemi kullan\u0131mdan kald\u0131r\u0131ld\u0131"
+        },
+        "organization_verification_required": {
+            "description": "Bu modeli kullanabilmek i\u00e7in kurulu\u015funuzun do\u011frulanmas\u0131 gerekir. L\u00fctfen \u015furaya gidin: {platform_settings} ve Kurulu\u015fu Do\u011frula'y\u0131 se\u00e7in. Yeni do\u011frulama yapt\u0131ysan\u0131z, eri\u015fimin yay\u0131lmas\u0131 15 dakikaya kadar s\u00fcrebilir.",
+            "title": "Kurulu\u015f do\u011frulamas\u0131 gerekli"
+        }
+    },
+    "selector": {
+        "reasoning_effort": {
+            "options": {
+                "high": "Y\u00fcksek",
+                "low": "D\u00fc\u015f\u00fck",
+                "medium": "Orta",
+                "minimal": "Minimal",
+                "none": "Hi\u00e7biri",
+                "xhigh": "X-Y\u00fcksek"
+            }
+        },
+        "reasoning_summary": {
+            "options": {
+                "auto": "Otomatik",
+                "detailed": "Detayl\u0131",
+                "off": "Kapal\u0131"
+            }
+        },
+        "search_context_size": {
+            "options": {
+                "high": "Y\u00fcksek",
+                "low": "D\u00fc\u015f\u00fck",
+                "medium": "Orta"
+            }
+        },
+        "service_tier": {
+            "options": {
+                "auto": "Otomatik",
+                "default": "Standart",
+                "flex": "Esnek",
+                "priority": "\u00d6ncelik"
+            }
+        },
+        "verbosity": {
+            "options": {
+                "high": "Y\u00fcksek",
+                "low": "D\u00fc\u015f\u00fck",
+                "medium": "Orta"
+            }
+        }
+    },
+    "services": {
+        "generate_content": {
+            "description": "Ekli resim veya PDF dosyalar\u0131 da dahil olmak \u00fczere ChatGPT'ye konu\u015fma tarz\u0131nda bir sorgu g\u00f6nderir (kullan\u0131mdan kald\u0131r\u0131lm\u0131\u015ft\u0131r)",
+            "fields": {
+                "config_entry": {
+                    "description": "Bu eylem i\u00e7in kullan\u0131lacak yap\u0131land\u0131rma giri\u015fi",
+                    "name": "Yap\u0131land\u0131rma giri\u015fi"
+                },
+                "filenames": {
+                    "description": "Y\u00fcklenecek dosyalar\u0131n listesi",
+                    "name": "Dosyalar"
+                },
+                "prompt": {
+                    "description": "G\u00f6nderilecek istem",
+                    "name": "\u0130stem"
+                }
+            },
+            "name": "\u0130\u00e7erik olu\u015ftur (kullan\u0131mdan kald\u0131r\u0131ld\u0131)"
+        },
+        "generate_image": {
+            "description": "Bir komut istemini resme d\u00f6n\u00fc\u015ft\u00fcr\u00fcr (kullan\u0131mdan kald\u0131r\u0131lm\u0131\u015ft\u0131r)",
+            "fields": {
+                "config_entry": {
+                    "description": "Bu eylem i\u00e7in kullan\u0131lacak yap\u0131land\u0131rma giri\u015fi",
+                    "name": "Yap\u0131land\u0131rma giri\u015fi"
+                },
+                "prompt": {
+                    "description": "G\u00f6r\u00fcnt\u00fcye d\u00f6n\u00fc\u015ft\u00fcr\u00fclecek metin",
+                    "example": "Bir k\u00f6pe\u011fin foto\u011fraf\u0131",
+                    "name": "\u0130stem"
+                },
+                "quality": {
+                    "description": "Olu\u015fturulacak g\u00f6r\u00fcnt\u00fcn\u00fcn kalitesi",
+                    "name": "Kalite"
+                },
+                "size": {
+                    "description": "Olu\u015fturulacak g\u00f6r\u00fcnt\u00fcn\u00fcn boyutu",
+                    "name": "Boyut"
+                },
+                "style": {
+                    "description": "Olu\u015fturulan g\u00f6r\u00fcnt\u00fcn\u00fcn stili",
+                    "name": "Stil"
+                }
+            },
+            "name": "G\u00f6r\u00fcnt\u00fc olu\u015ftur (kullan\u0131mdan kald\u0131r\u0131ld\u0131)"
+        }
+    }
+}

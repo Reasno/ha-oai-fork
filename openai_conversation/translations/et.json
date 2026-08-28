@@ -1,0 +1,320 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Teenus on juba seadistatud",
+            "reauth_successful": "Taastuvastamine \u00f5nnestus"
+        },
+        "error": {
+            "cannot_connect": "\u00dchendamine nurjus",
+            "invalid_auth": "Tuvastamine nurjus",
+            "unknown": "Ootamatu t\u00f5rge"
+        },
+        "step": {
+            "reauth_confirm": {
+                "data": {
+                    "api_key": "API v\u00f5ti"
+                },
+                "data_description": {
+                    "api_key": "OpenAI API v\u00f5ti."
+                },
+                "description": "Vajalik on taastuvastamine. Sisesta oma uuendatud API-v\u00f5ti."
+            },
+            "user": {
+                "data": {
+                    "api_key": "API v\u00f5ti"
+                },
+                "data_description": {
+                    "api_key": "OpenAI API v\u00f5ti."
+                },
+                "description": "OpenAI vestluse sidumise seadistamiseks esita oma OpenAI API-v\u00f5ti. API-v\u00f5tme hankimise juhised leiad [siit]({instructions_url})."
+            }
+        }
+    },
+    "config_subentries": {
+        "ai_task_data": {
+            "abort": {
+                "entry_not_loaded": "Asju ei saa lisada kui konfiguratsioon on keelatud.",
+                "reconfigure_successful": "\u00dcmberseadistamine \u00f5nnestus"
+            },
+            "entry_type": "AI \u00fclesanne",
+            "error": {
+                "code_interpreter_minimal_reasoning": "Koodit\u00f5lge ei ole toetatud minimaalse arutlusmahuga",
+                "model_not_supported": "Seda mudelit ei toetata, vali m\u00f5ni muu mudel",
+                "web_search_minimal_reasoning": "Veebiotsing ei ole praegu toetatud minimaalse arutlusmahuga"
+            },
+            "initiate_flow": {
+                "reconfigure": "AI \u00fclesande \u00fcmberseadistamine",
+                "user": "AI \u00fclesande lisamine"
+            },
+            "step": {
+                "advanced": {
+                    "data": {
+                        "chat_model": "Mudel",
+                        "max_tokens": "Vastuseks tagastatavate fraaside maksimaalne arv",
+                        "store_responses": "Talleta p\u00e4ringud ja vastused OpenAI-s",
+                        "temperature": "Temperatuur",
+                        "top_p": "\u00dclemine P"
+                    },
+                    "data_description": {
+                        "store_responses": "Kui see on lubatud, salvestab OpenAI p\u00e4ringud ja vastused ning need on n\u00e4htavad OpenAI vaate logides."
+                    },
+                    "title": "T\u00e4psemad s\u00e4tted"
+                },
+                "init": {
+                    "data": {
+                        "name": "Nimi",
+                        "recommended": "Soovitatavad mudeli seaded"
+                    }
+                },
+                "model": {
+                    "data": {
+                        "code_interpreter": "Luba koodit\u00f5lgi t\u00f6\u00f6riist",
+                        "image_model": "Pildi loomise mudel",
+                        "inline_citations": "Lisa lingid veebiotsingu tulemustesse",
+                        "reasoning_effort": "Arutlusk\u00e4ik",
+                        "reasoning_summary": "P\u00f5hjenduse kokkuv\u00f5te",
+                        "search_context_size": "Otsingukonteksti maht",
+                        "service_tier": "Teenuse tase",
+                        "user_location": "Kaasa kodu asukoht",
+                        "web_search": "Luba veebiotsing"
+                    },
+                    "data_description": {
+                        "code_interpreter": "See t\u00f6\u00f6riist, tuntud ka kui mudeli Pythoni t\u00f6\u00f6riist, v\u00f5imaldab sellel k\u00fcsimustele vastamiseks koodi k\u00e4ivitada.",
+                        "image_model": "Piltide genereerimisel kasutatav mudel",
+                        "inline_citations": "Kui see on keelatud lisatakse t\u00e4iendav viip, et paluda mudelil mitte lisada allikaviiteid",
+                        "reasoning_effort": "Mitu arutlusm\u00e4rki peaks mudel enne viibale vastuse loomist genereerima",
+                        "reasoning_summary": "Juhib mudeli pakutavate arutluskokkuv\u00f5tete pikkust ja detailsust",
+                        "search_context_size": "K\u00f5rgetasemelised juhised otsinguks kasutatava kontekstiakna ruumi mahu kohta",
+                        "service_tier": "Kontrollib kulusid ja reageerimisaega",
+                        "user_location": "T\u00e4psusta otsingutulemusi asukoha alusel",
+                        "web_search": "Lase mudelil enne vastuse loomist veebist uusimat teavet otsida"
+                    },
+                    "title": "Mudelip\u00f5hised valikud"
+                }
+            }
+        },
+        "conversation": {
+            "abort": {
+                "entry_not_loaded": "Asju ei saa lisada kui konfiguratsioon on keelatud.",
+                "reconfigure_successful": "\u00dcmberseadistamine \u00f5nnestus"
+            },
+            "entry_type": "Vestlusagent",
+            "error": {
+                "code_interpreter_minimal_reasoning": "Koodit\u00f5lge ei ole toetatud minimaalse arutlusmahuga",
+                "model_not_supported": "Seda mudelit ei toetata, vali m\u00f5ni muu mudel",
+                "web_search_minimal_reasoning": "Veebiotsing ei ole praegu toetatud minimaalse arutlusmahuga"
+            },
+            "initiate_flow": {
+                "reconfigure": "Vestlusagendi \u00fcmberseadistamine",
+                "user": "Lisa vestlusagent"
+            },
+            "step": {
+                "advanced": {
+                    "data": {
+                        "chat_model": "Mudel",
+                        "max_tokens": "Vastuseks tagastatavate fraaside maksimaalne arv",
+                        "store_responses": "Talleta p\u00e4ringud ja vastused OpenAI-s",
+                        "temperature": "Temperatuur",
+                        "top_p": "\u00dclemine P"
+                    },
+                    "data_description": {
+                        "store_responses": "Kui see on lubatud, salvestab OpenAI p\u00e4ringud ja vastused ning need on n\u00e4htavad OpenAI vaate logides."
+                    },
+                    "title": "T\u00e4psemad s\u00e4tted"
+                },
+                "init": {
+                    "data": {
+                        "llm_hass_api": "Home Assistanti juhtimine",
+                        "name": "Nimi",
+                        "prompt": "Juhised",
+                        "recommended": "Soovitatavad mudeli seaded"
+                    },
+                    "data_description": {
+                        "prompt": "Juhenda kuidas LLM peaks reageerima. See v\u00f5ib olla mall."
+                    }
+                },
+                "model": {
+                    "data": {
+                        "code_interpreter": "Luba koodit\u00f5lgi t\u00f6\u00f6riist",
+                        "image_model": "Pildi loomise mudel",
+                        "inline_citations": "Lisa lingid veebiotsingu tulemustesse",
+                        "reasoning_effort": "Arutlusk\u00e4ik",
+                        "reasoning_summary": "P\u00f5hjenduse kokkuv\u00f5te",
+                        "search_context_size": "Otsingukonteksti maht",
+                        "service_tier": "Teenuse tase",
+                        "user_location": "Kaasa kodu asukoht",
+                        "web_search": "Luba veebiotsing"
+                    },
+                    "data_description": {
+                        "code_interpreter": "See t\u00f6\u00f6riist, tuntud ka kui mudeli Pythoni t\u00f6\u00f6riist, v\u00f5imaldab sellel k\u00fcsimustele vastamiseks koodi k\u00e4ivitada.",
+                        "image_model": "Piltide genereerimisel kasutatav mudel",
+                        "inline_citations": "Kui see on keelatud lisatakse t\u00e4iendav viip, et paluda mudelil mitte lisada allikaviiteid",
+                        "reasoning_effort": "Mitu arutlusm\u00e4rki peaks mudel enne viibale vastuse loomist genereerima",
+                        "reasoning_summary": "Juhib mudeli pakutavate arutluskokkuv\u00f5tete pikkust ja detailsust",
+                        "search_context_size": "K\u00f5rgetasemelised juhised otsinguks kasutatava kontekstiakna ruumi mahu kohta",
+                        "service_tier": "Kontrollib kulusid ja reageerimisaega",
+                        "user_location": "T\u00e4psusta otsingutulemusi asukoha alusel",
+                        "web_search": "Lase mudelil enne vastuse loomist veebist uusimat teavet otsida"
+                    },
+                    "title": "Mudelip\u00f5hised valikud"
+                }
+            }
+        },
+        "stt": {
+            "abort": {
+                "entry_not_loaded": "Asju ei saa lisada kui konfiguratsioon on keelatud.",
+                "reconfigure_successful": "\u00dcmberseadistamine \u00f5nnestus"
+            },
+            "entry_type": "K\u00f5ne tekstiks",
+            "initiate_flow": {
+                "reconfigure": "K\u00f5nest tekstiks teenuse \u00fcmberseadistamine",
+                "user": "Lisa k\u00f5nest tekstiks teenus"
+            },
+            "step": {
+                "init": {
+                    "data": {
+                        "chat_model": "Mudel",
+                        "name": "Nimi",
+                        "prompt": "Juhised"
+                    },
+                    "data_description": {
+                        "chat_model": "K\u00f5ne transkribeerimiseks kasutatav mudel.",
+                        "prompt": "Kasuta seda viipa transkriptsioonide kvaliteedi parandamiseks. Parima tulemuse saavutamiseks t\u00f5lgi voo keelde. Lisateavet leiad dokumentatsioonist."
+                    }
+                }
+            }
+        },
+        "tts": {
+            "abort": {
+                "entry_not_loaded": "Asju ei saa lisada kui konfiguratsioon on keelatud.",
+                "reconfigure_successful": "\u00dcmberseadistamine \u00f5nnestus"
+            },
+            "entry_type": "Tekst k\u00f5neks",
+            "initiate_flow": {
+                "reconfigure": "Tekst k\u00f5neks teenuse \u00fcmberseadistamine",
+                "user": "Tekst k\u00f5neks teenuse lisamine"
+            },
+            "step": {
+                "init": {
+                    "data": {
+                        "name": "Nimi",
+                        "prompt": "Juhised",
+                        "tts_speed": "Kiirus"
+                    },
+                    "data_description": {
+                        "prompt": "K\u00f5ne aspektide, sh aktsendi, emotsioonide ulatuse, intonatsiooni, mulje, k\u00f5ne kiiruse, tooni, sosistamise ja muu kontrollimine",
+                        "tts_speed": "Genereeritud k\u00f5ne kiirus"
+                    }
+                }
+            }
+        }
+    },
+    "exceptions": {
+        "invalid_config_entry": {
+            "message": "Esitatud on vigane seadekanne. Saadi {config_entry}."
+        }
+    },
+    "issues": {
+        "deprecated_generate_content": {
+            "description": "Toiming 'openai_conversation.generate_content' on aegunud ja eemaldatakse versioonist 2026.9.0. Kasuta selle asemel toimingut 'ai_task.generate_data'.",
+            "title": "Aegunud 'generate_content' toiming"
+        },
+        "deprecated_generate_image": {
+            "description": "Toiming 'openai_conversation.generate_image' on aegunud ja eemaldatakse versioonist 2026.9.0. Kasuta selle asemel toimingut 'ai_task.generate_image'.",
+            "title": "Aegunud toiming \u201egenerate_image\u201d"
+        },
+        "organization_verification_required": {
+            "description": "Selle mudeli kasutamiseks peab organisatsioon olema kinnitatud. Mine aadressile {platform_settings} ja vali Kinnita organisatsioon. Kui oled just kinnitanud, v\u00f5ib juurdep\u00e4\u00e4su levitamiseks kuluda kuni 15 minutit.",
+            "title": "Organisatsiooni kinnitus on vajalik"
+        }
+    },
+    "selector": {
+        "reasoning_effort": {
+            "options": {
+                "high": "K\u00f5rge",
+                "low": "Madal",
+                "medium": "Keskmine",
+                "minimal": "Minimaalne",
+                "none": "Puudub",
+                "xhigh": "X-High"
+            }
+        },
+        "reasoning_summary": {
+            "options": {
+                "auto": "Automaatne",
+                "concise": "Kokkuv\u00f5tlik",
+                "detailed": "\u00dcksikasjalik",
+                "off": "V\u00e4ljas"
+            }
+        },
+        "search_context_size": {
+            "options": {
+                "high": "K\u00f5rge",
+                "low": "Madal",
+                "medium": "Keskmine"
+            }
+        },
+        "service_tier": {
+            "options": {
+                "auto": "Automaatne",
+                "default": "Tavaline",
+                "flex": "Paindlik",
+                "priority": "T\u00e4htsus"
+            }
+        },
+        "verbosity": {
+            "options": {
+                "high": "K\u00f5rge",
+                "low": "Madal",
+                "medium": "Keskmine"
+            }
+        }
+    },
+    "services": {
+        "generate_content": {
+            "description": "Saadab vestlusp\u00e4ringu ChatGPT-le koos lisatud piltide v\u00f5i PDF-failidega (aegunud)",
+            "fields": {
+                "config_entry": {
+                    "description": "Selle tegevuse jaoks kasutatav seadekanne",
+                    "name": "Seadekanne"
+                },
+                "filenames": {
+                    "description": "\u00dcleslaaditavate failide loend",
+                    "name": "Failid"
+                },
+                "prompt": {
+                    "description": "Saadetav viip",
+                    "name": "Viip"
+                }
+            },
+            "name": "Sisu loomine (aegunud)"
+        },
+        "generate_image": {
+            "description": "Muudab viiba pildiks (aegunud)",
+            "fields": {
+                "config_entry": {
+                    "description": "Selle teenuse jaoks kasutatav seadekanne",
+                    "name": "Seadekanne"
+                },
+                "prompt": {
+                    "description": "Pildiks muudetav tekst",
+                    "example": "Foto koerast",
+                    "name": "Viip"
+                },
+                "quality": {
+                    "description": "Loodava pildi kvaliteet",
+                    "name": "Pildi kvaliteet"
+                },
+                "size": {
+                    "description": "Loodava pildi suurus",
+                    "name": "Suurus"
+                },
+                "style": {
+                    "description": "Loodud pildi stiil",
+                    "name": "Stiil"
+                }
+            },
+            "name": "Loo pilt (aegunud)"
+        }
+    }
+}

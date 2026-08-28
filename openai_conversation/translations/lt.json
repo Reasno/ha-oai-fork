@@ -1,0 +1,320 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Paslauga jau sukonfig\u016bruota",
+            "reauth_successful": "Pakartotinis autentifikavimas buvo s\u0117kmingas"
+        },
+        "error": {
+            "cannot_connect": "Nepavyko prisijungti",
+            "invalid_auth": "Neteisingas autentifikavimas",
+            "unknown": "Netik\u0117ta klaida"
+        },
+        "step": {
+            "reauth_confirm": {
+                "data": {
+                    "api_key": "API raktas"
+                },
+                "data_description": {
+                    "api_key": "J\u016bs\u0173 OpenAI API raktas."
+                },
+                "description": "Reikalingas pakartotinis autentifikavimas. \u012eveskite atnaujint\u0105 API rakt\u0105."
+            },
+            "user": {
+                "data": {
+                    "api_key": "API raktas"
+                },
+                "data_description": {
+                    "api_key": "J\u016bs\u0173 OpenAI API raktas."
+                },
+                "description": "Nustatykite OpenAI Conversation integracij\u0105 pateikdami savo OpenAI API rakt\u0105. Instrukcijas, kaip gauti API rakt\u0105, rasite [\u010dia]({instructions_url})."
+            }
+        }
+    },
+    "config_subentries": {
+        "ai_task_data": {
+            "abort": {
+                "entry_not_loaded": "Negalima prid\u0117ti dalyk\u0173, kol konfig\u016bracija i\u0161jungta.",
+                "reconfigure_successful": "Perkonfig\u016bravimas s\u0117kmingas"
+            },
+            "entry_type": "AI u\u017eduotis",
+            "error": {
+                "code_interpreter_minimal_reasoning": "Kodo interpretatorius nepalaikomas, jei reikia minimali\u0173 samprotavimo pastang\u0173",
+                "model_not_supported": "\u0160is modelis nepalaikomas, pasirinkite kit\u0105 model\u012f",
+                "web_search_minimal_reasoning": "\u0160iuo metu \u017einiatinklio paie\u0161ka nepalaikoma, jei reikia minimali\u0173 samprotavimo pastang\u0173"
+            },
+            "initiate_flow": {
+                "reconfigure": "I\u0161 naujo konfig\u016bruoti DI u\u017eduot\u012f",
+                "user": "Prid\u0117ti dirbtinio intelekto u\u017eduot\u012f"
+            },
+            "step": {
+                "advanced": {
+                    "data": {
+                        "chat_model": "Modelis",
+                        "max_tokens": "Did\u017eiausias atsakyme gr\u0105\u017einam\u0173 \u017eeton\u0173 skai\u010dius",
+                        "store_responses": "Saugoti u\u017eklausas ir atsakymus OpenAI sistemoje",
+                        "temperature": "Temperat\u016bra",
+                        "top_p": "Vir\u0161uje P"
+                    },
+                    "data_description": {
+                        "store_responses": "Jei \u012fjungta, u\u017eklausos ir atsakymai saugomi OpenAI ir matomi j\u016bs\u0173 OpenAI prietais\u0173 skydelio \u017eurnaluose."
+                    },
+                    "title": "I\u0161pl\u0117stiniai nustatymai"
+                },
+                "init": {
+                    "data": {
+                        "name": "Vardas",
+                        "recommended": "Rekomenduojami modelio nustatymai"
+                    }
+                },
+                "model": {
+                    "data": {
+                        "code_interpreter": "\u012ejungti kodo interpretavimo \u012frank\u012f",
+                        "image_model": "Vaizdo generavimo modelis",
+                        "inline_citations": "\u012etraukti nuorodas \u012f \u017einiatinklio paie\u0161kos rezultatus",
+                        "reasoning_effort": "Argumentavimo pastangos",
+                        "reasoning_summary": "Samprotavimo santrauka",
+                        "search_context_size": "Paie\u0161kos konteksto dydis",
+                        "service_tier": "Paslaug\u0173 lygis",
+                        "user_location": "Nurodykite nam\u0173 viet\u0105",
+                        "web_search": "\u012egalinti \u017einiatinklio paie\u0161k\u0105"
+                    },
+                    "data_description": {
+                        "code_interpreter": "\u0160is \u012frankis, dar \u017einomas kaip modelio Python \u012frankis, leid\u017eia paleisti kod\u0105, kad b\u016bt\u0173 atsakyta \u012f klausimus.",
+                        "image_model": "Modelis, naudojamas kuriant vaizdus",
+                        "inline_citations": "Jei i\u0161jungta, pridedamas papildomas raginimas, kuriame pra\u0161oma ne\u012ftraukti \u0161altini\u0173 citat\u0173.",
+                        "reasoning_effort": "Kiek argumentavimo \u017eenkl\u0173 modelis tur\u0117t\u0173 sukurti prie\u0161 sukurdamas atsakym\u0105 \u012f u\u017eklaus\u0105",
+                        "reasoning_summary": "Kontroliuoja modelio pateikt\u0173 samprotavimo santrauk\u0173 ilg\u012f ir detalum\u0105",
+                        "search_context_size": "Auk\u0161to lygio nurodymai, kiek kontekstinio lango erdv\u0117s reikia naudoti paie\u0161kai",
+                        "service_tier": "Kontroliuoja i\u0161laidas ir reagavimo laik\u0105",
+                        "user_location": "Paie\u0161kos rezultat\u0173 tikslinimas pagal geografij\u0105",
+                        "web_search": "Leisti modeliui ie\u0161koti naujausios informacijos internete prie\u0161 generuojant atsakym\u0105"
+                    },
+                    "title": "Modeliui b\u016bdingos parinktys"
+                }
+            }
+        },
+        "conversation": {
+            "abort": {
+                "entry_not_loaded": "Negalima prid\u0117ti dalyk\u0173, kol konfig\u016bracija i\u0161jungta.",
+                "reconfigure_successful": "Perkonfig\u016bravimas s\u0117kmingas"
+            },
+            "entry_type": "Pokalbi\u0173 agentas",
+            "error": {
+                "code_interpreter_minimal_reasoning": "Kodo interpretatorius nepalaikomas, jei reikia minimali\u0173 samprotavimo pastang\u0173",
+                "model_not_supported": "\u0160is modelis nepalaikomas, pasirinkite kit\u0105 model\u012f",
+                "web_search_minimal_reasoning": "\u0160iuo metu \u017einiatinklio paie\u0161ka nepalaikoma, jei reikia minimali\u0173 samprotavimo pastang\u0173"
+            },
+            "initiate_flow": {
+                "reconfigure": "Perkonfig\u016bruoti pokalbi\u0173 agent\u0105",
+                "user": "Prid\u0117ti pokalbi\u0173 agent\u0105"
+            },
+            "step": {
+                "advanced": {
+                    "data": {
+                        "chat_model": "Modelis",
+                        "max_tokens": "Did\u017eiausias atsakyme gr\u0105\u017einam\u0173 \u017eeton\u0173 skai\u010dius",
+                        "store_responses": "Saugoti u\u017eklausas ir atsakymus OpenAI sistemoje",
+                        "temperature": "Temperat\u016bra",
+                        "top_p": "Vir\u0161uje P"
+                    },
+                    "data_description": {
+                        "store_responses": "Jei \u012fjungta, u\u017eklausos ir atsakymai saugomi OpenAI ir matomi j\u016bs\u0173 OpenAI prietais\u0173 skydelio \u017eurnaluose."
+                    },
+                    "title": "I\u0161pl\u0117stiniai nustatymai"
+                },
+                "init": {
+                    "data": {
+                        "llm_hass_api": "Valdykite Home Assistant",
+                        "name": "Vardas",
+                        "prompt": "Instrukcijos",
+                        "recommended": "Rekomenduojami modelio nustatymai"
+                    },
+                    "data_description": {
+                        "prompt": "Nurodykite, kaip LLM tur\u0117t\u0173 reaguoti. Tai gali b\u016bti \u0161ablonas."
+                    }
+                },
+                "model": {
+                    "data": {
+                        "code_interpreter": "\u012ejungti kodo interpretavimo \u012frank\u012f",
+                        "image_model": "Vaizdo generavimo modelis",
+                        "inline_citations": "\u012etraukti nuorodas \u012f \u017einiatinklio paie\u0161kos rezultatus",
+                        "reasoning_effort": "Argumentavimo pastangos",
+                        "reasoning_summary": "Samprotavimo santrauka",
+                        "search_context_size": "Paie\u0161kos konteksto dydis",
+                        "service_tier": "Paslaug\u0173 lygis",
+                        "user_location": "Nurodykite nam\u0173 viet\u0105",
+                        "web_search": "\u012egalinti \u017einiatinklio paie\u0161k\u0105"
+                    },
+                    "data_description": {
+                        "code_interpreter": "\u0160is \u012frankis, dar \u017einomas kaip modelio Python \u012frankis, leid\u017eia paleisti kod\u0105, kad b\u016bt\u0173 atsakyta \u012f klausimus.",
+                        "image_model": "Modelis, naudojamas kuriant vaizdus",
+                        "inline_citations": "Jei i\u0161jungta, pridedamas papildomas raginimas, kuriame pra\u0161oma ne\u012ftraukti \u0161altini\u0173 citat\u0173.",
+                        "reasoning_effort": "Kiek argumentavimo \u017eenkl\u0173 modelis tur\u0117t\u0173 sukurti prie\u0161 sukurdamas atsakym\u0105 \u012f u\u017eklaus\u0105",
+                        "reasoning_summary": "Kontroliuoja modelio pateikt\u0173 samprotavimo santrauk\u0173 ilg\u012f ir detalum\u0105",
+                        "search_context_size": "Auk\u0161to lygio nurodymai, kiek kontekstinio lango erdv\u0117s reikia naudoti paie\u0161kai",
+                        "service_tier": "Kontroliuoja i\u0161laidas ir reagavimo laik\u0105",
+                        "user_location": "Paie\u0161kos rezultat\u0173 tikslinimas pagal geografij\u0105",
+                        "web_search": "Leisti modeliui ie\u0161koti naujausios informacijos internete prie\u0161 generuojant atsakym\u0105"
+                    },
+                    "title": "Modeliui b\u016bdingos parinktys"
+                }
+            }
+        },
+        "stt": {
+            "abort": {
+                "entry_not_loaded": "Negalima prid\u0117ti dalyk\u0173, kol konfig\u016bracija i\u0161jungta.",
+                "reconfigure_successful": "Perkonfig\u016bravimas s\u0117kmingas"
+            },
+            "entry_type": "Kalba \u012f tekst\u0105",
+            "initiate_flow": {
+                "reconfigure": "I\u0161 naujo konfig\u016bruoti kalbos \u012f tekst\u0105 paslaug\u0105",
+                "user": "Prid\u0117ti kalbos \u012f tekst\u0105 paslaug\u0105"
+            },
+            "step": {
+                "init": {
+                    "data": {
+                        "chat_model": "Modelis",
+                        "name": "Vardas",
+                        "prompt": "Instrukcijos"
+                    },
+                    "data_description": {
+                        "chat_model": "Modelis, naudojamas kalbai transkribuoti.",
+                        "prompt": "Naudokite \u0161\u012f raginim\u0105, kad pagerintum\u0117te transkript\u0173 kokyb\u0119. Geriausiems rezultatams pasiekti i\u0161verskite \u012f srauto kalb\u0105. Daugiau informacijos rasite dokumentacijoje."
+                    }
+                }
+            }
+        },
+        "tts": {
+            "abort": {
+                "entry_not_loaded": "Negalima prid\u0117ti dalyk\u0173, kol konfig\u016bracija i\u0161jungta.",
+                "reconfigure_successful": "Perkonfig\u016bravimas s\u0117kmingas"
+            },
+            "entry_type": "Teksto \u012fgarsinimas",
+            "initiate_flow": {
+                "reconfigure": "I\u0161 naujo konfig\u016bruoti teksto \u012fgarsinimo paslaug\u0105",
+                "user": "Prid\u0117ti teksto \u012fgarsinimo paslaug\u0105"
+            },
+            "step": {
+                "init": {
+                    "data": {
+                        "name": "Vardas",
+                        "prompt": "Instrukcijos",
+                        "tts_speed": "Greitis"
+                    },
+                    "data_description": {
+                        "prompt": "Kontroliuokite kalbos aspektus, \u012fskaitant akcent\u0105, emocin\u012f diapazon\u0105, intonacij\u0105, \u012fsp\u016bd\u017eius, kalbos greit\u012f, ton\u0105, \u0161nab\u017edes\u012f ir kt.",
+                        "tts_speed": "Sugeneruotos kalbos greitis"
+                    }
+                }
+            }
+        }
+    },
+    "exceptions": {
+        "invalid_config_entry": {
+            "message": "Pateiktas neteisingas konfig\u016bracijos \u012fra\u0161as. Gauta {config_entry}"
+        }
+    },
+    "issues": {
+        "deprecated_generate_content": {
+            "description": "Veiksmas 'openai_conversation.generate_content' yra nebenaudojamas ir bus pa\u0161alintas 2026.9.0 versijoje. Vietoj jo naudokite veiksm\u0105 'ai_task.generate_data'.",
+            "title": "Nebenaudojamas veiksmas 'generate_content'"
+        },
+        "deprecated_generate_image": {
+            "description": "Veiksmas 'openai_conversation.generate_image' yra nebenaudojamas ir bus pa\u0161alintas 2026.9.0 versijoje. Vietoj jo naudokite veiksm\u0105 'ai_task.generate_image'.",
+            "title": "Nebenaudojamas veiksmas 'generate_image'"
+        },
+        "organization_verification_required": {
+            "description": "J\u016bs\u0173 organizacija turi b\u016bti patvirtinta, kad gal\u0117tum\u0117te naudoti \u0161\u012f model\u012f. Eikite \u012f {platform_settings} ir pasirinkite Patvirtinti organizacij\u0105. Jei k\u0105 tik patvirtinote, prieigos suteikimas gali u\u017etrukti iki 15 minu\u010di\u0173.",
+            "title": "Reikalingas organizacijos patvirtinimas"
+        }
+    },
+    "selector": {
+        "reasoning_effort": {
+            "options": {
+                "high": "Auk\u0161tas",
+                "low": "\u017demas",
+                "medium": "Vidutinis",
+                "minimal": "Minimalus",
+                "none": "N\u0117ra",
+                "xhigh": "X-High"
+            }
+        },
+        "reasoning_summary": {
+            "options": {
+                "auto": "Automatinis",
+                "concise": "Glaustas",
+                "detailed": "I\u0161samus",
+                "off": "I\u0161jungta"
+            }
+        },
+        "search_context_size": {
+            "options": {
+                "high": "Auk\u0161tas",
+                "low": "\u017demas",
+                "medium": "Vidutinis"
+            }
+        },
+        "service_tier": {
+            "options": {
+                "auto": "Automatinis",
+                "default": "Standartinis",
+                "flex": "Lankstus",
+                "priority": "Prioritetas"
+            }
+        },
+        "verbosity": {
+            "options": {
+                "high": "Auk\u0161tas",
+                "low": "\u017demas",
+                "medium": "Vidutinis"
+            }
+        }
+    },
+    "services": {
+        "generate_content": {
+            "description": "Siun\u010dia pokalbio u\u017eklaus\u0105 \u012f ChatGPT, \u012fskaitant visus prid\u0117tus paveiksl\u0117lius arba PDF failus (nebenaudojama)",
+            "fields": {
+                "config_entry": {
+                    "description": "\u0160iam veiksmui naudojamas konfig\u016bracijos \u012fra\u0161as",
+                    "name": "Konfig\u016bracijos \u012fra\u0161as"
+                },
+                "filenames": {
+                    "description": "Fail\u0173, kuriuos reikia \u012fkelti, s\u0105ra\u0161as",
+                    "name": "Failai"
+                },
+                "prompt": {
+                    "description": "Raginimas i\u0161si\u0173sti",
+                    "name": "Raginimas"
+                }
+            },
+            "name": "Turinio generavimas (nebenaudojamas)"
+        },
+        "generate_image": {
+            "description": "Paver\u010dia raginim\u0105 paveiksl\u0117liu (nebenaudojama)",
+            "fields": {
+                "config_entry": {
+                    "description": "\u0160iam veiksmui naudojamas konfig\u016bracijos \u012fra\u0161as",
+                    "name": "Konfig\u016bracijos \u012fra\u0161as"
+                },
+                "prompt": {
+                    "description": "Tekstas, kur\u012f reikia paversti vaizdu",
+                    "example": "\u0160uns nuotrauka",
+                    "name": "Raginimas"
+                },
+                "quality": {
+                    "description": "Vaizdo, kuris bus sugeneruotas, kokyb\u0117",
+                    "name": "Kokyb\u0117"
+                },
+                "size": {
+                    "description": "Sugeneruojamo vaizdo dydis",
+                    "name": "Dydis"
+                },
+                "style": {
+                    "description": "Sukurto vaizdo stilius",
+                    "name": "Stilius"
+                }
+            },
+            "name": "Generuoti vaizd\u0105 (nebenaudojama)"
+        }
+    }
+}

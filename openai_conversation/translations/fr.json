@@ -1,0 +1,233 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Le service est d\u00e9j\u00e0 configur\u00e9",
+            "reauth_successful": "La r\u00e9-authentification a r\u00e9ussi"
+        },
+        "error": {
+            "cannot_connect": "\u00c9chec de connexion",
+            "invalid_auth": "Authentification non valide",
+            "unknown": "Erreur inattendue"
+        },
+        "step": {
+            "reauth_confirm": {
+                "data": {
+                    "api_key": "Cl\u00e9 d'API"
+                },
+                "data_description": {
+                    "api_key": "Votre cl\u00e9 API OpenAI."
+                },
+                "description": "R\u00e9authentification requise. Veuillez saisir votre cl\u00e9 API mise \u00e0 jour."
+            },
+            "user": {
+                "data": {
+                    "api_key": "Cl\u00e9 d'API"
+                },
+                "data_description": {
+                    "api_key": "Votre cl\u00e9 API OpenAI."
+                },
+                "description": "Configurez l'int\u00e9gration OpenAI Conversation en fournissant votre cl\u00e9 API OpenAI. Les instructions pour obtenir une cl\u00e9 API se trouvent [ici]({instructions_url})."
+            }
+        }
+    },
+    "config_subentries": {
+        "ai_task_data": {
+            "abort": {
+                "entry_not_loaded": "Impossible d'ajouter des \u00e9l\u00e9ments lorsque la configuration est d\u00e9sactiv\u00e9e."
+            },
+            "entry_type": "T\u00e2che d'IA",
+            "error": {
+                "model_not_supported": "Ce mod\u00e8le n'est pas pris en charge, veuillez s\u00e9lectionner un autre mod\u00e8le",
+                "web_search_minimal_reasoning": "La recherche sur le Web n'est actuellement pas prise en charge avec un effort de raisonnement minimal"
+            },
+            "initiate_flow": {
+                "reconfigure": "Reconfigurer la t\u00e2che d'IA",
+                "user": "Ajouter une t\u00e2che d'IA"
+            },
+            "step": {
+                "advanced": {
+                    "data": {
+                        "chat_model": "Mod\u00e8le",
+                        "max_tokens": "Nombre maximal de jetons \u00e0 renvoyer en r\u00e9ponse",
+                        "temperature": "Temp\u00e9rature",
+                        "top_p": "Top P"
+                    },
+                    "title": "Param\u00e8tres avanc\u00e9s"
+                },
+                "init": {
+                    "data": {
+                        "name": "Nom",
+                        "recommended": "Param\u00e8tres recommand\u00e9s pour le mod\u00e8le"
+                    }
+                },
+                "model": {
+                    "data": {
+                        "code_interpreter": "Activer l'outil d'interpr\u00e9tation de code",
+                        "image_model": "Mod\u00e8le de g\u00e9n\u00e9ration d'images",
+                        "inline_citations": "Inclure les liens dans les r\u00e9sultats de recherche Web",
+                        "reasoning_effort": "Effort de raisonnement",
+                        "search_context_size": "Taille du contexte de recherche",
+                        "user_location": "Inclure l'emplacement de la maison",
+                        "web_search": "Activer la recherche sur le Web"
+                    },
+                    "data_description": {
+                        "code_interpreter": "Cet outil, \u00e9galement connu sous le nom d'outil Python pour le mod\u00e8le, lui permet d'ex\u00e9cuter du code pour r\u00e9pondre \u00e0 des questions",
+                        "image_model": "Le mod\u00e8le \u00e0 utiliser lors de la g\u00e9n\u00e9ration d'images",
+                        "inline_citations": "Si cette option est d\u00e9sactiv\u00e9e, un prompt suppl\u00e9mentaire est ajout\u00e9 pour demander au mod\u00e8le de ne pas inclure les citations de sources.",
+                        "reasoning_effort": "Combien de jetons de raisonnement le mod\u00e8le doit-il g\u00e9n\u00e9rer avant de cr\u00e9er une r\u00e9ponse au prompt\u00a0?",
+                        "search_context_size": "Indication g\u00e9n\u00e9rale sur la quantit\u00e9 d'espace de la fen\u00eatre de contexte \u00e0 utiliser pour la recherche",
+                        "user_location": "Affiner les r\u00e9sultats de recherche en fonction de la g\u00e9ographie",
+                        "web_search": "Permettre au mod\u00e8le de rechercher sur le Web les informations les plus r\u00e9centes avant de g\u00e9n\u00e9rer une r\u00e9ponse"
+                    },
+                    "title": "Options sp\u00e9cifiques au mod\u00e8le"
+                }
+            }
+        },
+        "conversation": {
+            "abort": {
+                "entry_not_loaded": "Impossible d'ajouter des \u00e9l\u00e9ments lorsque la configuration est d\u00e9sactiv\u00e9e."
+            },
+            "entry_type": "Agent de conversation",
+            "error": {
+                "model_not_supported": "Ce mod\u00e8le n'est pas pris en charge, veuillez s\u00e9lectionner un autre mod\u00e8le",
+                "web_search_minimal_reasoning": "La recherche sur le Web n'est actuellement pas prise en charge avec un effort de raisonnement minimal"
+            },
+            "initiate_flow": {
+                "reconfigure": "Reconfigurer l'agent de conversation",
+                "user": "Ajouter un agent de conversation"
+            },
+            "step": {
+                "advanced": {
+                    "data": {
+                        "chat_model": "Mod\u00e8le",
+                        "max_tokens": "Nombre maximal de jetons \u00e0 renvoyer en r\u00e9ponse",
+                        "temperature": "Temp\u00e9rature",
+                        "top_p": "Top P"
+                    },
+                    "title": "Param\u00e8tres avanc\u00e9s"
+                },
+                "init": {
+                    "data": {
+                        "llm_hass_api": "Contr\u00f4ler Home Assistant",
+                        "name": "Nom",
+                        "prompt": "Instructions",
+                        "recommended": "Param\u00e8tres recommand\u00e9s pour le mod\u00e8le"
+                    },
+                    "data_description": {
+                        "prompt": "Indiquer comment le LLM doit r\u00e9pondre. Il peut s'agir d'un mod\u00e8le."
+                    }
+                },
+                "model": {
+                    "data": {
+                        "code_interpreter": "Activer l'outil d'interpr\u00e9tation de code",
+                        "image_model": "Mod\u00e8le de g\u00e9n\u00e9ration d'images",
+                        "inline_citations": "Inclure les liens dans les r\u00e9sultats de recherche Web",
+                        "reasoning_effort": "Effort de raisonnement",
+                        "search_context_size": "Taille du contexte de recherche",
+                        "user_location": "Inclure l'emplacement de la maison",
+                        "web_search": "Activer la recherche sur le Web"
+                    },
+                    "data_description": {
+                        "code_interpreter": "Cet outil, \u00e9galement connu sous le nom d'outil Python pour le mod\u00e8le, lui permet d'ex\u00e9cuter du code pour r\u00e9pondre \u00e0 des questions",
+                        "image_model": "Le mod\u00e8le \u00e0 utiliser lors de la g\u00e9n\u00e9ration d'images",
+                        "inline_citations": "Si cette option est d\u00e9sactiv\u00e9e, un prompt suppl\u00e9mentaire est ajout\u00e9 pour demander au mod\u00e8le de ne pas inclure les citations de sources.",
+                        "reasoning_effort": "Combien de jetons de raisonnement le mod\u00e8le doit-il g\u00e9n\u00e9rer avant de cr\u00e9er une r\u00e9ponse au prompt\u00a0?",
+                        "search_context_size": "Indication g\u00e9n\u00e9rale sur la quantit\u00e9 d'espace de la fen\u00eatre de contexte \u00e0 utiliser pour la recherche",
+                        "user_location": "Affiner les r\u00e9sultats de recherche en fonction de la g\u00e9ographie",
+                        "web_search": "Permettre au mod\u00e8le de rechercher sur le Web les informations les plus r\u00e9centes avant de g\u00e9n\u00e9rer une r\u00e9ponse"
+                    },
+                    "title": "Options sp\u00e9cifiques au mod\u00e8le"
+                }
+            }
+        }
+    },
+    "exceptions": {
+        "invalid_config_entry": {
+            "message": "Entr\u00e9e de configuration non valide fournie. Re\u00e7u {config_entry}"
+        }
+    },
+    "issues": {
+        "organization_verification_required": {
+            "description": "Votre organisation doit \u00eatre v\u00e9rifi\u00e9e pour utiliser ce mod\u00e8le. Acc\u00e9dez \u00e0 {platform_settings} et s\u00e9lectionnez Verify Organization. Si vous venez de v\u00e9rifier, la propagation de l'acc\u00e8s peut prendre jusqu'\u00e0 15\u00a0minutes.",
+            "title": "V\u00e9rification de l'organisation requise"
+        }
+    },
+    "selector": {
+        "reasoning_effort": {
+            "options": {
+                "high": "\u00c9lev\u00e9",
+                "low": "Faible",
+                "medium": "Moyen",
+                "minimal": "Minimal",
+                "none": "Aucun",
+                "xhigh": "X-High"
+            }
+        },
+        "reasoning_summary": {
+            "options": {
+                "concise": "Concis"
+            }
+        },
+        "search_context_size": {
+            "options": {
+                "high": "\u00c9lev\u00e9e",
+                "low": "Faible",
+                "medium": "Moyenne"
+            }
+        },
+        "verbosity": {
+            "options": {
+                "high": "\u00c9lev\u00e9",
+                "low": "Faible",
+                "medium": "Moyen"
+            }
+        }
+    },
+    "services": {
+        "generate_content": {
+            "description": "Envoie une requ\u00eate conversationnelle \u00e0 ChatGPT pouvant inclure des images ou fichiers PDF joints (obsol\u00e8te)",
+            "fields": {
+                "config_entry": {
+                    "description": "L'entr\u00e9e de configuration \u00e0 utiliser pour cette action",
+                    "name": "Entr\u00e9e de configuration"
+                },
+                "filenames": {
+                    "description": "Liste des fichiers \u00e0 t\u00e9l\u00e9verser",
+                    "name": "Fichiers"
+                },
+                "prompt": {
+                    "description": "Le prompt \u00e0 envoyer",
+                    "name": "Prompt"
+                }
+            },
+            "name": "G\u00e9n\u00e9rer du contenu (obsol\u00e8te)"
+        },
+        "generate_image": {
+            "description": "Transforme un prompt en image (obsol\u00e8te)",
+            "fields": {
+                "config_entry": {
+                    "description": "L'entr\u00e9e de configuration \u00e0 utiliser pour cette action",
+                    "name": "Entr\u00e9e de configuration"
+                },
+                "prompt": {
+                    "description": "Le texte \u00e0 transformer en image",
+                    "example": "Une photo d'un chien",
+                    "name": "Prompt"
+                },
+                "quality": {
+                    "description": "La qualit\u00e9 de l'image qui sera g\u00e9n\u00e9r\u00e9e",
+                    "name": "Qualit\u00e9"
+                },
+                "size": {
+                    "description": "Taille de l'image \u00e0 g\u00e9n\u00e9rer",
+                    "name": "Taille"
+                },
+                "style": {
+                    "description": "Le style de l'image g\u00e9n\u00e9r\u00e9e",
+                    "name": "Style"
+                }
+            },
+            "name": "G\u00e9n\u00e9rer une image (obsol\u00e8te)"
+        }
+    }
+}

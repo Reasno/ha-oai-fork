@@ -1,0 +1,320 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Dienst ist bereits konfiguriert",
+            "reauth_successful": "Die erneute Authentifizierung war erfolgreich"
+        },
+        "error": {
+            "cannot_connect": "Verbindung fehlgeschlagen",
+            "invalid_auth": "Ung\u00fcltige Authentifizierung",
+            "unknown": "Unerwarteter Fehler"
+        },
+        "step": {
+            "reauth_confirm": {
+                "data": {
+                    "api_key": "API-Schl\u00fcssel"
+                },
+                "data_description": {
+                    "api_key": "Dein OpenAI-API-Schl\u00fcssel."
+                },
+                "description": "Eine erneute Authentifizierung ist erforderlich. Bitte gib deinen aktualisierten API-Schl\u00fcssel ein."
+            },
+            "user": {
+                "data": {
+                    "api_key": "API-Schl\u00fcssel"
+                },
+                "data_description": {
+                    "api_key": "Dein OpenAI-API-Schl\u00fcssel."
+                },
+                "description": "Richte die OpenAI Conversation-Integration ein, indem du deinen OpenAI-API-Schl\u00fcssel angibst. Anweisungen zum Erhalt eines API-Schl\u00fcssels findest du [hier]({instructions_url})."
+            }
+        }
+    },
+    "config_subentries": {
+        "ai_task_data": {
+            "abort": {
+                "entry_not_loaded": "Es k\u00f6nnen keine Dinge hinzugef\u00fcgt werden, wenn die Konfiguration deaktiviert ist.",
+                "reconfigure_successful": "Die Neukonfiguration war erfolgreich"
+            },
+            "entry_type": "KI-Task",
+            "error": {
+                "code_interpreter_minimal_reasoning": "Der Code-Interpreter wird mit minimalem Reasoning-Aufwand nicht unterst\u00fctzt",
+                "model_not_supported": "Dieses Modell wird nicht unterst\u00fctzt, bitte w\u00e4hle ein anderes Modell",
+                "web_search_minimal_reasoning": "Die Websuche wird derzeit mit minimalem Reasoning-Aufwand nicht unterst\u00fctzt"
+            },
+            "initiate_flow": {
+                "reconfigure": "KI-Task neu konfigurieren",
+                "user": "KI-Task hinzuf\u00fcgen"
+            },
+            "step": {
+                "advanced": {
+                    "data": {
+                        "chat_model": "Modell",
+                        "max_tokens": "Maximalzahl Token in der Antwort",
+                        "store_responses": "Anfragen und Antworten in OpenAI speichern",
+                        "temperature": "Temperatur",
+                        "top_p": "Top P"
+                    },
+                    "data_description": {
+                        "store_responses": "Wenn aktiviert, werden Anfragen und Antworten von OpenAI gespeichert und sind in den Protokollen deines OpenAI-Dashboards sichtbar."
+                    },
+                    "title": "Erweiterte Einstellungen"
+                },
+                "init": {
+                    "data": {
+                        "name": "Name",
+                        "recommended": "Empfohlene Modelleinstellungen"
+                    }
+                },
+                "model": {
+                    "data": {
+                        "code_interpreter": "Codeinterpreter-Werkzeug aktivieren",
+                        "image_model": "Bildgenerierungsmodell",
+                        "inline_citations": "Links in Web-Suchergebnisse einbeziehen",
+                        "reasoning_effort": "Reasoning-Aufwand",
+                        "reasoning_summary": "Reasoning-Zusammenfassung",
+                        "search_context_size": "Gr\u00f6\u00dfe des Suchkontexts",
+                        "service_tier": "Servicestufe",
+                        "user_location": "Standort des Zuhauses einbeziehen",
+                        "web_search": "Websuche aktivieren"
+                    },
+                    "data_description": {
+                        "code_interpreter": "Dieses Werkzeug, das auch als Python-Tool f\u00fcr das Modell bezeichnet wird, erm\u00f6glicht das Ausf\u00fchren von Code zum Beantworten von Fragen",
+                        "image_model": "Das Modell, das beim Generieren von Bildern verwendet werden soll",
+                        "inline_citations": "Wenn deaktiviert, wird ein zus\u00e4tzlicher Prompt an das Modell hinzugef\u00fcgt, keine Quellenangaben zu machen",
+                        "reasoning_effort": "Wie viele Reasoning-Token das Modell generieren soll, bevor eine Antwort auf den Prompt erstellt wird",
+                        "reasoning_summary": "Steuert die L\u00e4nge und Detailliertheit der vom Modell gelieferten Zusammenfassungen der Schlussfolgerungen",
+                        "search_context_size": "Allgemeine Leitlinie f\u00fcr den Umfang des f\u00fcr die Suche zu verwendenden Kontextfensters",
+                        "service_tier": "Steuert Kosten und Reaktionszeit",
+                        "user_location": "Suchergebnisse auf der Geografie basierend verfeinern",
+                        "web_search": "Dem Modell erm\u00f6glichen, im Internet nach den neuesten Informationen zu suchen, bevor eine Antwort generiert wird"
+                    },
+                    "title": "Modellspezifische Optionen"
+                }
+            }
+        },
+        "conversation": {
+            "abort": {
+                "entry_not_loaded": "Es k\u00f6nnen keine Dinge hinzugef\u00fcgt werden, wenn die Konfiguration deaktiviert ist.",
+                "reconfigure_successful": "Die Neukonfiguration war erfolgreich"
+            },
+            "entry_type": "Konversationsagent",
+            "error": {
+                "code_interpreter_minimal_reasoning": "Der Code-Interpreter wird mit minimalem Reasoning-Aufwand nicht unterst\u00fctzt",
+                "model_not_supported": "Dieses Modell wird nicht unterst\u00fctzt, bitte w\u00e4hle ein anderes Modell",
+                "web_search_minimal_reasoning": "Die Websuche wird derzeit mit minimalem Reasoning-Aufwand nicht unterst\u00fctzt"
+            },
+            "initiate_flow": {
+                "reconfigure": "Konversationsagent neu konfigurieren",
+                "user": "Konversationsagent hinzuf\u00fcgen"
+            },
+            "step": {
+                "advanced": {
+                    "data": {
+                        "chat_model": "Modell",
+                        "max_tokens": "Maximalzahl Token in der Antwort",
+                        "store_responses": "Anfragen und Antworten in OpenAI speichern",
+                        "temperature": "Temperatur",
+                        "top_p": "Top P"
+                    },
+                    "data_description": {
+                        "store_responses": "Wenn aktiviert, werden Anfragen und Antworten von OpenAI gespeichert und sind in den Protokollen deines OpenAI-Dashboards sichtbar."
+                    },
+                    "title": "Erweiterte Einstellungen"
+                },
+                "init": {
+                    "data": {
+                        "llm_hass_api": "Home Assistant steuern",
+                        "name": "Name",
+                        "prompt": "Anweisungen",
+                        "recommended": "Empfohlene Modelleinstellungen"
+                    },
+                    "data_description": {
+                        "prompt": "Gib an, wie das LLM antworten soll. Dies kann ein Template sein."
+                    }
+                },
+                "model": {
+                    "data": {
+                        "code_interpreter": "Codeinterpreter-Werkzeug aktivieren",
+                        "image_model": "Bildgenerierungsmodell",
+                        "inline_citations": "Links in Web-Suchergebnisse einbeziehen",
+                        "reasoning_effort": "Reasoning-Aufwand",
+                        "reasoning_summary": "Reasoning-Zusammenfassung",
+                        "search_context_size": "Gr\u00f6\u00dfe des Suchkontexts",
+                        "service_tier": "Servicestufe",
+                        "user_location": "Standort des Zuhauses einbeziehen",
+                        "web_search": "Websuche aktivieren"
+                    },
+                    "data_description": {
+                        "code_interpreter": "Dieses Werkzeug, das auch als Python-Tool f\u00fcr das Modell bezeichnet wird, erm\u00f6glicht das Ausf\u00fchren von Code zum Beantworten von Fragen",
+                        "image_model": "Das Modell, das beim Generieren von Bildern verwendet werden soll",
+                        "inline_citations": "Wenn deaktiviert, wird ein zus\u00e4tzlicher Prompt an das Modell hinzugef\u00fcgt, keine Quellenangaben zu machen",
+                        "reasoning_effort": "Wie viele Reasoning-Token das Modell generieren soll, bevor eine Antwort auf den Prompt erstellt wird",
+                        "reasoning_summary": "Steuert die L\u00e4nge und Detailliertheit der vom Modell gelieferten Zusammenfassungen der Schlussfolgerungen",
+                        "search_context_size": "Allgemeine Leitlinie f\u00fcr den Umfang des f\u00fcr die Suche zu verwendenden Kontextfensters",
+                        "service_tier": "Steuert Kosten und Reaktionszeit",
+                        "user_location": "Suchergebnisse auf der Geografie basierend verfeinern",
+                        "web_search": "Dem Modell erm\u00f6glichen, im Internet nach den neuesten Informationen zu suchen, bevor eine Antwort generiert wird"
+                    },
+                    "title": "Modellspezifische Optionen"
+                }
+            }
+        },
+        "stt": {
+            "abort": {
+                "entry_not_loaded": "Es k\u00f6nnen keine Dinge hinzugef\u00fcgt werden, wenn die Konfiguration deaktiviert ist.",
+                "reconfigure_successful": "Die Neukonfiguration war erfolgreich"
+            },
+            "entry_type": "Sprache-zu-Text",
+            "initiate_flow": {
+                "reconfigure": "Sprache-zu-Text-Dienst neu konfigurieren",
+                "user": "Sprache-zu-Text-Dienst hinzuf\u00fcgen"
+            },
+            "step": {
+                "init": {
+                    "data": {
+                        "chat_model": "Modell",
+                        "name": "Name",
+                        "prompt": "Anweisungen"
+                    },
+                    "data_description": {
+                        "chat_model": "Das Modell, das zur Transkription von Sprache verwendet werden soll.",
+                        "prompt": "Verwende diesen Prompt, um die Qualit\u00e4t der Transkripte zu verbessern. \u00dcbersetze in die Pipeline-Sprache, um optimale Ergebnisse zu erzielen. Weitere Informationen findest du in der Dokumentation."
+                    }
+                }
+            }
+        },
+        "tts": {
+            "abort": {
+                "entry_not_loaded": "Es k\u00f6nnen keine Dinge hinzugef\u00fcgt werden, wenn die Konfiguration deaktiviert ist.",
+                "reconfigure_successful": "Die Neukonfiguration war erfolgreich"
+            },
+            "entry_type": "Text-zu-Sprache",
+            "initiate_flow": {
+                "reconfigure": "Text-zu-Sprache-Dienst neu konfigurieren",
+                "user": "Text-zu-Sprache-Dienst hinzuf\u00fcgen"
+            },
+            "step": {
+                "init": {
+                    "data": {
+                        "name": "Name",
+                        "prompt": "Anweisungen",
+                        "tts_speed": "Geschwindigkeit"
+                    },
+                    "data_description": {
+                        "prompt": "Aspekte der Sprache steuern, einschlie\u00dflich Akzent, emotionaler Bandbreite, Intonation, Ausdruck, Sprechgeschwindigkeit, Tonfall, Fl\u00fcstern und mehr",
+                        "tts_speed": "Geschwindigkeit der generierten Sprache"
+                    }
+                }
+            }
+        }
+    },
+    "exceptions": {
+        "invalid_config_entry": {
+            "message": "Ung\u00fcltiger Konfigurationseintrag angegeben. {config_entry} erhalten."
+        }
+    },
+    "issues": {
+        "deprecated_generate_content": {
+            "description": "Die Aktion `openai_conversation.generate_content` ist veraltet und wird in der Version 2026.9.0 entfernt werden. Bitte verwende stattdessen die Aktion `ai_task.generate_data`",
+            "title": "Veraltete `generate_content`-Aktion"
+        },
+        "deprecated_generate_image": {
+            "description": "Die Aktion`'openai_conversation.generate_image` ist veraltet und wird in der Version 2026.9.0 entfernt werden. Bitte verwende stattdessen die Aktion `ai_task.generate_image`",
+            "title": "Veraltete `generate_image`-Aktion"
+        },
+        "organization_verification_required": {
+            "description": "Um dieses Modell verwenden zu k\u00f6nnen, muss deine Organisation verifiziert sein. Gehe zu {platform_settings} und w\u00e4hle \u201eOrganisation verifizieren\u201c. Wenn du die Verifizierung gerade erst durchgef\u00fchrt hast, kann es bis zu 15 Minuten dauern, bis der Zugriff freigegeben wird.",
+            "title": "Verifizierung der Organisation erforderlich"
+        }
+    },
+    "selector": {
+        "reasoning_effort": {
+            "options": {
+                "high": "Hoch",
+                "low": "Niedrig",
+                "medium": "Mittel",
+                "minimal": "Minimal",
+                "none": "Kein",
+                "xhigh": "X-Hoch"
+            }
+        },
+        "reasoning_summary": {
+            "options": {
+                "auto": "Auto",
+                "concise": "Pr\u00e4gnant",
+                "detailed": "Ausf\u00fchrlich",
+                "off": "Aus"
+            }
+        },
+        "search_context_size": {
+            "options": {
+                "high": "Hoch",
+                "low": "Niedrig",
+                "medium": "Mittel"
+            }
+        },
+        "service_tier": {
+            "options": {
+                "auto": "Auto",
+                "default": "Standard",
+                "flex": "Flex",
+                "priority": "Priority"
+            }
+        },
+        "verbosity": {
+            "options": {
+                "high": "Hoch",
+                "low": "Niedrig",
+                "medium": "Mittel"
+            }
+        }
+    },
+    "services": {
+        "generate_content": {
+            "description": "Sendet eine Konversationsanfrage an ChatGPT, einschlie\u00dflich angeh\u00e4ngter Bild- oder PDF-Dateien (veraltet)",
+            "fields": {
+                "config_entry": {
+                    "description": "Der f\u00fcr diese Aktion zu verwendende Konfigurationseintrag",
+                    "name": "Konfigurationseintrag"
+                },
+                "filenames": {
+                    "description": "Liste der hochzuladenden Dateien",
+                    "name": "Dateien"
+                },
+                "prompt": {
+                    "description": "Der zu sendende Prompt",
+                    "name": "Prompt"
+                }
+            },
+            "name": "Inhalte generieren (veraltet)"
+        },
+        "generate_image": {
+            "description": "Wandelt einen Prompt in ein Bild um (veraltet)",
+            "fields": {
+                "config_entry": {
+                    "description": "Der f\u00fcr diese Aktion zu verwendende Konfigurationseintrag",
+                    "name": "Konfigurationseintrag"
+                },
+                "prompt": {
+                    "description": "Der Text, der in ein Bild umgewandelt werden soll",
+                    "example": "Ein Foto eines Hundes",
+                    "name": "Prompt"
+                },
+                "quality": {
+                    "description": "Die Qualit\u00e4t des Bildes, das generiert wird",
+                    "name": "Qualit\u00e4t"
+                },
+                "size": {
+                    "description": "Die Gr\u00f6\u00dfe des zu generierenden Bildes",
+                    "name": "Gr\u00f6\u00dfe"
+                },
+                "style": {
+                    "description": "Der Stil des generierten Bildes",
+                    "name": "Stil"
+                }
+            },
+            "name": "Bild generieren (veraltet)"
+        }
+    }
+}

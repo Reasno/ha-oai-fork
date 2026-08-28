@@ -1,0 +1,320 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Usluga je ve\u0107 pode\u0161ena",
+            "reauth_successful": "Ponovna prijava je uspe\u0161na"
+        },
+        "error": {
+            "cannot_connect": "Povezivanje nije uspelo",
+            "invalid_auth": "Neispravna prijava",
+            "unknown": "Neo\u010dekivana gre\u0161ka"
+        },
+        "step": {
+            "reauth_confirm": {
+                "data": {
+                    "api_key": "API klju\u010d"
+                },
+                "data_description": {
+                    "api_key": "Va\u0161 OpenAI API klju\u010d."
+                },
+                "description": "Potrebna je ponovna prijava. Unesite a\u017eurirani API klju\u010d."
+            },
+            "user": {
+                "data": {
+                    "api_key": "API klju\u010d"
+                },
+                "data_description": {
+                    "api_key": "Va\u0161 OpenAI API klju\u010d."
+                },
+                "description": "Podesite OpenAI Conversation integraciju unosom va\u0161eg OpenAI API klju\u010da. Uputstva za preuzimaje API klju\u010da mo\u017eete prona\u0107i [ovde]({instructions_url})."
+            }
+        }
+    },
+    "config_subentries": {
+        "ai_task_data": {
+            "abort": {
+                "entry_not_loaded": "Nije mogu\u0107e dodavati stavke dok je konfiguracija onemogu\u0107ena.",
+                "reconfigure_successful": "Ponovno pode\u0161avanje je uspe\u0161no"
+            },
+            "entry_type": "AI zadatak",
+            "error": {
+                "code_interpreter_minimal_reasoning": "Interpreter za kod nije podr\u017ean uz minimalnu obradu",
+                "model_not_supported": "Ovaj model nije podr\u017ean, izaberi drugi model",
+                "web_search_minimal_reasoning": "Web pretraga trenutno nije podr\u017eana u re\u017eimu minimalnog rezonovanja"
+            },
+            "initiate_flow": {
+                "reconfigure": "Ponovo konfiguri\u0161i AI zadatak",
+                "user": "Dodajte AI zadatak"
+            },
+            "step": {
+                "advanced": {
+                    "data": {
+                        "chat_model": "Model",
+                        "max_tokens": "Maksimalan broj tokena u odgovoru",
+                        "store_responses": "Skladi\u0161tenje upita i odgovora na OpenAI platformi",
+                        "temperature": "Temperatura",
+                        "top_p": "Top P"
+                    },
+                    "data_description": {
+                        "store_responses": "Ako je omogu\u0107eno, OpenAI skladi\u0161ti upite i odgovore, koji \u0107e biti vidljivi u zapisima va\u0161e OpenAI kontrolne table."
+                    },
+                    "title": "Napredna pode\u0161avanja"
+                },
+                "init": {
+                    "data": {
+                        "name": "Naziv",
+                        "recommended": "Preporu\u010dena pode\u0161avanja modela"
+                    }
+                },
+                "model": {
+                    "data": {
+                        "code_interpreter": "Omogu\u0107i alat za interpretaciju koda",
+                        "image_model": "Model za generisanje slika",
+                        "inline_citations": "Uklju\u010di linkove u rezultatima web pretrage",
+                        "reasoning_effort": "Nivo rezonovanja",
+                        "reasoning_summary": "Sa\u017eetak obrazlo\u017eenja",
+                        "search_context_size": "Veli\u010dina konteksta pretrage",
+                        "service_tier": "Nivo usluge",
+                        "user_location": "Uklju\u010di ku\u0107nu lokaciju",
+                        "web_search": "Omogu\u0107i web pretragu"
+                    },
+                    "data_description": {
+                        "code_interpreter": "Ovaj alat, poznat i kao Python alat za model, omogu\u0107ava pokretanje koda radi odgovaranja na pitanja",
+                        "image_model": "Model koji se koristi za generisanje slika",
+                        "inline_citations": "Ako je onemogu\u0107eno, dodaje se dodatni prompt koji tra\u017ei od modela da ne uklju\u010duje izvore",
+                        "reasoning_effort": "Koliko tokena za rezonovanje model treba da generi\u0161e pre nego \u0161to kreira odgovor na prompt",
+                        "reasoning_summary": "Kontroli\u0161e du\u017einu i detaljnost sa\u017eetaka obrazlo\u017eenja koje daje model",
+                        "search_context_size": "Op\u0161te smernice za koli\u010dinu prostora kontekstnog prozora koji se koristi za pretragu",
+                        "service_tier": "Kontroli\u0161e tro\u0161kove i brzinu odziva",
+                        "user_location": "Preciziraj rezultate pretrage na osnovu geografije",
+                        "web_search": "Dozvoli modelu da pretra\u017euje web radi najnovijih informacija pre generisanja odgovora"
+                    },
+                    "title": "Opcije specifi\u010dne za model"
+                }
+            }
+        },
+        "conversation": {
+            "abort": {
+                "entry_not_loaded": "Nije mogu\u0107e dodavati stavke dok je konfiguracija onemogu\u0107ena.",
+                "reconfigure_successful": "Ponovno pode\u0161avanje je uspe\u0161no"
+            },
+            "entry_type": "Agent za konverzaciju",
+            "error": {
+                "code_interpreter_minimal_reasoning": "Interpreter za kod nije podr\u017ean uz minimalnu obradu",
+                "model_not_supported": "Ovaj model nije podr\u017ean, izaberi drugi model",
+                "web_search_minimal_reasoning": "Web pretraga trenutno nije podr\u017eana u re\u017eimu minimalnog rezonovanja"
+            },
+            "initiate_flow": {
+                "reconfigure": "Ponovo konfiguri\u0161i agenta za konverzaciju",
+                "user": "Dodajte agenta za razgovor"
+            },
+            "step": {
+                "advanced": {
+                    "data": {
+                        "chat_model": "Model",
+                        "max_tokens": "Maksimalan broj tokena u odgovoru",
+                        "store_responses": "Skladi\u0161tenje upita i odgovora na OpenAI platformi",
+                        "temperature": "Temperatura",
+                        "top_p": "Top P"
+                    },
+                    "data_description": {
+                        "store_responses": "Ako je omogu\u0107eno, OpenAI skladi\u0161ti upite i odgovore, koji \u0107e biti vidljivi u zapisima va\u0161e OpenAI kontrolne table."
+                    },
+                    "title": "Napredna pode\u0161avanja"
+                },
+                "init": {
+                    "data": {
+                        "llm_hass_api": "Upravljanje Home Assistant\u2011om",
+                        "name": "Naziv",
+                        "prompt": "Uputstva",
+                        "recommended": "Preporu\u010dena pode\u0161avanja modela"
+                    },
+                    "data_description": {
+                        "prompt": "Uputite kako LLM treba da odgovori. Ovo mo\u017ee biti \u0161ablon."
+                    }
+                },
+                "model": {
+                    "data": {
+                        "code_interpreter": "Omogu\u0107i alat za interpretaciju koda",
+                        "image_model": "Model za generisanje slika",
+                        "inline_citations": "Uklju\u010di linkove u rezultatima web pretrage",
+                        "reasoning_effort": "Nivo rezonovanja",
+                        "reasoning_summary": "Sa\u017eetak obrazlo\u017eenja",
+                        "search_context_size": "Veli\u010dina konteksta pretrage",
+                        "service_tier": "Nivo usluge",
+                        "user_location": "Uklju\u010di ku\u0107nu lokaciju",
+                        "web_search": "Omogu\u0107i web pretragu"
+                    },
+                    "data_description": {
+                        "code_interpreter": "Ovaj alat, poznat i kao Python alat za model, omogu\u0107ava pokretanje koda radi odgovaranja na pitanja",
+                        "image_model": "Model koji se koristi za generisanje slika",
+                        "inline_citations": "Ako je onemogu\u0107eno, dodaje se dodatni prompt koji tra\u017ei od modela da ne uklju\u010duje izvore",
+                        "reasoning_effort": "Koliko tokena za rezonovanje model treba da generi\u0161e pre nego \u0161to kreira odgovor na prompt",
+                        "reasoning_summary": "Kontroli\u0161e du\u017einu i detaljnost sa\u017eetaka obrazlo\u017eenja koje daje model",
+                        "search_context_size": "Op\u0161te smernice za koli\u010dinu prostora kontekstnog prozora koji se koristi za pretragu",
+                        "service_tier": "Kontroli\u0161e tro\u0161kove i brzinu odziva",
+                        "user_location": "Preciziraj rezultate pretrage na osnovu geografije",
+                        "web_search": "Dozvoli modelu da pretra\u017euje web radi najnovijih informacija pre generisanja odgovora"
+                    },
+                    "title": "Opcije specifi\u010dne za model"
+                }
+            }
+        },
+        "stt": {
+            "abort": {
+                "entry_not_loaded": "Nije mogu\u0107e dodavati stavke dok je konfiguracija onemogu\u0107ena.",
+                "reconfigure_successful": "Ponovno pode\u0161avanje je uspe\u0161no"
+            },
+            "entry_type": "Pretvaranje govora u tekst",
+            "initiate_flow": {
+                "reconfigure": "Ponovo konfiguri\u0161ite uslugu za pretvaranje govora u tekst",
+                "user": "Dodajte uslugu za pretvaranje govora u tekst"
+            },
+            "step": {
+                "init": {
+                    "data": {
+                        "chat_model": "Model",
+                        "name": "Naziv",
+                        "prompt": "Uputstva"
+                    },
+                    "data_description": {
+                        "chat_model": "Model koji \u0107e se koristiti za transkripciju govora.",
+                        "prompt": "Koristite ovaj upit da biste pobolj\u0161ali kvalitet transkripata. Za najbolje rezultate, prevedite ga na jezik protokola. Pogledajte dokumentaciju za vi\u0161e detalja."
+                    }
+                }
+            }
+        },
+        "tts": {
+            "abort": {
+                "entry_not_loaded": "Nije mogu\u0107e dodavati stavke dok je konfiguracija onemogu\u0107ena.",
+                "reconfigure_successful": "Ponovno pode\u0161avanje je uspe\u0161no"
+            },
+            "entry_type": "Pretvaranje teksta u govor",
+            "initiate_flow": {
+                "reconfigure": "Ponovno pode\u0161avanje servisa za pretvaranje teksta u govor",
+                "user": "Dodajte servis za pretvaranje teksta u govor"
+            },
+            "step": {
+                "init": {
+                    "data": {
+                        "name": "Naziv",
+                        "prompt": "Uputstva",
+                        "tts_speed": "Brzina"
+                    },
+                    "data_description": {
+                        "prompt": "Kontroli\u0161i aspekte govora, uklju\u010duju\u0107i akcenat, emocionalni raspon, intonaciju, imitacije, brzinu govora, ton, \u0161apat i jo\u0161 mnogo toga",
+                        "tts_speed": "Brzina generisanog govora"
+                    }
+                }
+            }
+        }
+    },
+    "exceptions": {
+        "invalid_config_entry": {
+            "message": "Naveden je neispravan unos konfiguracije. Dobijeno: {config_entry}"
+        }
+    },
+    "issues": {
+        "deprecated_generate_content": {
+            "description": "Akcija 'openai_conversation.generate_content' je zastarela i bi\u0107e uklonjena u izdanju 2026.9.0. Umesto toga koristite akciju 'ai_task.generate_data'.",
+            "title": "Zastarela akcija 'generate_content'"
+        },
+        "deprecated_generate_image": {
+            "description": "Akcija 'openai_conversation.generate_image' je zastarela i bi\u0107e uklonjena u izdanju 2026.9.0. Umesto toga koristite akciju 'ai_task.generate_image'.",
+            "title": "Zastarela akcija 'generate_image'"
+        },
+        "organization_verification_required": {
+            "description": "Va\u0161a organizacija mora biti verifikovana da biste koristili ovaj model. \nIdite na {platform_settings} i izaberite \u201eVerifikuj organizaciju\u201c. Ako ste je upravo verifikovali, mo\u017ee potrajati do 15 minuta da se pristup pro\u0161iri.",
+            "title": "Potrebna je verifikacija organizacije"
+        }
+    },
+    "selector": {
+        "reasoning_effort": {
+            "options": {
+                "high": "Visok",
+                "low": "Nizak",
+                "medium": "Srednji",
+                "minimal": "Minimalno",
+                "none": "Nijedno",
+                "xhigh": "Vrlo visok"
+            }
+        },
+        "reasoning_summary": {
+            "options": {
+                "auto": "Automatski",
+                "concise": "Sa\u017eeto",
+                "detailed": "Detaljno",
+                "off": "Isklju\u010deno"
+            }
+        },
+        "search_context_size": {
+            "options": {
+                "high": "Visok",
+                "low": "Nizak",
+                "medium": "Srednji"
+            }
+        },
+        "service_tier": {
+            "options": {
+                "auto": "Automatski",
+                "default": "Standardno",
+                "flex": "Fleksibilna tarifa",
+                "priority": "Prioritet"
+            }
+        },
+        "verbosity": {
+            "options": {
+                "high": "Visok",
+                "low": "Nizak",
+                "medium": "Srednji"
+            }
+        }
+    },
+    "services": {
+        "generate_content": {
+            "description": "\u0160alje upit za razgovor ChatGPT-u, uklju\u010duju\u0107i sve prilo\u017eene slike ili PDF datoteke (zastarelo)",
+            "fields": {
+                "config_entry": {
+                    "description": "Konfiguracioni unos koji se koristi za ovu akciju",
+                    "name": "Konfiguracioni unos"
+                },
+                "filenames": {
+                    "description": "Spisak datoteka za slanje",
+                    "name": "Datoteke"
+                },
+                "prompt": {
+                    "description": "Prompt za slanje",
+                    "name": "Prompt"
+                }
+            },
+            "name": "Generi\u0161i sadr\u017eaj (zastarelo)"
+        },
+        "generate_image": {
+            "description": "Pretvara tekstualni upit u sliku (zastarelo)",
+            "fields": {
+                "config_entry": {
+                    "description": "Unos konfiguracije koji se koristi za ovu akciju.",
+                    "name": "Konfiguracioni unos"
+                },
+                "prompt": {
+                    "description": "Tekst za pretvaranje u sliku.",
+                    "example": "Fotografija psa",
+                    "name": "Prompt"
+                },
+                "quality": {
+                    "description": "Kvalitet slike koja \u0107e biti generisana",
+                    "name": "Kvalitet"
+                },
+                "size": {
+                    "description": "Veli\u010dina slike koja \u0107e biti generisana",
+                    "name": "Veli\u010dina"
+                },
+                "style": {
+                    "description": "Stil generisane slike",
+                    "name": "Stil"
+                }
+            },
+            "name": "Generi\u0161i sliku (zastarelo)"
+        }
+    }
+}
