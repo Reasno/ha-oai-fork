@@ -753,10 +753,12 @@ async def async_prepare_files_for_prompt(
             if mime_type is None:
                 mime_type = guess_file_type(file_path)[0]
 
-            if not mime_type or not mime_type.startswith(("image/", "application/pdf")):
+            if not mime_type or not mime_type.startswith(
+                ("image/", "application/pdf", "video/")
+            ):
                 raise HomeAssistantError(
-                    "Only images and PDF are supported by the OpenAI API,"
-                    f"`{file_path}` is not an image file or PDF"
+                    "Only images, PDF and video are supported,"
+                    f"`{file_path}` is not an image, PDF or video file"
                 )
 
             base64_file = base64.b64encode(file_path.read_bytes()).decode("utf-8")
@@ -776,6 +778,17 @@ async def async_prepare_files_for_prompt(
                         filename=str(file_path),
                         file_data=f"data:{mime_type};base64,{base64_file}",
                     )
+                )
+            elif mime_type.startswith("video/"):
+                # custom patch: Volcengine Ark supports video input via the
+                # `input_video` content part. Not part of the official OpenAI
+                # Responses API, so it is only reachable when a video
+                # attachment is explicitly passed.
+                content.append(
+                    {  # type: ignore[typeddict-item]
+                        "type": "input_video",
+                        "video_url": f"data:{mime_type};base64,{base64_file}",
+                    }
                 )
 
         return content
