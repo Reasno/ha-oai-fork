@@ -69,6 +69,7 @@ from homeassistant.helpers.json import json_dumps
 from homeassistant.util import slugify
 
 from .const import (
+    CONF_BASE_URL,
     CONF_CHAT_MODEL,
     CONF_CODE_INTERPRETER,
     CONF_IMAGE_MODEL,
@@ -88,8 +89,11 @@ from .const import (
     CONF_WEB_SEARCH_REGION,
     CONF_WEB_SEARCH_TIMEZONE,
     CONF_WEB_SEARCH_USER_LOCATION,
+    DEFAULT_BASE_URL,
     DOMAIN,
     LOGGER,
+    OPENAI_ONLY_REQUEST_PARAMS,
+    OPENAI_ONLY_WEB_SEARCH_FIELDS,
     RECOMMENDED_CHAT_MODEL,
     RECOMMENDED_IMAGE_MODEL,
     RECOMMENDED_MAX_TOKENS,
@@ -298,6 +302,11 @@ async def _transform_stream(  # noqa: C901 - This is complex, but better to have
                 last_role = "assistant"
                 last_summary_index = None
                 current_tool_call = event.item
+                # custom patch: some OpenAI-compatible gateways (Volcengine Ark)
+                # send `arguments: null` instead of `""` on the initial
+                # function_call item, which breaks the `+=` accumulation below.
+                if current_tool_call.arguments is None:
+                    current_tool_call.arguments = ""
             elif (
                 isinstance(event.item, ResponseOutputMessage)
                 or (
@@ -416,7 +425,7 @@ async def _transform_stream(  # noqa: C901 - This is complex, but better to have
                     llm.ToolInput(
                         id=current_tool_call.call_id,
                         tool_name=current_tool_call.name,
-                        tool_args=json.loads(current_tool_call.arguments),
+                        tool_args=json.loads(current_tool_call.arguments or "{}"),
                     )
                 ]
             }
@@ -629,6 +638,16 @@ class OpenAIBaseLLMEntity(Entity):
 
         if tools:
             model_args["tools"] = tools
+
+        # --- custom patch: strip params unsupported by non-OpenAI endpoints ---
+        if (self.entry.data.get(CONF_BASE_URL) or DEFAULT_BASE_URL) != DEFAULT_BASE_URL:
+            for _param in OPENAI_ONLY_REQUEST_PARAMS:
+                model_args.pop(_param, None)  # type: ignore[misc]
+            for _tool in model_args.get("tools", []):
+                if _tool.get("type") == "web_search":
+                    for _field in OPENAI_ONLY_WEB_SEARCH_FIELDS:
+                        _tool.pop(_field, None)  # type: ignore[misc]
+        # --- end custom patch ---
 
         last_content = chat_log.content[-1]
 

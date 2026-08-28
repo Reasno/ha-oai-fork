@@ -15,6 +15,19 @@ DEFAULT_STT_NAME = "OpenAI STT"
 DEFAULT_TTS_NAME = "OpenAI TTS"
 DEFAULT_NAME = "OpenAI Conversation"
 
+# --- custom patch: OpenAI-compatible endpoint support ---
+CONF_BASE_URL = "base_url"
+DEFAULT_BASE_URL = "https://api.openai.com/v1"
+# Params/tool fields only the official OpenAI endpoint accepts. Third-party
+# OpenAI-compatible gateways (e.g. Volcengine Ark) reject them with 400
+# "unknown field", so they are stripped when a custom base_url is used.
+OPENAI_ONLY_REQUEST_PARAMS: tuple[str, ...] = ("user", "prompt_cache_retention")
+OPENAI_ONLY_WEB_SEARCH_FIELDS: tuple[str, ...] = (
+    "search_context_size",
+    "user_location",
+)
+# --- end custom patch ---
+
 CONF_CHAT_MODEL = "chat_model"
 CONF_IMAGE_MODEL = "image_model"
 CONF_CODE_INTERPRETER = "code_interpreter"

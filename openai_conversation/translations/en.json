@@ -21,10 +21,12 @@
             },
             "user": {
                 "data": {
-                    "api_key": "API key"
+                    "api_key": "API key",
+                    "base_url": "Base URL"
                 },
                 "data_description": {
-                    "api_key": "Your OpenAI API key."
+                    "api_key": "Your OpenAI API key.",
+                    "base_url": "API base URL. Leave the default for OpenAI, or set an OpenAI-compatible endpoint (e.g. Volcengine Ark)."
                 },
                 "description": "Set up OpenAI Conversation integration by providing your OpenAI API key. Instructions to obtain an API key can be found [here]({instructions_url})."
             }
