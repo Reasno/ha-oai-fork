@@ -3,19 +3,26 @@
 import base64
 from json import JSONDecodeError
 import logging
-from typing import TYPE_CHECKING
+from mimetypes import guess_file_type
+from pathlib import Path
+from typing import TYPE_CHECKING, Any
 
+import httpx
 from openai.types.responses.response_output_item import ImageGenerationCall
 
 from homeassistant.components import ai_task, conversation
+from homeassistant.const import CONF_API_KEY
 from homeassistant.core import HomeAssistant
 from homeassistant.exceptions import HomeAssistantError
 from homeassistant.helpers.entity_platform import AddConfigEntryEntitiesCallback
+from homeassistant.helpers.httpx_client import get_async_client
 from homeassistant.util.json import json_loads
 
 from .const import (
+    CONF_BASE_URL,
     CONF_CHAT_MODEL,
     CONF_IMAGE_MODEL,
+    DEFAULT_BASE_URL,
     RECOMMENDED_CHAT_MODEL,
     RECOMMENDED_IMAGE_MODEL,
     UNSUPPORTED_IMAGE_MODELS,
@@ -28,6 +35,31 @@ if TYPE_CHECKING:
     from . import OpenAIConfigEntry
 
 _LOGGER = logging.getLogger(__name__)
+
+
+def _is_custom_base_url(base_url: str) -> bool:
+    """Return if the configured base URL is not the official OpenAI endpoint."""
+    return base_url.rstrip("/") != DEFAULT_BASE_URL.rstrip("/")
+
+
+def _normalize_image_mime_type(output_format: str | None) -> str:
+    """Normalize image output format into a MIME type."""
+    if not output_format:
+        return "image/png"
+    if output_format == "jpg":
+        output_format = "jpeg"
+    return f"image/{output_format}"
+
+
+def _parse_image_size(size: str | None) -> tuple[int | None, int | None]:
+    """Parse a <width>x<height> size string."""
+    if not size or "x" not in size:
+        return None, None
+    width_str, height_str = size.split("x", 1)
+    try:
+        return int(width_str), int(height_str)
+    except ValueError:
+        return None, None
 
 
 async def async_setup_entry(
@@ -62,6 +94,27 @@ class OpenAITaskEntity(
         model = self.subentry.data.get(CONF_CHAT_MODEL, RECOMMENDED_CHAT_MODEL)
         if not model.startswith(tuple(UNSUPPORTED_IMAGE_MODELS)):
             self._attr_supported_features |= ai_task.AITaskEntityFeature.GENERATE_IMAGE
+
+    async def _async_prepare_image_inputs(
+        self,
+        attachments: list[conversation.Attachment] | None,
+    ) -> list[str]:
+        """Prepare image attachments as data URLs for direct image APIs."""
+
+        def _prepare() -> list[str]:
+            image_inputs: list[str] = []
+            for attachment in attachments or []:
+                path = Path(attachment.path)
+                mime_type = attachment.mime_type or guess_file_type(path)[0]
+                if not mime_type or not mime_type.startswith("image/"):
+                    raise HomeAssistantError(
+                        f"Unsupported image attachment type: {attachment.mime_type or 'unknown'}"
+                    )
+                encoded = base64.b64encode(path.read_bytes()).decode("utf-8")
+                image_inputs.append(f"data:{mime_type};base64,{encoded}")
+            return image_inputs
+
+        return await self.hass.async_add_executor_job(_prepare)
 
     async def _async_generate_data(
         self,
@@ -100,12 +153,87 @@ class OpenAITaskEntity(
             data=data,
         )
 
+    async def _async_generate_image_via_direct_api(
+        self,
+        task: ai_task.GenImageTask,
+        chat_log: conversation.ChatLog,
+    ) -> ai_task.GenImageTaskResult:
+        """Generate an image via the direct images API instead of tool calls."""
+        base_url = (self.entry.data.get(CONF_BASE_URL) or DEFAULT_BASE_URL).rstrip("/")
+        model = self.subentry.data.get(CONF_IMAGE_MODEL, RECOMMENDED_IMAGE_MODEL)
+        payload: dict[str, Any] = {
+            "model": model,
+            "prompt": task.instructions,
+            "response_format": "b64_json",
+        }
+
+        image_inputs = await self._async_prepare_image_inputs(task.attachments)
+        if image_inputs:
+            payload["image"] = image_inputs[0] if len(image_inputs) == 1 else image_inputs
+
+        if _is_custom_base_url(base_url):
+            payload["output_format"] = "png"
+            payload["watermark"] = False
+
+        client = get_async_client(self.hass)
+        try:
+            response = await client.post(
+                f"{base_url}/images/generations",
+                headers={
+                    "Authorization": f"Bearer {self.entry.data[CONF_API_KEY]}",
+                    "Content-Type": "application/json",
+                },
+                json=payload,
+            )
+            response.raise_for_status()
+        except httpx.HTTPStatusError as err:
+            detail = err.response.text
+            _LOGGER.error("Direct image API request failed: %s", detail)
+            raise HomeAssistantError("Error generating image") from err
+        except httpx.HTTPError as err:
+            raise HomeAssistantError("Error generating image") from err
+
+        data = response.json()
+        if not data.get("data"):
+            raise HomeAssistantError("No image returned")
+
+        image_item = data["data"][0]
+        mime_type = _normalize_image_mime_type(image_item.get("output_format"))
+        width, height = _parse_image_size(image_item.get("size"))
+
+        if b64_json := image_item.get("b64_json"):
+            image_data = base64.b64decode(b64_json)
+        elif image_url := image_item.get("url"):
+            try:
+                image_response = await client.get(image_url)
+                image_response.raise_for_status()
+            except httpx.HTTPError as err:
+                raise HomeAssistantError("Error downloading generated image") from err
+            image_data = image_response.content
+            mime_type = image_response.headers.get("Content-Type", mime_type)
+        else:
+            raise HomeAssistantError("No image returned")
+
+        return ai_task.GenImageTaskResult(
+            image_data=image_data,
+            conversation_id=chat_log.conversation_id,
+            mime_type=mime_type,
+            width=width,
+            height=height,
+            model=model,
+            revised_prompt=image_item.get("revised_prompt"),
+        )
+
     async def _async_generate_image(
         self,
         task: ai_task.GenImageTask,
         chat_log: conversation.ChatLog,
     ) -> ai_task.GenImageTaskResult:
         """Handle a generate image task."""
+        base_url = self.entry.data.get(CONF_BASE_URL) or DEFAULT_BASE_URL
+        if _is_custom_base_url(base_url):
+            return await self._async_generate_image_via_direct_api(task, chat_log)
+
         await self._async_handle_chat_log(chat_log, task.name, force_image=True)
 
         if not isinstance(chat_log.content[-1], conversation.AssistantContent):

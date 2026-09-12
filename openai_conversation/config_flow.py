@@ -539,7 +539,10 @@ class OpenAISubentryFlowHandler(ConfigSubentryFlow):
             tuple(UNSUPPORTED_IMAGE_MODELS)
         ):
             step_schema[
-                vol.Optional(CONF_IMAGE_MODEL, default=RECOMMENDED_IMAGE_MODEL)
+                vol.Optional(
+                    CONF_IMAGE_MODEL,
+                    default=options.get(CONF_IMAGE_MODEL, RECOMMENDED_IMAGE_MODEL),
+                )
             ] = SelectSelector(
                 SelectSelectorConfig(
                     options=[
@@ -549,6 +552,10 @@ class OpenAISubentryFlowHandler(ConfigSubentryFlow):
                         "gpt-image-1-mini",
                     ],
                     mode=SelectSelectorMode.DROPDOWN,
+                    custom_value=(
+                        (self._get_entry().data.get(CONF_BASE_URL) or DEFAULT_BASE_URL)
+                        != DEFAULT_BASE_URL
+                    ),
                 )
             )
 
