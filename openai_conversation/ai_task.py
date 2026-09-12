@@ -184,6 +184,7 @@ class OpenAITaskEntity(
                     "Content-Type": "application/json",
                 },
                 json=payload,
+                timeout=180.0,
             )
             response.raise_for_status()
         except httpx.HTTPStatusError as err:
@@ -205,7 +206,7 @@ class OpenAITaskEntity(
             image_data = base64.b64decode(b64_json)
         elif image_url := image_item.get("url"):
             try:
-                image_response = await client.get(image_url)
+                image_response = await client.get(image_url, timeout=60.0)
                 image_response.raise_for_status()
             except httpx.HTTPError as err:
                 raise HomeAssistantError("Error downloading generated image") from err
