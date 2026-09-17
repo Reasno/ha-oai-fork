@@ -109,6 +109,7 @@ from .const import (
     RECOMMENDED_WEB_SEARCH_INLINE_CITATIONS,
     UNSUPPORTED_EXTENDED_CACHE_RETENTION_MODELS,
 )
+from .get_history import GetHistoryTool
 
 if TYPE_CHECKING:
     from . import OpenAIConfigEntry
@@ -566,6 +567,14 @@ class OpenAIBaseLLMEntity(Entity):
 
         tools: list[ToolParam] = []
         if chat_log.llm_api:
+            if (
+                chat_log.llm_api.api.id == llm.LLM_API_ASSIST
+                and not any(
+                    tool.name == GetHistoryTool.name
+                    for tool in chat_log.llm_api.tools
+                )
+            ):
+                chat_log.llm_api.tools.append(GetHistoryTool())
             tools = [
                 _format_tool(tool, chat_log.llm_api.custom_serializer)
                 for tool in chat_log.llm_api.tools
