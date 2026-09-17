@@ -1,9 +1,11 @@
 # ha-oai-fork
 
-Home Assistant 官方 `openai_conversation` 集成的 fork，加了两件事：
+Home Assistant 官方 `openai_conversation` 集成的 fork，增加了：
 
 1. **可自定义 `base_url`** —— 用任何 OpenAI 兼容网关驱动 HA 语音助手
 2. **火山方舟（Volcengine Ark）兼容层** —— 官方组件直连 Ark 会 400 / 500，这里修掉了
+3. **只读历史查询工具** —— 允许 Assist 查询已暴露实体的近期历史趋势
+4. **静默延迟动作工具** —— `schedule_action` 可延迟调用设备服务，不依赖卫星的 announce 能力
 
 上游基线：**Home Assistant 2026.6.0**（`openai` lib 2.21.0）
 

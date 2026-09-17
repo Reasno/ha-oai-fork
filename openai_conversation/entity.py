@@ -110,6 +110,7 @@ from .const import (
     UNSUPPORTED_EXTENDED_CACHE_RETENTION_MODELS,
 )
 from .get_history import GetHistoryTool
+from .schedule_action import ScheduleActionTool
 
 if TYPE_CHECKING:
     from . import OpenAIConfigEntry
@@ -567,14 +568,14 @@ class OpenAIBaseLLMEntity(Entity):
 
         tools: list[ToolParam] = []
         if chat_log.llm_api:
-            if (
-                chat_log.llm_api.api.id == llm.LLM_API_ASSIST
-                and not any(
-                    tool.name == GetHistoryTool.name
-                    for tool in chat_log.llm_api.tools
-                )
-            ):
-                chat_log.llm_api.tools.append(GetHistoryTool())
+            if chat_log.llm_api.api.id == llm.LLM_API_ASSIST:
+                custom_tools = (GetHistoryTool, ScheduleActionTool)
+                existing_tool_names = {
+                    tool.name for tool in chat_log.llm_api.tools
+                }
+                for tool_cls in custom_tools:
+                    if tool_cls.name not in existing_tool_names:
+                        chat_log.llm_api.tools.append(tool_cls())
             tools = [
                 _format_tool(tool, chat_log.llm_api.custom_serializer)
                 for tool in chat_log.llm_api.tools

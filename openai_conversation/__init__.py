@@ -67,6 +67,7 @@ from .const import (
     RECOMMENDED_TTS_OPTIONS,
 )
 from .entity import async_prepare_files_for_prompt
+from .schedule_action import async_setup_manager
 
 SERVICE_GENERATE_IMAGE = "generate_image"
 SERVICE_GENERATE_CONTENT = "generate_content"
@@ -80,6 +81,7 @@ type OpenAIConfigEntry = ConfigEntry[openai.AsyncClient]
 async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
     """Set up OpenAI Conversation."""
     await async_migrate_integration(hass)
+    await async_setup_manager(hass)
 
     async def render_image(call: ServiceCall) -> ServiceResponse:
         """Render an image with dall-e."""
