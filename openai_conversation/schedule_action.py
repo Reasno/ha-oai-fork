@@ -162,7 +162,7 @@ class ScheduleActionTool(llm.Tool):
                 vol.Coerce(int), vol.Range(min=1, max=_MAX_DELAY_SECONDS)
             ),
             vol.Required("domain"): cv.string,
-            vol.Required("service"): vol.In(_ALLOWED_SERVICES),
+            vol.Required("service"): vol.In(sorted(_ALLOWED_SERVICES)),
             vol.Required("entity_ids"): vol.All(
                 cv.ensure_list,
                 vol.Length(min=1, max=_MAX_ENTITIES),
