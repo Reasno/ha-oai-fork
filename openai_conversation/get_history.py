@@ -16,6 +16,8 @@ from homeassistant.helpers import config_validation as cv, llm
 from homeassistant.helpers.recorder import get_instance
 from homeassistant.util import dt as dt_util
 
+from .schedule_action import ScheduleActionTool
+
 _MAX_DAYS = 30
 _MAX_ENTITIES = 10
 _ASSISTANT = "conversation"
@@ -74,7 +76,7 @@ class GetHistoryTool(llm.Tool):
                 vol.Coerce(int), vol.Range(min=1, max=_MAX_DAYS)
             ),
             vol.Optional("aggregation", default="daily_last"): vol.In(
-                ("daily_last",)
+                ["daily_last"]
             ),
         }
     )
@@ -172,3 +174,51 @@ class GetHistoryTool(llm.Tool):
             "aggregation": "daily_last",
             "entities": result,
         }
+
+
+class AssistAPIWithCustomTools(llm.AssistAPI):
+    """Assist API extended with local OpenAI tools."""
+
+    async def async_get_api_instance(
+        self, llm_context: llm.LLMContext
+    ) -> llm.APIInstance:
+        """Return the standard Assist tools plus local OpenAI tools."""
+        api_instance = await super().async_get_api_instance(llm_context)
+        for tool_class in (GetHistoryTool, ScheduleActionTool):
+            if not any(tool.name == tool_class.name for tool in api_instance.tools):
+                api_instance.tools.append(tool_class())
+        return api_instance
+
+
+def async_register_get_history_tool(hass: HomeAssistant) -> None:
+    """Expose local OpenAI tools directly through the built-in Assist LLM API."""
+    apis = llm._async_get_apis(hass)  # noqa: SLF001
+    if not isinstance(apis[llm.LLM_API_ASSIST], AssistAPIWithCustomTools):
+        apis[llm.LLM_API_ASSIST] = AssistAPIWithCustomTools(hass)
+
+    original = llm.MergedAPI.async_get_api_instance
+    if getattr(original, "_openai_custom_tools_patch", False):
+        return
+
+    async def async_get_api_instance_without_custom_tool_namespace(
+        merged_api: llm.MergedAPI, llm_context: llm.LLMContext
+    ) -> llm.APIInstance:
+        api_instance = await original(merged_api, llm_context)
+        custom_tool_names = {GetHistoryTool.name, ScheduleActionTool.name}
+        for tool in api_instance.tools:
+            if (
+                isinstance(tool, llm.NamespacedTool)
+                and tool.namespace == "assist"
+                and tool.tool.name in custom_tool_names
+            ):
+                tool.name = tool.tool.name
+        return api_instance
+
+    setattr(
+        async_get_api_instance_without_custom_tool_namespace,
+        "_openai_custom_tools_patch",
+        True,
+    )
+    llm.MergedAPI.async_get_api_instance = (
+        async_get_api_instance_without_custom_tool_namespace
+    )

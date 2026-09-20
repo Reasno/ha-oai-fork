@@ -67,6 +67,7 @@ from .const import (
     RECOMMENDED_TTS_OPTIONS,
 )
 from .entity import async_prepare_files_for_prompt
+from .get_history import async_register_get_history_tool
 from .schedule_action import async_setup_manager
 
 SERVICE_GENERATE_IMAGE = "generate_image"
@@ -81,6 +82,7 @@ type OpenAIConfigEntry = ConfigEntry[openai.AsyncClient]
 async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
     """Set up OpenAI Conversation."""
     await async_migrate_integration(hass)
+    async_register_get_history_tool(hass)
     await async_setup_manager(hass)
 
     async def render_image(call: ServiceCall) -> ServiceResponse:
